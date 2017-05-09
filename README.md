@@ -44,9 +44,20 @@ You should see something like this:
     [2017-05-09 13:37:26.113188] RCV: Received "hi" from 123456789
 
 Where `123456789` is your telegram id. Make sure you put that in the configuration file (`cryptoforexbot.cfg` as explained above, see **Configuring**).  
-Send `/admin` command to the bot to get help on how to manage the database.  
+When the bot is successfully acknowledging you as an admin, send the `/admin` command to get help on how to manage the database.  
 
-Using a local database to store values is important because querying external APIs everytime an user make a request would overhead the APIs, also they could be temporary unreachable because of network lag.
+Using a local database to store values is important because querying external APIs everytime an user make a request would overhead the APIs, also they could be temporary unreachable because of network lag.  
+
+Disclaimer
+---
+
+This bot relies on external services, for instance on [Coin Market Cap](https://coinmarketcap.com) and [International Monetary Fund](https://imf.org) for current values fetching. This is so as to provide a convenient way to convert to the latest prices of currencies. However, I am **not** responsible for the accuratness of the values provided by those external services. In your ideal world, we would have only descentralized currencies directly manipulated by the market. Which is not our reality as of now.  
+
+**This bot is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Use at your own risk.**  
+
+If you ever complain to me that you lost money because you saw a wrong value, I will laugh at you. That said, major finance websites that charges you lots of money annualy for "secure and trusted" market data use the **very same methods** that are being used here.  
+So what they are charging for? They are charging you because they will be nice and won't say *"-we will laugh at you"* like I do. They would treat you as a customer, and not as an user like I do. So you're really paying to be pampered and feel special. Also they spend much money so they don't have one milisecond of downtime, and if they ever do, theorectically you may sue them.  
+If you think this is useful and should stay online and available, consider donating.  
 
 License
 ---
