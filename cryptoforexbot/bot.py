@@ -77,8 +77,12 @@ class cryptoforex():
 			reply = str(texts.info)
 			self.log_SEND(str(reply), str(chat_id))
 			self.bot.sendMessage(chat_id, reply)
+		elif re.search('@cryptoforexbot$', command):
+			reply = str("I'm not sure what '%s' is. Perhaps you should try /help@cryptoforexbot" % (command))
+			self.log_SEND(str(reply), str(chat_id))
+			self.bot.sendMessage(chat_id, reply)
 	def user_commands(self, command, chat_id):
-		reply = str("I'm not sure what a '%s' is. Perhaps you should try /help" % (command))
+		reply = str("I'm not sure what '%s' is. Perhaps you should try /help" % (command))
 		if re.search('^/help', command):
 			self.log_CMD(str(command))
 			reply = str(texts.help)
@@ -88,7 +92,7 @@ class cryptoforex():
 		self.log_SEND(str(reply), str(chat_id))
 		self.bot.sendMessage(chat_id, reply)
 	def admin_commands(self, command, chat_id):
-		reply = str("I'm not sure what a '%s' is. Perhaps you should try /admin" % (command))
+		reply = str("I'm not sure what '%s' is. Perhaps you should try /admin" % (command))
 		if re.search('^/help', command):
 			self.log_CMD(str(command))
 			reply = str(texts.help)
