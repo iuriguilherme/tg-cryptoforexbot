@@ -65,5 +65,9 @@ License
 Copyleft 2017 Desobediente Civil  
 
 This is GPL software. Which basically means that if you modify the source code, you need to distribute the modified version WITH the modified source code and with the same license.  
-See the file LICENSE which should be distributed with this software.  
+See the file *LICENSE.md* which should be distributed with this software.  
+
+### Assets
+
+Logo found in subdirectory *assets/* uses the [orange bitcoin symbol](https://en.bitcoin.it/wiki/Promotional_graphics) which is available in the public domain, as well as an edited graphic chart image obtained from <http://www.netpicks.com/forex-trading-2/forex-trading-charts/>. Both the scalable vector and the exported PNG image are licensed under CC0. See the file *ASSETS-LICENSE.txt*.
 
