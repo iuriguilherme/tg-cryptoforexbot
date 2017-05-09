@@ -1,4 +1,6 @@
 # vim:fileencoding=utf-8
+## Telegram bots documentation at https://core.telegram.org/bots
+## Telepot documentation at https://telepot.readthedocs.io/en/latest/
 
 import datetime
 import re
@@ -105,6 +107,8 @@ class cryptoforex():
 		elif re.search('^/add', command):
 			pass
 		elif re.search('^/del', command):
+			pass
+		elif re.search('^/list', command):
 			pass
 		elif re.search('^/update', command):
 			pass
