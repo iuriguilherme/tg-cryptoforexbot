@@ -28,11 +28,19 @@ The source code for this bot resides on github: https://github.com/desci/tg-cryp
 The purpose of this bot is to convert values between cryptocurrencies as well as fiat currencies.
 
 The current state of development is `alpha`.
+
+There is a channel if you are interested in helping / following the development: https://t.me/joinchat/AAAAAA5gJhDL8TwBpxo5yw
 """
 admin = """
 Crypto Forex Bot admin instructions
 
-`Note that none of these options have been implemented yet`
+Implemented options
+
+/send - Send message to a group or user
+Parameters: <id> <message>
+Example: /send 0 This bot has been hacked
+
+Unimplemented options
 
 /dbadd - Adds a new coin to the database.
 Parameters: <SYMBOL> <ISO 4217 SYMBOL> <Name> <current SDR value> <current BTC value> <API update link ('' for none)>
@@ -52,6 +60,8 @@ Parameters: <SYMBOL>
 Example: /dblist BTC
 
 /dbupdate - Update SRD or BTC value with API if present
+
+Regular user and group options should be available.
 
 For cryptocurrencies, <API update link> is one of the "id" listed at https://api.coinmarketcap.com/v1/ticker
 
