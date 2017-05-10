@@ -18,10 +18,10 @@ class stdout():
 	def cmd(self, command):
 		now = str(datetime.datetime.now())
 		print '[%s] CMD: Running %s' % (now, command)
-	def rcv(self, message, target):
+	def rcv(self, target, message):
 		now = str(datetime.datetime.now())
 		print '[%s] RCV: Received "%s" from %s' % (now, message, target)
-	def send(self, message, target):
+	def send(self, target, message):
 		now = str(datetime.datetime.now())
 		print '[%s] SEND: Sending "%s" to %s' % (now, message, target)
 

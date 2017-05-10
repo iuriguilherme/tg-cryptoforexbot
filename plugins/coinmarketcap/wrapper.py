@@ -4,6 +4,7 @@ import re
 
 from plugins.coinmarketcap.api import coinmarketcap as api
 from plugins.coinmarketcap import valid
+from cryptoforexbot import texts
 
 class coinmarketcap():
 
@@ -34,6 +35,8 @@ class coinmarketcap():
 			response = self.api.get_ticker_id(check_from, check_to)
 			if response:
 				result = float(float(safe_value) * float(response[0][''.join(['price_',check_to.lower()])]))
-				return ''.join(["(from coinmarketcap.com): ", str(safe_value), " ", safe_from, " = " , str(result), " ", safe_to])
+				return ''.join(["(from coinmarketcap.com): ", '{:,}'.format(safe_value), " ", safe_from, " = " , '{:,}'.format(result), " ", safe_to])
+		else:
+			return texts.err_valid
 		return False
 

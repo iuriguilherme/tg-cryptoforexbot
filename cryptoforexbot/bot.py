@@ -14,6 +14,7 @@ except (ImportError, NameError):
 
 from cryptoforexbot import metadata, texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
+from plugins.coinmarketcap import valid as coinmarketcap_valid
 from plugins.log.stdout import stdout as log
 
 class cryptoforex():
@@ -52,75 +53,57 @@ class cryptoforex():
 			except KeyboardInterrupt:
 				self.log.info(str("Exiting %s." % (__name__)))
 				return
+			except Exception as e:
+				self.log.err("%s" % (e))
+				continue
+
+	def send(self, chat_id=0, reply='Nevermind.'):
+		self.log.send(str(chat_id), str(reply))
+		try:
+			self.bot.sendMessage(chat_id, reply)
+		except Exception as e:
+			self.log.err(str("Telegram error: %s" % (e)))
 
 	def group_commands(self, command, chat_id):
 		reply = str()
 		## Only answer if we are being addressed
-		if ''.join([command[2], command[3]]) == metadata.handle:
-			if ''.join([command[0], command[1]]) == '/help':
-				self.log.cmd(str(command))
-				reply = str(texts.help)
-				self.log.send(str(reply), str(chat_id))
-				self.bot.sendMessage(chat_id, reply)
-			elif ''.join([command[0], command[1]]) == '/info':
-				self.log.cmd(str(command))
-				reply = str(texts.info)
-				self.log.send(str(reply), str(chat_id))
-				self.bot.sendMessage(chat_id, reply)
+		if re.search(''.join([metadata.handle, '$']), command[0]):
+			if command[0] == ''.join(['/help', metadata.handle]):
+				self.log.cmd(' '.join(command))
+				reply = texts.help
+				self.send(chat_id, reply)
+			elif command[0] == ''.join(['/info', metadata.handle]):
+				self.log.cmd(' '.join(command))
+				reply = texts.info
+				self.send(chat_id, reply)
+			elif command[0] == ''.join(['/list', metadata.handle]):
+				self.log.cmd(' '.join(command))
+				reply = texts.err_group[0]
+				self.send(chat_id, reply)
 			else:
 				reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
-				self.log.send(str(reply), str(chat_id))
-				self.bot.sendMessage(chat_id, reply)
+				self.send(chat_id, reply)
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (command, chat_id))
-			pass
+
 	def user_commands(self, command, chat_id):
 		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
-		if ''.join([command[0], command[1]]) == '/help' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/help', metadata.handle]):
-			self.log.cmd(str(command))
+		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
+			self.log.cmd(' '.join(command))
 			reply = str(texts.help)
-		elif ''.join([command[0], command[1]]) == '/info' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/info', metadata.handle]):
-			self.log.cmd(str(command))
+		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
+			self.log.cmd(' '.join(command))
 			reply = str(texts.info)
-		else:
-			self.log.err("Don't know what to do with '%s' from %s" % (command, chat_id))
-			pass
-		self.log.send(str(reply), str(chat_id))
-		self.bot.sendMessage(chat_id, reply)
-	def admin_commands(self, command, chat_id):
-		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
-		if ''.join([command[0], command[1]]) == '/help' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/help', metadata.handle]):
-			self.log.cmd(str(command))
-			reply = str(texts.help)
-		elif ''.join([command[0], command[1]]) == '/info' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/info', metadata.handle]):
-			self.log.cmd(str(command))
-			reply = str(texts.info)
-		elif ''.join([command[0], command[1]]) == '/admin' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/admin', metadata.handle]):
-			self.log.cmd(str(command))
-			reply = str(texts.info)
-		elif ''.join([command[0], command[1]]) == '/add' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/add', metadata.handle]):
-			pass
-		elif ''.join([command[0], command[1]]) == '/del' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/del', metadata.handle]):
-			pass
-		elif ''.join([command[0], command[1]]) == '/list' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/list', metadata.handle]):
-			pass
-		elif ''.join([command[0], command[1]]) == '/update' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/update', metadata.handle]):
-			pass
-		elif ''.join([command[0], command[1]]) == '/conv' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/conv', metadata.handle]):
-			self.log.cmd(str(command))
+		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
+			self.log.cmd(' '.join(command))
 			reply = texts.err_conv[0]
-			float_pattern = re.compile('[\d,.]+')
+			float_pattern = re.compile('[\d.]+')
 			string_pattern = re.compile('\w+')
 			##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
 			try:
-				if command[2] == '@':
-					conv_value = float(''.join(re.findall(float_pattern, command[4])))
-					conv_from = str(''.join(re.findall(string_pattern, command[5])))
-					conv_to = str(''.join(re.findall(string_pattern, command[6])))
-				else:
-					conv_value = float(''.join(re.findall(float_pattern, command[2])))
-					conv_from = str(''.join(re.findall(string_pattern, command[3])))
-					conv_to = str(''.join(re.findall(string_pattern, command[4])))
+				conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
+				conv_from = str(''.join(re.findall(string_pattern, command[2])))
+				conv_to = str(''.join(re.findall(string_pattern, command[3])))
 				reply = texts.err_conv[1]
 				try:
 					reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
@@ -128,23 +111,81 @@ class cryptoforex():
 					self.log.err("%s" % (e))
 			except Exception as e:
 				self.log.err("%s" % (e))
+		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			available_to = ' '.join(coinmarketcap_valid.converts)
+			available_from = list()
+			for c in coinmarketcap_valid.cryptos:
+				available_from.append(c)
+			reply = 'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
 		else:
-			self.log.err("Don't know what to do with '%s' from %s" % (command, chat_id))
-		try:
-			self.log.send(str(reply), str(chat_id))
-			self.bot.sendMessage(chat_id, reply)
-		except Exception as e:
-			self.log.err(str("Telegram error: %s" % (e)))
+			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
 			pass
+		self.send(chat_id, reply)
+
+	def admin_commands(self, command, chat_id):
+		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
+		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = str(texts.help)
+		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = str(texts.info)
+		elif command[0] == '/admin' or command[0] == ''.join(['/admin', metadata.handle]):
+			self.log.cmd(str(command))
+			reply = str(texts.info)
+		elif command[0] == '/dbadd' or command[0] == ''.join(['/dbadd', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = "Not implemented."
+		elif command[0] == '/dbdel' or command[0] == ''.join(['/dbdel', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = "Not implemented."
+		elif command[0] == '/dblist' or command[0] == ''.join(['/dblist', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = "Not implemented."
+		elif command[0] == '/dbupdate' or command[0] == ''.join(['/dbupdate', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = "Not implemented."
+		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			reply = texts.err_conv[0]
+			float_pattern = re.compile('[\d.]+')
+			string_pattern = re.compile('\w+')
+			##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
+			try:
+				conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
+				conv_from = str(''.join(re.findall(string_pattern, command[2])))
+				conv_to = str(''.join(re.findall(string_pattern, command[3])))
+				reply = texts.err_conv[1]
+				try:
+					reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
+					if not reply:
+						reply = texts.err_conv[1]
+				except Exception as e:
+					self.log.err("%s" % (e))
+			except Exception as e:
+				self.log.err("%s" % (e))
+		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			available_to = ' '.join(coinmarketcap_valid.converts)
+			available_from = list()
+			for c in coinmarketcap_valid.cryptos:
+				available_from.append(c)
+			reply = 'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
+		else:
+			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
+		self.send(chat_id, reply)
 
 	def rcv(self, msg):
 		chat_id = int(msg['chat']['id'])
-		msg_text = str(msg['text'])
-		## TODO: find a way to ditch all '@' but the first one
-		pattern = re.compile('(^[/]{1}|[@]{1}|\w+)')
-		command = re.findall(pattern, msg_text)
-		
-		self.log.rcv(command,str(chat_id))
+		command = list()
+		for subcommand in msg['text'].split(' '):
+			pattern = re.compile('(^[/]{1}|[@]{1}|[,.]|\w+)')
+			item = ''.join(re.findall(pattern, subcommand))
+			if item != '':
+				command.append(item)
+
+		self.log.rcv(str(chat_id), ' '.join(command))
 		## If chat_id is negative, then we're talking with a group.
 		##	therefore, we'll answer only if we're being directly addressed
 		##	(command must include bot name).

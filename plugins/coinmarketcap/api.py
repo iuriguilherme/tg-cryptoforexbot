@@ -17,7 +17,6 @@ class coinmarketcap():
 	def __get(self, url, params={'':''}):
 		safe_url = url
 		request_url = ''.join([self.api_url, safe_url])
-		return_message = 'Nothing.'
 		## TODO: catch exceptions
 		try:
 			response = requests.get(request_url, headers=self.headers, params=params)

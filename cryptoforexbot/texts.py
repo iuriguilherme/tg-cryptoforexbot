@@ -1,5 +1,7 @@
 # vim:fileencoding=utf-8
 
+from cryptoforexbot import metadata
+
 ## Commands
 help = """
 Crypto Forex Bot
@@ -23,24 +25,24 @@ Crypto Forex Bot admin instructions
 
 *Note that none of these options have been implemented yet*
 
-/add - Adds a new coin to the database.
+/dbadd - Adds a new coin to the database.
 Parameters: <SYMBOL> <ISO 4217 SYMBOL> <Name> <current SDR value> <current BTC value> <API update link ('' for none)>
-Example: /add BTC XBT Bitcoin 1000 1 'bitcoin'
+Example: /dbadd BTC XBT Bitcoin 1000 1 'bitcoin'
 
-/del - Removes a coin from the database
+/dbdel - Removes a coin from the database
 Parameters: <SYMBOL>
-Example: /del BTC
+Example: /dbdel BTC
 
-/edit - Edit a coin in the database
+/dbedit - Edit a coin in the database
 Parameters: <SYMBOL> <row> <value>
-Example: /edit BTC sdr 1100
+Example: /dbedit BTC sdr 1100
 <row> can be one of: symbol, isosymbol, name, sdr, btc, api
 
-/list - Show current coin values
+/dblist - Show current coin values
 Parameters: <SYMBOL>
-Exampple: /list BTC
+Example: /dblist BTC
 
-/update - Update SRD or BTC value with API if present
+/dbupdate - Update SRD or BTC value with API if present
 
 For cryptocurrencies, <API update link> is one of the "id" listed at https://api.coinmarketcap.com/v1/ticker
 
@@ -59,15 +61,27 @@ Talk to @BotFather on Telegram to obtain a token.
 
 err_conv = [
 """
-Incorrect parameters.
+Incorrect parameters. Usage: /conv <value> <from currency> <to currency>
 
-Use /conv <value> <from currency> <to currency>
+Example: /conv 1,000.000 BTC USD
 
-Example: /conv 1 BTC USD
-""",
+Note: Commas will be ignored.
+
+For a list of available currencies, try /list%s
+""" % (metadata.handle),
 """
 I'm sorry, something happened and I couldn't proccess this request.
 The admin has been notified. I think.
 """
+]
+
+err_valid = """
+You've sent an unsupported or inexistent currency.
+
+To see all available currencies, try /list%s
+""" % (metadata.handle)
+
+err_group = [
+"This command is only available as private message. Click on %s to message me." % (metadata.handle)
 ]
 
