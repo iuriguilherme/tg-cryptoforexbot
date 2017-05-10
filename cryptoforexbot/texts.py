@@ -19,7 +19,7 @@ Where <value> must be a valid float (commas will be ignored);
 Example: /conv%s 1,000.000 BTC USD
 
 To see a list of available currencies, type /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle)
+""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle)
 info = """
 Crypto Forex Bot information
 
