@@ -4,26 +4,32 @@ from cryptoforexbot import metadata
 
 ## Commands
 help = """
-Crypto Forex Bot
+Crypto Forex Bot help
 
-This bot does nothing at all.
-As soon as development occurs, it will display prices and convert values for cryptocurrencies as well as fiat currencies.
-Stay tuned.
-"""
+This bot convert values in some cryptocurrencies to fiat currencies.
+
+To convert values, use /conv%s <value> <from> <to>
+Where <value> must be a valid float (commas will be ignored);
+<from> may be a coinmarketcap id or a cryptocurrency symbol;
+<to> may be USD or other available fiat currency;
+
+Example: /conv%s 1,000.000 BTC USD
+
+To see a list of available currencies, type /list%s
+""" % (metadata.handle, metadata.handle, metadata.handle)
 info = """
-Crypto Forex Bot info
+Crypto Forex Bot information
 
 The source code for this bot resides on github: https://github.com/desci/tg-cryptoforexbot
 
-The purpose of this bot is to convert cryptocurrencies as well as fiat currencies.
-The current state of development is pre-alpha and so far, the bot does nothing at all.
-You may follow the development at Github.
-Or even help speed the development by either sending pull requests to the repository on Github, or money to @desci42 on Telegram
+The purpose of this bot is to convert values between cryptocurrencies as well as fiat currencies.
+
+The current state of development is `alpha`.
 """
-info = """
+admin = """
 Crypto Forex Bot admin instructions
 
-*Note that none of these options have been implemented yet*
+`Note that none of these options have been implemented yet`
 
 /dbadd - Adds a new coin to the database.
 Parameters: <SYMBOL> <ISO 4217 SYMBOL> <Name> <current SDR value> <current BTC value> <API update link ('' for none)>
@@ -61,14 +67,12 @@ Talk to @BotFather on Telegram to obtain a token.
 
 err_conv = [
 """
-Incorrect parameters. Usage: /conv <value> <from currency> <to currency>
+Incorrect parameters. Usage: /conv%s <value> <from> <to>
 
-Example: /conv 1,000.000 BTC USD
-
-Note: Commas will be ignored.
+Example: /conv%s 1,000.000 BTC USD
 
 For a list of available currencies, try /list%s
-""" % (metadata.handle),
+""" % (metadata.handle, metadata.handle, metadata.handle),
 """
 I'm sorry, something happened and I couldn't proccess this request.
 The admin has been notified. I think.
@@ -82,6 +86,6 @@ To see all available currencies, try /list%s
 """ % (metadata.handle)
 
 err_group = [
-"This command is only available as private message. Click on %s to message me." % (metadata.handle)
+"This command is only available as a private message. Click on %s to message me." % (metadata.handle)
 ]
 

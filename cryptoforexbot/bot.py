@@ -70,12 +70,29 @@ class cryptoforex():
 		if re.search(''.join([metadata.handle, '$']), command[0]):
 			if command[0] == ''.join(['/help', metadata.handle]):
 				self.log.cmd(' '.join(command))
-				reply = texts.help
+				reply = texts.err_group[0]
 				self.send(chat_id, reply)
 			elif command[0] == ''.join(['/info', metadata.handle]):
 				self.log.cmd(' '.join(command))
-				reply = texts.info
+				reply = texts.err_group[0]
 				self.send(chat_id, reply)
+			elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
+				self.log.cmd(' '.join(command))
+				reply = texts.err_conv[0]
+				float_pattern = re.compile('[\d.]+')
+				string_pattern = re.compile('\w+')
+				##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
+				try:
+					conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
+					conv_from = str(''.join(re.findall(string_pattern, command[2])))
+					conv_to = str(''.join(re.findall(string_pattern, command[3])))
+					reply = texts.err_conv[1]
+					try:
+						reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
+					except Exception as e:
+						self.log.err("%s" % (e))
+				except Exception as e:
+					self.log.err("%s" % (e))
 			elif command[0] == ''.join(['/list', metadata.handle]):
 				self.log.cmd(' '.join(command))
 				reply = texts.err_group[0]
