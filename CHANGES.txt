@@ -1,3 +1,5 @@
 v0.0.5.a, 2016-05-09 -- First commit to Github
 v0.0.6.a, 2016-05-09 -- Adding administration
 v0.0.7.a1, 2016-05-09 -- Using lists for commands
+v0.0.7.a2, 2016-05-09 -- Changed versioning scheme retroactively
+v0.0.8.a, 2016-05-10 -- Coinmarketcap API

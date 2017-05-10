@@ -57,3 +57,11 @@ and change the values to your own bot.
 Talk to @BotFather on Telegram to obtain a token.
 """
 
+err_conv = """
+Incorrect parameters.
+
+Use /conv <value> <from currency> <to currency>
+
+Example: /conv 1 BTC USD
+"""
+
