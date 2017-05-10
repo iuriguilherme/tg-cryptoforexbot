@@ -19,6 +19,7 @@ class cryptoforex():
 
 	def __init__(self):
 		self.log_INFO(str("Starting %s" % (__name__)))
+
 		self.config_file = str("cryptoforexbot/cryptoforexbot.cfg")
 		self.log_INFO(str("Opening config file: %s" % (self.config_file)))
 		self.config = ConfigParser.ConfigParser()
@@ -34,12 +35,14 @@ class cryptoforex():
 			self.log_INFO(str("Exiting %s." % (__name__)))
 			return
 		self.log_INFO(str("Our telegram token is '%s' and the admin id is '%s'" % (self.token, self.admin_id)))
+
 		try:
 			self.bot = telepot.Bot(self.token)
 			self.bot.message_loop(self.rcv)
 		except Exception as e:
 			self.log_ERR(str("Telegram error: %s" % (e)))
 			pass
+
 		while 1:
 			try:
 				time.sleep(10)
@@ -67,7 +70,7 @@ class cryptoforex():
 	def group_commands(self, command, chat_id):
 		reply = str()
 		## Only answer if we are being addressed
-		if ''.join([command[3], command[4]]) == metadata.handle:
+		if ''.join([command[2], command[3]]) == metadata.handle:
 			if ''.join([command[0], command[1]]) == '/help':
 				self.log_CMD(str(command))
 				reply = str(texts.help)
@@ -87,10 +90,10 @@ class cryptoforex():
 			pass
 	def user_commands(self, command, chat_id):
 		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
-		if ''.join([command[0], command[1]]) == '/help':
+		if ''.join([command[0], command[1]]) == '/help' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/help', metadata.handle]):
 			self.log_CMD(str(command))
 			reply = str(texts.help)
-		elif ''.join([command[0], command[1]]) == '/info':
+		elif ''.join([command[0], command[1]]) == '/info' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/info', metadata.handle]):
 			self.log_CMD(str(command))
 			reply = str(texts.info)
 		else:
@@ -100,22 +103,22 @@ class cryptoforex():
 		self.bot.sendMessage(chat_id, reply)
 	def admin_commands(self, command, chat_id):
 		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
-		if command[0] == 'help':
+		if ''.join([command[0], command[1]]) == '/help' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/help', metadata.handle]):
 			self.log_CMD(str(command))
 			reply = str(texts.help)
-		elif command[0] == 'info':
+		elif ''.join([command[0], command[1]]) == '/info' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/info', metadata.handle]):
 			self.log_CMD(str(command))
 			reply = str(texts.info)
-		elif command[0] == 'admin':
+		elif ''.join([command[0], command[1]]) == '/admin' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/admin', metadata.handle]):
 			self.log_CMD(str(command))
 			reply = str(texts.info)
-		elif command[0] == 'add':
+		elif ''.join([command[0], command[1]]) == '/add' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/add', metadata.handle]):
 			pass
-		elif command[0] == 'del':
+		elif ''.join([command[0], command[1]]) == '/del' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/del', metadata.handle]):
 			pass
-		elif command[0] == 'list':
+		elif ''.join([command[0], command[1]]) == '/list' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/list', metadata.handle]):
 			pass
-		elif command[0] == 'update':
+		elif ''.join([command[0], command[1]]) == '/update' or ''.join([[command[0], command[1], command[2], command[3]]) == ''.join(['/update', metadata.handle]):
 			pass
 		else:
 			self.log_ERR("Don't know what to do with '%s' from %s" % (command, chat_id))
