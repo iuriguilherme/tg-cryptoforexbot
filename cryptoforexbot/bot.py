@@ -66,7 +66,7 @@ class cryptoforex():
 
 	def command_conv(self, command):
 		self.log.cmd(' '.join(command))
-		reply = texts.err_conv[0]
+		reply = texts.err_param[1]
 		float_pattern = re.compile('[\d.]+')
 		string_pattern = re.compile('\w+')
 		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
@@ -74,7 +74,7 @@ class cryptoforex():
 			conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
 			conv_from = str(''.join(re.findall(string_pattern, command[2])))
 			conv_to = str(''.join(re.findall(string_pattern, command[3])))
-			reply = texts.err_conv[1]
+			reply = texts.err_param[0]
 			try:
 				reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
 			except Exception as e:
@@ -91,6 +91,22 @@ class cryptoforex():
 			available_from.append(c)
 		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
 
+	def command_price(self, command):
+		self.log.cmd(' '.join(command))
+		reply = texts.err_param[2]
+		string_pattern = re.compile('\w+')
+		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
+		try:
+			crypto = str(''.join(re.findall(string_pattern, command[1])))
+			reply = texts.err_param[0]
+			try:
+				reply = self.coinmarketcap.price(crypto)
+			except Exception as e:
+				self.log.err("%s" % (e))
+		except Exception as e:
+			self.log.err("%s" % (e))
+		return reply
+
 	def group_commands(self, command, chat_id):
 		reply = "Nevermind."
 		## Only answer if we are being addressed
@@ -106,6 +122,8 @@ class cryptoforex():
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			self.log.cmd(' '.join(command))
 			reply = texts.err_group[0]
+		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
+			reply = self.command_price(command)
 		elif re.search(''.join([metadata.handle, '$']), command[0]):
 			reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
 			self.send(chat_id, reply)
@@ -125,6 +143,8 @@ class cryptoforex():
 			reply = self.command_conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			reply = self.command_list(command)
+		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
+			reply = self.command_price(command)
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
 			pass
@@ -157,6 +177,8 @@ class cryptoforex():
 			reply = self.command_conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			reply = self.command_list(command)
+		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
+			reply = self.command_price(command)
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
 		self.send(chat_id, reply)

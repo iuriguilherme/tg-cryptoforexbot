@@ -8,6 +8,9 @@ Crypto Forex Bot help
 
 This bot convert values in some cryptocurrencies to fiat currencies.
 
+To see the price info for a cryptocurrency, use /price%s <coin>
+Example: /price%s ETH
+
 To convert values, use /conv%s <value> <from> <to>
 Where <value> must be a valid float (commas will be ignored);
 <from> may be a coinmarketcap id or a cryptocurrency symbol;
@@ -16,7 +19,7 @@ Where <value> must be a valid float (commas will be ignored);
 Example: /conv%s 1,000.000 BTC USD
 
 To see a list of available currencies, type /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle)
+""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle)
 info = """
 Crypto Forex Bot information
 
@@ -65,7 +68,11 @@ and change the values to your own bot.
 Talk to @BotFather on Telegram to obtain a token.
 """
 
-err_conv = [
+err_param = [
+"""
+I'm sorry, something happened and I couldn't proccess this request.
+The admin has been notified. I think.
+""",
 """
 Incorrect parameters. Usage: /conv%s <value> <from> <to>
 
@@ -74,9 +81,12 @@ Example: /conv%s 1,000.000 BTC USD
 For a list of available currencies, try /list%s
 """ % (metadata.handle, metadata.handle, metadata.handle),
 """
-I'm sorry, something happened and I couldn't proccess this request.
-The admin has been notified. I think.
-"""
+Incorrect parameters. Usage: /price%s <coin>
+
+Example: /price%s BTC
+
+For a list of available currencies, try /list%s
+""" % (metadata.handle, metadata.handle, metadata.handle)
 ]
 
 err_valid = """
