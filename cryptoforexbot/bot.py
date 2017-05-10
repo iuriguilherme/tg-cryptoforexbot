@@ -12,7 +12,7 @@ except (ImportError, NameError):
 	print "You have to `pip install telepot`. Try again when you do."
 	exit()
 
-from cryptoforexbot import metadata, texts
+from cryptoforexbot import metadata, texts, commands
 from plugins.coinmarketcap.wrapper import coinmarketcap
 from plugins.coinmarketcap import valid as coinmarketcap_valid
 from plugins.log.stdout import stdout as log
@@ -64,72 +64,27 @@ class cryptoforex():
 		except Exception as e:
 			self.log.err(str("Telegram error: %s" % (e)))
 
-	def command_conv(self, command):
-		self.log.cmd(' '.join(command))
-		reply = texts.err_param[1]
-		float_pattern = re.compile('[\d.]+')
-		string_pattern = re.compile('\w+')
-		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
-		try:
-			conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
-			conv_from = str(''.join(re.findall(string_pattern, command[2])))
-			conv_to = str(''.join(re.findall(string_pattern, command[3])))
-			reply = texts.err_param[0]
-			try:
-				reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
-			except Exception as e:
-				self.log.err("%s" % (e))
-		except Exception as e:
-			self.log.err("%s" % (e))
-		return reply
-
-	def command_list(self, command):
-		self.log.cmd(' '.join(command))
-		available_to = ' '.join(coinmarketcap_valid.converts)
-		available_from = list()
-		for c in coinmarketcap_valid.cryptos:
-			available_from.append(c)
-		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
-
-	def command_price(self, command):
-		self.log.cmd(' '.join(command))
-		reply = texts.err_param[2]
-		string_pattern = re.compile('\w+')
-		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
-		try:
-			crypto = str(''.join(re.findall(string_pattern, command[1])))
-			reply = texts.err_param[0]
-			try:
-				reply = self.coinmarketcap.price(crypto)
-			except Exception as e:
-				self.log.err("%s" % (e))
-		except Exception as e:
-			self.log.err("%s" % (e))
-		return reply
-
 	def group_commands(self, command, chat_id):
-		reply = "Nevermind."
 		## Only answer if we are being addressed
 		#if re.search(''.join([metadata.handle, '$']), command[0]):
 		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = texts.err_group[0]
+			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = texts.err_group[0]
+			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			reply = self.command_conv(command)
+			self.send(chat_id, commands.command_conv(command))
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = texts.err_group[0]
+			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			reply = self.command_price(command)
+			self.log.cmd(' '.join(command))
+			self.send(chat_id, commands.command_conv(command))
 		elif re.search(''.join([metadata.handle, '$']), command[0]):
-			reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
-			self.send(chat_id, reply)
+			self.send(chat_id, "I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (command, chat_id))
-		self.send(chat_id, reply)
 
 	def user_commands(self, command, chat_id):
 		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
@@ -140,14 +95,16 @@ class cryptoforex():
 			self.log.cmd(' '.join(command))
 			reply = str(texts.info)
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			reply = self.command_conv(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
-			reply = self.command_list(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_list(command)
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			reply = self.command_price(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_price(command)
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
-			pass
 		self.send(chat_id, reply)
 
 	def admin_commands(self, command, chat_id):
@@ -174,11 +131,18 @@ class cryptoforex():
 			self.log.cmd(' '.join(command))
 			reply = "Not implemented."
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			reply = self.command_conv(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
-			reply = self.command_list(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_list(command)
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			reply = self.command_price(command)
+			self.log.cmd(' '.join(command))
+			reply = commands.command_price(command)
+		elif command[0] == '/send' or command[0] == ''.join(['/send', metadata.handle]):
+			self.log.cmd(' '.join(command))
+			chat_id = command[1]
+			reply = ' '.join(command[2::1])
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
 		self.send(chat_id, reply)
@@ -187,7 +151,7 @@ class cryptoforex():
 		chat_id = int(msg['chat']['id'])
 		command = list()
 		for subcommand in msg['text'].split(' '):
-			pattern = re.compile('(^[/]{1}|[@]{1}|[,.]|\w+)')
+			pattern = re.compile('(^[/]{1}|[@]{1}|[,.]|-?\d+|\n|\w+)')
 			item = ''.join(re.findall(pattern, subcommand))
 			if item != '':
 				command.append(item)

@@ -5,3 +5,4 @@ v0.0.7.a2, 2016-05-09 -- Changed versioning scheme retroactively
 v0.0.8.a, 2016-05-10 -- Coinmarketcap API
 v0.0.9.b, 2016-05-10 -- Added command for listing available currencies
 v0.0.10.b, 2016-05-10 -- Added /price
+v0.1.0.b, 2016-05-10 -- Added /send command for feedback
