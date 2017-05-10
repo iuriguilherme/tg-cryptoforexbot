@@ -13,7 +13,7 @@ except (ImportError, NameError):
 	print "You have to `pip install telepot`. Try again when you do."
 	exit()
 
-from cryptoforexbot import texts
+from cryptoforexbot import metadata, texts
 
 class cryptoforex():
 
@@ -46,9 +46,6 @@ class cryptoforex():
 			except KeyboardInterrupt:
 				self.log_INFO(str("Exiting %s." % (__name__)))
 				return
-			except ReadTimeoutError:
-				self.log_INFO(str("Telegram timeout."))
-				pass
 
 	## Standard output debugging
 	def log_INFO(self, message):
@@ -69,65 +66,84 @@ class cryptoforex():
 
 	def group_commands(self, command, chat_id):
 		reply = str()
-		if command == '/help@cryptoforexbot':
-			self.log_CMD(str(command))
-			reply = str(texts.help)
-			self.log_SEND(str(reply), str(chat_id))
-			self.bot.sendMessage(chat_id, reply)
-		elif command == '/info@cryptoforexbot':
-			self.log_CMD(str(command))
-			reply = str(texts.info)
-			self.log_SEND(str(reply), str(chat_id))
-			self.bot.sendMessage(chat_id, reply)
-		elif re.search('@cryptoforexbot$', command):
-			reply = str("I'm not sure what '%s' is. Perhaps you should try /help@cryptoforexbot" % (command))
-			self.log_SEND(str(reply), str(chat_id))
-			self.bot.sendMessage(chat_id, reply)
+		## Only answer if we are being addressed
+		if ''.join([command[3], command[4]]) == metadata.handle:
+			if ''.join([command[0], command[1]]) == '/help':
+				self.log_CMD(str(command))
+				reply = str(texts.help)
+				self.log_SEND(str(reply), str(chat_id))
+				self.bot.sendMessage(chat_id, reply)
+			elif ''.join([command[0], command[1]]) == '/info':
+				self.log_CMD(str(command))
+				reply = str(texts.info)
+				self.log_SEND(str(reply), str(chat_id))
+				self.bot.sendMessage(chat_id, reply)
+			else:
+				reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
+				self.log_SEND(str(reply), str(chat_id))
+				self.bot.sendMessage(chat_id, reply)
+		else:
+			self.log_ERR("Don't know what to do with '%s' from %s" % (command, chat_id))
+			pass
 	def user_commands(self, command, chat_id):
-		reply = str("I'm not sure what '%s' is. Perhaps you should try /help" % (command))
-		if re.search('^/help', command):
+		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
+		if ''.join([command[0], command[1]]) == '/help':
 			self.log_CMD(str(command))
 			reply = str(texts.help)
-		elif re.search('^/info', command):
+		elif ''.join([command[0], command[1]]) == '/info':
 			self.log_CMD(str(command))
 			reply = str(texts.info)
+		else:
+			self.log_ERR("Don't know what to do with '%s' from %s" % (command, chat_id))
+			pass
 		self.log_SEND(str(reply), str(chat_id))
 		self.bot.sendMessage(chat_id, reply)
 	def admin_commands(self, command, chat_id):
-		reply = str("I'm not sure what '%s' is. Perhaps you should try /admin" % (command))
-		if re.search('^/help', command):
+		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
+		if command[0] == 'help':
 			self.log_CMD(str(command))
 			reply = str(texts.help)
-		elif re.search('^/info', command):
+		elif command[0] == 'info':
 			self.log_CMD(str(command))
 			reply = str(texts.info)
-		elif re.search('^/admin', command):
+		elif command[0] == 'admin':
 			self.log_CMD(str(command))
 			reply = str(texts.info)
-		elif re.search('^/add', command):
+		elif command[0] == 'add':
 			pass
-		elif re.search('^/del', command):
+		elif command[0] == 'del':
 			pass
-		elif re.search('^/list', command):
+		elif command[0] == 'list':
 			pass
-		elif re.search('^/update', command):
+		elif command[0] == 'update':
 			pass
-		self.log_SEND(str(reply), str(chat_id))
-		self.bot.sendMessage(chat_id, reply)
+		else:
+			self.log_ERR("Don't know what to do with '%s' from %s" % (command, chat_id))
+			pass
+		try:
+			self.log_SEND(str(reply), str(chat_id))
+			self.bot.sendMessage(chat_id, reply)
+		except Exception as e:
+			self.log_ERR(str("Telegram error: %s" % (e)))
+			pass
 
 	def rcv(self, msg):
 		chat_id = int(msg['chat']['id'])
-		command = str(re.compile('/\W+').sub(' ', msg['text']).strip())
-		self.log_RCV(str(command),str(chat_id))
+		msg_text = str(msg['text'])
+		## TODO: find a way to ditch all '@' but the first one
+		pattern = re.compile('(^[/]{1}|[@]{1}|\w+)')
+		command = re.findall(pattern, msg_text)
+		
+		self.log_RCV(command,str(chat_id))
 		## If chat_id is negative, then we're talking with a group.
 		##	therefore, we'll answer only if we're being directly addressed
 		##	(command must include bot name).
 		##	Otherwise, we answer any command
 		if chat_id < 0:
-			self.group_commands(str(command), str(chat_id))
+			self.group_commands(command, str(chat_id))
 		## Admin
 		elif chat_id == self.admin_id:
-			self.admin_commands(str(command),str(chat_id))
+			self.admin_commands(command,str(chat_id))
 		else:
-			self.user_commands(str(command), str(chat_id))
+			self.user_commands(command, str(chat_id))
 
