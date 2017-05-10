@@ -1,15 +1,19 @@
 # vim:fileencoding=utf-8
 
+import re
+
+from cryptoforexbot import texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
 from plugins.coinmarketcap import valid as coinmarketcap_valid
 from plugins.log.stdout import stdout as log
 
-class commands():
+class command():
 
 	def __init__(self):
 		self.log = log()
+		self.coinmarketcap = coinmarketcap()
 
-	def command_conv(self, command):
+	def conv(self, command=[]):
 		self.log.cmd(' '.join(command))
 		reply = texts.err_param[1]
 		float_pattern = re.compile('[\d.]+')
@@ -28,7 +32,7 @@ class commands():
 			self.log.err("%s" % (e))
 		return reply
 
-	def command_list(self, command):
+	def list(self, command=[]):
 		self.log.cmd(' '.join(command))
 		available_to = ' '.join(coinmarketcap_valid.converts)
 		available_from = list()
@@ -36,7 +40,7 @@ class commands():
 			available_from.append(c)
 		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
 
-	def command_price(self, command):
+	def price(self, command=[]):
 		self.log.cmd(' '.join(command))
 		reply = texts.err_param[2]
 		string_pattern = re.compile('\w+')

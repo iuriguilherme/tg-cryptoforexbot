@@ -23,6 +23,7 @@ class cryptoforex():
 		self.log = log()
 		self.log.info(str("Starting %s" % (__name__)))
 		self.coinmarketcap = coinmarketcap()
+		self.command = commands.command()
 
 		self.config_file = str("cryptoforexbot/cryptoforexbot.cfg")
 		self.log.info(str("Opening config file: %s" % (self.config_file)))
@@ -74,13 +75,13 @@ class cryptoforex():
 			self.log.cmd(' '.join(command))
 			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			self.send(chat_id, commands.command_conv(command))
+			self.send(chat_id, self.command.conv(command))
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			self.log.cmd(' '.join(command))
 			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			self.send(chat_id, commands.command_conv(command))
+			self.send(chat_id, self.command.conv(command))
 		elif re.search(''.join([metadata.handle, '$']), command[0]):
 			self.send(chat_id, "I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
 		else:
@@ -96,13 +97,13 @@ class cryptoforex():
 			reply = str(texts.info)
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_conv(command)
+			reply = self.command.conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_list(command)
+			reply = self.command.list(command)
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_price(command)
+			reply = self.command.price(command)
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id))
 		self.send(chat_id, reply)
@@ -132,13 +133,13 @@ class cryptoforex():
 			reply = "Not implemented."
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_conv(command)
+			reply = self.command.conv(command)
 		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_list(command)
+			reply = self.command.list(command)
 		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
 			self.log.cmd(' '.join(command))
-			reply = commands.command_price(command)
+			reply = self.command.price(command)
 		elif command[0] == '/send' or command[0] == ''.join(['/send', metadata.handle]):
 			self.log.cmd(' '.join(command))
 			chat_id = command[1]
