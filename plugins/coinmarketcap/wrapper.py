@@ -34,6 +34,6 @@ class coinmarketcap():
 			response = self.api.get_ticker_id(check_from, check_to)
 			if response:
 				result = float(float(safe_value) * float(response[0][''.join(['price_',check_to.lower()])]))
-				return ''.join([str(safe_value), " ", safe_from, " = " , str(result), " ", safe_to])
+				return ''.join(["(from coinmarketcap.com): ", str(safe_value), " ", safe_from, " = " , str(result), " ", safe_to])
 		return False
 

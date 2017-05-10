@@ -108,9 +108,10 @@ class cryptoforex():
 			pass
 		elif ''.join([command[0], command[1]]) == '/conv' or ''.join([command[0], command[1], command[2], command[3]]) == ''.join(['/conv', metadata.handle]):
 			self.log.cmd(str(command))
-			reply = texts.err_conv
+			reply = texts.err_conv[0]
 			float_pattern = re.compile('[\d,.]+')
 			string_pattern = re.compile('\w+')
+			##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
 			try:
 				if command[2] == '@':
 					conv_value = float(''.join(re.findall(float_pattern, command[4])))
@@ -120,9 +121,12 @@ class cryptoforex():
 					conv_value = float(''.join(re.findall(float_pattern, command[2])))
 					conv_from = str(''.join(re.findall(string_pattern, command[3])))
 					conv_to = str(''.join(re.findall(string_pattern, command[4])))
-				reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
+				reply = texts.err_conv[1]
+				try:
+					reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
+				except Exception as e:
+					self.log.err("%s" % (e))
 			except Exception as e:
-				##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
 				self.log.err("%s" % (e))
 		else:
 			self.log.err("Don't know what to do with '%s' from %s" % (command, chat_id))
