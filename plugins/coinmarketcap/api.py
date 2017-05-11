@@ -11,7 +11,7 @@ class coinmarketcap():
 
 	def __init__(self):
 		self.api_url = 'https://api.coinmarketcap.com/v1/'
-		self.agent = str('/'.join([metadata.name, metadata.version]))
+		self.agent = str('/'.join([metadata.agent, metadata.version]))
 		self.headers = {'user-agent': self.agent}
 
 	def __get(self, url, params={'':''}):

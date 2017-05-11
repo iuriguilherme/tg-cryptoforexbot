@@ -7,3 +7,4 @@ v0.0.9.b, 2016-05-10 -- Added command for listing available currencies
 v0.0.10.b, 2016-05-10 -- Added /price
 v0.1.0.b, 2016-05-10 -- Added /send command for feedback
 v0.2.0.b, 2016-05-10 -- Changed log facility to group admin, added group admin feature
+v0.2.1.b, 2016-05-11 -- Improved commands parsing

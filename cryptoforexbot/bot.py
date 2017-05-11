@@ -12,7 +12,7 @@ except (ImportError, NameError):
 	print "You have to `pip install telepot`. Try again when you do."
 	exit()
 
-from cryptoforexbot import metadata, texts, commands
+from cryptoforexbot import group_commands, user_commands, admin_commands, metadata, texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
 from plugins.coinmarketcap import valid as coinmarketcap_valid
 from plugins.log.log_str import log_str
@@ -22,9 +22,11 @@ class cryptoforex():
 	def __init__(self):
 		self.log_str = log_str()
 		self.coinmarketcap = coinmarketcap()
-		self.command = commands.command()
+		self.group_commands = group_commands.group_commands()
+		self.user_commands = user_commands.user_commands()
+		self.admin_commands = admin_commands.admin_commands()
 
-		print(self.log_str.info("Starting %s" % (__name__)))
+		print(self.log_str.info("Starting %s" % (metadata.name)))
 		self.config_file = str("cryptoforexbot/cryptoforexbot.cfg")
 		self.config = ConfigParser.ConfigParser()
 		try:
@@ -39,7 +41,7 @@ class cryptoforex():
 			#self.log(self.log_str.err(texts.err_config))
 			print(self.log_str.err(texts.err_config))
 			#self.log(self.log_str.info("Exiting %s." % (__name__)))
-			print(self.log_str.info("Exiting %s." % (__name__)))
+			print(self.log_str.info("Exiting %s" % (metadata.name)))
 			return
 		print(self.log_str.info("Our telegram token is '%s', the admin id is '%s' and the admin group is '%s'" % (self.token, self.admin_id, self.group_id)))
 
@@ -49,13 +51,14 @@ class cryptoforex():
 		except Exception as e:
 			self.log(self.log_str.err("Telegram error: %s" % (e)))
 			pass
-		self.log(self.log_str.info("Started %s" % (__name__)))
+		self.log(self.log_str.info("Started %s" % (metadata.name)))
 
 		while 1:
 			try:
 				time.sleep(10)
 			except KeyboardInterrupt:
-				self.log(self.log_str.info("Exiting %s." % (__name__)))
+				self.log(self.log_str.info("Exiting %s" % (metadata.name)))
+				time.sleep(1)
 				return
 			except Exception as e:
 				self.log(self.log_str.err("%s" % (e)))
@@ -63,7 +66,8 @@ class cryptoforex():
 
 	def send(self, chat_id=0, reply='Nevermind.'):
 		try:
-			self.bot.sendMessage(self.group_id, self.log_str.send(chat_id, reply))
+			if chat_id != self.group_id:
+				self.bot.sendMessage(self.group_id, self.log_str.send(chat_id, reply))
 		except Exception as e:
 			self.bot.sendMessage(self.group_id, self.log_str.err('%s' % (e)))
 			print(self.log_str.err('%s' % (e)))
@@ -77,164 +81,71 @@ class cryptoforex():
 		print(reply)
 		self.send(self.group_id, reply)
 
-	def group_commands(self, chat_id, command):
-		## Only answer if we are being addressed
-		## Unless it's the /conv command
-		#if re.search(''.join([metadata.handle, '$']), command[0]):
-		if command[0] == ''.join(['/help', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			self.send(chat_id, texts.err_group[0])
-		elif command[0] == ''.join(['/info', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			self.send(chat_id, texts.err_group[0])
-		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			self.send(chat_id, self.command.conv(command))
-		elif command[0] == ''.join(['/list', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			self.send(chat_id, texts.err_group[0])
-		elif command[0] == ''.join(['/price', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			self.send(chat_id, self.command.conv(command))
-		elif re.search(''.join([metadata.handle, '$']), command[0]):
-			self.send(chat_id, "I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command), metadata.handle))
-		else:
-			self.log(self.log_str.err("Don't know what to do with '%s' from %s" % (command, chat_id)))
-
-	def user_commands(self, chat_id, command):
-		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
-		if command[0] == '/start' or command[0] == ''.join(['/start', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.help)
-		elif command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.help)
-		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.info)
-		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.conv(command)
-		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.list(command)
-		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.price(command)
-		else:
-			self.log(self.log_str.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id)))
-		self.send(chat_id, reply)
-
-	def admin_commands(self, chat_id, command):
-		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
-		if command[0] == '/start' or command[0] == ''.join(['/start', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.help)
-		elif command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.help)
-		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.info)
-		elif command[0] == '/admin' or command[0] == ''.join(['/admin', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.info)
-		elif command[0] == '/dbadd' or command[0] == ''.join(['/dbadd', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dbdel' or command[0] == ''.join(['/dbdel', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dblist' or command[0] == ''.join(['/dblist', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dbupdate' or command[0] == ''.join(['/dbupdate', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.conv(command)
-		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.list(command)
-		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.price(command)
-		elif command[0] == '/send' or command[0] == ''.join(['/send', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			chat_id = command[1]
-			reply = ' '.join(command[2::1])
-		else:
-			self.log(self.log_str.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id)))
-		self.send(chat_id, reply)
-
-	def admin_group_commands(self, chat_id, command):
-		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
-		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.help)
-		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.info)
-		elif command[0] == '/admin' or command[0] == ''.join(['/admin', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = str(texts.info)
-		elif command[0] == '/dbadd' or command[0] == ''.join(['/dbadd', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dbdel' or command[0] == ''.join(['/dbdel', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dblist' or command[0] == ''.join(['/dblist', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/dbupdate' or command[0] == ''.join(['/dbupdate', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = "Not implemented."
-		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.conv(command)
-		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.list(command)
-		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			reply = self.command.price(command)
-		elif command[0] == '/send' or command[0] == ''.join(['/send', metadata.handle]):
-			self.log(self.log_str.cmd(' '.join(command)))
-			try:
-				chat_id = command[1]
-				reply = ' '.join(command[2::1])
-			except IndexError as e:
-				self.log(self.log_str.err('%s' % (e)))
-				reply = texts.err_params[3]
-		else:
-			self.log(self.log_str.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id)))
-		self.send(chat_id, reply)
-
 	def rcv(self, msg):
 		chat_id = self.group_id
-		command = list()
+		command_list = list()
 		try:
 			chat_id = int(msg['chat']['id'])
 			for subcommand in msg['text'].split(' '):
 				pattern = re.compile('(^[/]{1}|[@]{1}|[,.]|-?\d+|\n|\w+)')
 				item = ''.join(re.findall(pattern, subcommand))
 				if item != '':
-					command.append(item)
+					command_list.append(item)
 		except Exception as e:
 			self.log(self.log_str.err('Telepot error: %s' % (e)))
 
-		self.log(self.log_str.rcv(str(chat_id), ' '.join(command)))
+		self.log(self.log_str.rcv(str(chat_id), ' '.join(command_list)))
 		## If chat_id is negative, then we're talking with a group.
 		if chat_id < 0:
-			## Group admin
+			## Admin group
 			if chat_id == self.group_id:
-				self.admin_group_commands(str(chat_id), command)
+				response = self.admin_commands.parse(chat_id, command_list)
+				if response[0]:
+					self.log(self.log_str.cmd(' '.join(command_list)))
+					if response[0] == 'send':
+						self.send(response[1], response[2])
+					else:
+						self.send(chat_id, response[2])
+				elif response[1]:
+					self.log(self.log_str.err(response[2]))
+				else:
+					response = self.group_commands.parse(chat_id, command_list)
+					if response[0]:
+						self.log(self.log_str.cmd(' '.join(command_list)))
+						self.send(chat_id, response[1])
+					else:
+						self.log(self.log_str.err(response[1]))
+			## Regular group
 			else:
-				self.group_commands(str(chat_id), command)
-		## Admin
+				response = self.group_commands.parse(chat_id, command_list)
+				if response[0]:
+					self.send(chat_id, response[1])
+				else:
+					self.log(self.log_str.err(response[1]))
+		## Admin user
 		elif chat_id == self.admin_id:
-			self.admin_commands(str(chat_id), command)
+			response = self.admin_commands.parse(chat_id, command_list)
+			if response[0]:
+				self.log(self.log_str.cmd(' '.join(command_list)))
+				if response[0] == 'send':
+					self.send(response[1], response[2])
+				else:
+					self.send(chat_id, response[2])
+			elif response[1]:
+				self.log(self.log_str.err(response[2]))
+			else:
+				response = self.user_commands.parse(chat_id, command_list)
+				if response[0]:
+					self.log(self.log_str.cmd(' '.join(command_list)))
+					self.send(chat_id, response[1])
+				else:
+					self.log(self.log_str.err(response[1]))
+		## Regular user
 		else:
-			self.user_commands(str(chat_id), command)
+			response = self.user_commands.parse(chat_id, command_list)
+			if response[0]:
+				self.log(self.log_str.cmd(' '.join(command_list)))
+				self.send(chat_id, response[1])
+			else:
+				self.log(self.log_str.err(response[1]))
 

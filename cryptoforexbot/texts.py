@@ -79,10 +79,12 @@ Talk to @BotFather on Telegram to obtain a token.
 """
 
 err_param = [
+# 0
 """
 I'm sorry, something happened and I couldn't proccess this request.
 The admin has been notified. I think.
 """,
+# 1
 """
 Incorrect parameters. Usage: /conv%s <value> <from> <to>
 
@@ -90,6 +92,7 @@ Example: /conv%s 1,000.000 BTC USD
 
 For a list of available currencies, try /list%s
 """ % (metadata.handle, metadata.handle, metadata.handle),
+# 2
 """
 Incorrect parameters. Usage: /price%s <coin>
 
@@ -97,12 +100,15 @@ Example: /price%s BTC
 
 For a list of available currencies, try /list%s
 """ % (metadata.handle, metadata.handle, metadata.handle),
+# 3
 """
 Incorrect parameters. Usage: /send%s <to> <message>
 Where <to> is a telegram id.
 
 Example: /send%s 0 This bot has been hacked
-""" % (metadata.handle, metadata.handle)
+""" % (metadata.handle, metadata.handle),
+# 4
+"Not implemented."
 ]
 
 err_valid = """

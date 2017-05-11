@@ -32,8 +32,7 @@ class bot_commands():
 			self.log.err("%s" % (e))
 		return reply
 
-	def list(self, command=[]):
-		self.log.cmd(' '.join(command))
+	def list(self):
 		available_to = ' '.join(coinmarketcap_valid.converts)
 		available_from = list()
 		for c in coinmarketcap_valid.cryptos:

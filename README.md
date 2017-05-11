@@ -45,8 +45,21 @@ Lists current available currencies that can be used with the other commands.
 Make your own
 ---
 
-If you want to make your own bot based on this one, then first get a token from [@BotFather](https://telegram.me/botfather).  
-Then install the dependencies:  
+If you want to make your own bot based on this one, then:  
+
+### Register as a Telegram Bot
+
+First get a token from [@BotFather](https://telegram.me/botfather) on Telegram. See the [bot faq](https://telegram.org/faq#bots) for reference.  
+
+### Get the working code
+
+Do not just clone the main branch. I commit everything. Use the *stable* release tag:  
+
+```bash
+$ git clone https://github.com/desci/tg-cryptoforexbot.git
+$ cd tg-cryptoforexbot
+$ git checkout stable
+```
 
 ### Dependencies
 

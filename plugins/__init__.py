@@ -1,3 +1,3 @@
 # vim:fileencoding=utf-8
-__all__ = [ 'coinmarketcap', 'log' ]
+__all__ = [ 'coinmarketcap', 'log', 'validation' ]
 
