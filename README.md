@@ -12,7 +12,41 @@ Usage
 ---
 
 You can use the bot [@criptoforexbot](https://telegram.me/cryptoforexbot) on [Telegram](https://telegram.org).  
-If you want to make your own, then first get a token from [@BotFather](https://telegram.me/botfather).  
+
+There is a telegram group if you are interested in following or helping the development: <https://t.me/joinchat/AAAAAA5gJhDL8TwBpxo5yw>  
+
+### Commands
+
+Currently available commands:
+
+#### /help
+
+Display a (helpfully) helpful information, as a guide for usage;
+
+#### /info
+
+Display information about the bot, link to the source code and the development group;
+
+#### /conv
+
+Convert values from one currency to another.
+
+Example: `/conv 0.003 BTC BRL`
+
+#### /price
+
+Display price information for a currency.
+
+Example: `/info ETH`
+
+### /list
+
+Lists current available currencies that can be used with the other commands.
+
+Make your own
+---
+
+If you want to make your own bot based on this one, then first get a token from [@BotFather](https://telegram.me/botfather).  
 Then install the dependencies:  
 
 ### Dependencies
@@ -44,9 +78,90 @@ You should see something like this:
     [2017-05-09 13:37:26.113188] RCV: Received "hi" from 123456789
 
 Where `123456789` is your telegram id. Make sure you put that in the configuration file (`cryptoforexbot.cfg` as explained above, see **Configuring**).  
-When the bot is successfully acknowledging you as an admin, send the `/admin` command to get help on how to manage the database.  
 
-Using a local database to store values is important because querying external APIs everytime an user make a request would overhead the APIs, also they could be temporary unreachable because of network lag.  
+~~When the bot is successfully acknowledging you as an admin, send the `/admin` command to get help on how to manage the database.~~  
+
+~~Using a local database to store values is important because querying external APIs everytime an user make a request would overhead the APIs, also they could be temporary unreachable because of network lag.~~  
+
+*database not yet implemented, see roadmap below*
+
+### Systemd
+
+If you are running the bot on a Linux server (or other systemd capable), use the following *systemd* service file for a daemon:
+
+```systemd
+[Unit]
+Description=tg-cryptoforexbot daemon
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python2.7 /home/user/tg-cryptoforexbot/start.py
+WorkingDirectory=/home/user/tg-cryptoforexbot/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+On a Debian system, this should reside at `/lib/systemd/system/tg-cryptoforexbot.service`.
+
+Enable the service and start:
+
+```bash
+# systemctl daemon-reload
+# systemctl enable tg-cryptoforexbot.service
+# systemctl -l start tg-cryptoforexbot.service
+```
+
+To see if it's working:
+
+```bash
+# systemctl -l status tg-cryptoforexbot.service
+```
+
+To stop:
+
+```bash
+# systemctl stop tg-cryptoforexbot.service
+```
+
+Or restart:
+
+```bash
+# systemctl -l restart tg-cryptoforexbot.service
+```
+
+#### Crontab
+
+You can also put a watchdog cronjob to make sure it will restart on failure:
+
+```bash
+# crontab -e
+```
+
+Add a line like this in the crontab:
+
+```crontab
+*/10 * * * * /usr/lib/systemctl is-active tg-cryptoforexbot.service || /usr/lib/systemctl start tg-cryptoforexbot.service
+```
+
+This would check every 10 minutes if the bot is running and start it in case it wasn't.
+
+Roadmap
+---
+
+### TODO
+
+- [ ] Add as many currencies as possible;
+
+- [ ] Use as many external websites API as possible, in case some of them gets rate limit or suffer downtime;
+
+- [ ] Use sqlite or other database to store coin information and values;
+
+- [ ] Use inline commmands;
+
+- [ ] Translations;
 
 Disclaimer
 ---
