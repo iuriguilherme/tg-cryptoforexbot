@@ -5,7 +5,6 @@ What
 ---
 
 This is a [Python](https://python.org) [Telegram bot](https://telegram.org/faq#bots) to convert values between [crypto](https://en.wikipedia.org/wiki/Criptocurrency) and [fiat](https://en.wikipedia.org/wiki/Fiat_money) currencies.  
-It is currently pre-alpha and does not do anything.  
 The intended implementation resides at [@criptoforexbot](https://telegram.me/cryptoforexbot).  
 
 Usage
