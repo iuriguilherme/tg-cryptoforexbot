@@ -1,20 +1,19 @@
 # vim:fileencoding=utf-8
+## TODO: Debug logging
 
 import re
 
 from cryptoforexbot import texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
 from plugins.coinmarketcap import valid as coinmarketcap_valid
-from plugins.log.stdout import stdout as log
 
 class bot_commands():
 
 	def __init__(self):
-		self.log = log()
 		self.coinmarketcap = coinmarketcap()
 
 	def conv(self, command=[]):
-		self.log.cmd(' '.join(command))
+		print(' '.join(['DEBUG:', command]))
 		reply = texts.err_param[1]
 		float_pattern = re.compile('[\d.]+')
 		string_pattern = re.compile('\w+')
@@ -27,9 +26,9 @@ class bot_commands():
 			try:
 				reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
 			except Exception as e:
-				self.log.err("%s" % (e))
+				print("DEBUG: %s" % (e))
 		except Exception as e:
-			self.log.err("%s" % (e))
+			print("DEBUG: %s" % (e))
 		return reply
 
 	def list(self):
@@ -40,7 +39,7 @@ class bot_commands():
 		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
 
 	def price(self, command=[]):
-		self.log.cmd(' '.join(command))
+		print(' '.join(['DEBUG:', command]))
 		reply = texts.err_param[2]
 		string_pattern = re.compile('\w+')
 		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
@@ -50,8 +49,8 @@ class bot_commands():
 			try:
 				reply = self.coinmarketcap.price(crypto)
 			except Exception as e:
-				self.log.err("%s" % (e))
+				print("DEBUG: %s" % (e))
 		except Exception as e:
-			self.log.err("%s" % (e))
+			print("DEBUG: %s" % (e))
 		return reply
 

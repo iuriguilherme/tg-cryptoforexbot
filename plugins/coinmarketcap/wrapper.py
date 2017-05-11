@@ -1,17 +1,16 @@
 # vim:fileencoding=utf-8
+## TODO: Debug logging
 
 import re
 
 from plugins.coinmarketcap.api import coinmarketcap as api
 from plugins.coinmarketcap import valid
 from cryptoforexbot import texts
-from plugins.log.stdout import stdout as log
 
 class coinmarketcap():
 
 	def __init__(self):
 		self.api = api()
-		self.log = log()
 
 	def test_crypto(self, d, t):
 		for l in d:
@@ -37,7 +36,7 @@ class coinmarketcap():
 			response = self.api.get_ticker_id(check_from, check_to)
 			if response:
 				result = float(float(safe_value) * float(response[0][''.join(['price_',check_to.lower()])]))
-				return ''.join(["(from coinmarketcap.com): ", '{:,}'.format(safe_value), " ", safe_from, " = " , '{:,}'.format(result), " ", safe_to])
+				return ' '.join(["(from coinmarketcap.com):", '{:,}'.format(safe_value), safe_from, "=" , '{:,}'.format(result), safe_to])
 		else:
 			return texts.err_valid
 		return False
@@ -48,12 +47,12 @@ class coinmarketcap():
 		try:
 			check_crypto = self.test_crypto(valid.cryptos, safe_crypto)
 		except Exception as e:
-			self.log.debug('1 %s' % (e))
+			print('DEBUG: %s' % (e))
 		if check_crypto:
 			try:
 				response = self.api.get_ticker_id(check_crypto, '')
 			except Exception as e:
-				self.log.debug('1 %s' % (e))
+				print('DEBUG: %s' % (e))
 			if response:
 				return """
 Price information for %s (from coinmarketcap.com)
