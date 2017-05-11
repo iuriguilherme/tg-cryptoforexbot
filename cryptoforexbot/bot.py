@@ -63,17 +63,15 @@ class cryptoforex():
 
 	def send(self, chat_id=0, reply='Nevermind.'):
 		try:
-			self.bot.sendMessage(self.group_id, self.log_str.send(str(self.group_id), str(reply)))
+			self.bot.sendMessage(self.group_id, self.log_str.send(chat_id, reply))
 		except Exception as e:
 			self.bot.sendMessage(self.group_id, self.log_str.err('%s' % (e)))
-			print(self.log_str.err(str(chat_id), '%s' % (e)))
+			print(self.log_str.err('%s' % (e)))
 		try:
 			self.bot.sendMessage(chat_id, reply)
 		except Exception as e:
-			self.bot.sendMessage(self.group_id, self.log_str.err(str(chat_id), 'Telegram error: %s' % (e)))
-			print(self.log_str.err(str("Telegram error: %s" % (e))))
-			self.send(self.group_id, reply)
-			pass
+			self.bot.sendMessage(self.group_id, self.log_str.err('Telegram error: %s' % (e)))
+			print(self.log_str.err('Telegram error: %s' % (e)))
 
 	def log(self, reply):
 		print(reply)
@@ -104,7 +102,10 @@ class cryptoforex():
 
 	def user_commands(self, chat_id, command):
 		reply = str("I'm not sure what you mean with'%s'.\nPerhaps you should try /help" % (' '.join(command)))
-		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
+		if command[0] == '/start' or command[0] == ''.join(['/start', metadata.handle]):
+			self.log(self.log_str.cmd(' '.join(command)))
+			reply = str(texts.help)
+		elif command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.help)
 		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
@@ -125,14 +126,17 @@ class cryptoforex():
 
 	def admin_commands(self, chat_id, command):
 		reply = str("I'm not sure what you mean with '%s'.\nPerhaps you should try /admin" % (' '.join(command)))
-		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
+		if command[0] == '/start' or command[0] == ''.join(['/start', metadata.handle]):
+			self.log(self.log_str.cmd(' '.join(command)))
+			reply = str(texts.help)
+		elif command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.help)
 		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.info)
 		elif command[0] == '/admin' or command[0] == ''.join(['/admin', metadata.handle]):
-			self.log(self.log_str.cmd(str(command)))
+			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.info)
 		elif command[0] == '/dbadd' or command[0] == ''.join(['/dbadd', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
@@ -172,7 +176,7 @@ class cryptoforex():
 			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.info)
 		elif command[0] == '/admin' or command[0] == ''.join(['/admin', metadata.handle]):
-			self.log(self.log_str.cmd(str(command)))
+			self.log(self.log_str.cmd(' '.join(command)))
 			reply = str(texts.info)
 		elif command[0] == '/dbadd' or command[0] == ''.join(['/dbadd', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
