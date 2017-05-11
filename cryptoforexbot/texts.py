@@ -96,7 +96,13 @@ Incorrect parameters. Usage: /price%s <coin>
 Example: /price%s BTC
 
 For a list of available currencies, try /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle)
+""" % (metadata.handle, metadata.handle, metadata.handle),
+"""
+Incorrect parameters. Usage: /send%s <to> <message>
+Where <to> is a telegram id.
+
+Example: /send%s 0 This bot has been hacked
+""" % (metadata.handle, metadata.handle)
 ]
 
 err_valid = """

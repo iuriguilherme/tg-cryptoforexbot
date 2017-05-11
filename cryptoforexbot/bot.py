@@ -49,6 +49,7 @@ class cryptoforex():
 		except Exception as e:
 			self.log(self.log_str.err("Telegram error: %s" % (e)))
 			pass
+		self.log(self.log_str.info("Started %s" % (__name__)))
 
 		while 1:
 			try:
@@ -61,11 +62,17 @@ class cryptoforex():
 				continue
 
 	def send(self, chat_id=0, reply='Nevermind.'):
-		print(self.log_str.send(str(chat_id), str(reply)))
+		try:
+			self.bot.sendMessage(self.group_id, self.log_str.send(str(self.group_id), str(reply)))
+		except Exception as e:
+			self.bot.sendMessage(self.group_id, self.log_str.err('%s' % (e)))
+			print(self.log_str.err(str(chat_id), '%s' % (e)))
 		try:
 			self.bot.sendMessage(chat_id, reply)
 		except Exception as e:
+			self.bot.sendMessage(self.group_id, self.log_str.err(str(chat_id), 'Telegram error: %s' % (e)))
 			print(self.log_str.err(str("Telegram error: %s" % (e))))
+			self.send(self.group_id, reply)
 			pass
 
 	def log(self, reply):
@@ -74,19 +81,20 @@ class cryptoforex():
 
 	def group_commands(self, chat_id, command):
 		## Only answer if we are being addressed
+		## Unless it's the /conv command
 		#if re.search(''.join([metadata.handle, '$']), command[0]):
-		if command[0] == '/help' or command[0] == ''.join(['/help', metadata.handle]):
+		if command[0] == ''.join(['/help', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			self.send(chat_id, texts.err_group[0])
-		elif command[0] == '/info' or command[0] == ''.join(['/info', metadata.handle]):
+		elif command[0] == ''.join(['/info', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			self.send(chat_id, texts.err_group[0])
 		elif command[0] == '/conv' or command[0] == ''.join(['/conv', metadata.handle]):
 			self.send(chat_id, self.command.conv(command))
-		elif command[0] == '/list' or command[0] == ''.join(['/list', metadata.handle]):
+		elif command[0] == ''.join(['/list', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			self.send(chat_id, texts.err_group[0])
-		elif command[0] == '/price' or command[0] == ''.join(['/price', metadata.handle]):
+		elif command[0] == ''.join(['/price', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
 			self.send(chat_id, self.command.conv(command))
 		elif re.search(''.join([metadata.handle, '$']), command[0]):
@@ -189,8 +197,12 @@ class cryptoforex():
 			reply = self.command.price(command)
 		elif command[0] == '/send' or command[0] == ''.join(['/send', metadata.handle]):
 			self.log(self.log_str.cmd(' '.join(command)))
-			chat_id = command[1]
-			reply = ' '.join(command[2::1])
+			try:
+				chat_id = command[1]
+				reply = ' '.join(command[2::1])
+			except IndexError as e:
+				self.log(self.log_str.err('%s' % (e)))
+				reply = texts.err_params[3]
 		else:
 			self.log(self.log_str.err("Don't know what to do with '%s' from %s" % (' '.join(command), chat_id)))
 		self.send(chat_id, reply)
