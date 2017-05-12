@@ -52,6 +52,29 @@ class bot_commands():
 						return (False, True, texts.err_internal)
 				except Exception as e:
 					return (False, False, '%s' % (e))
+			elif from_type == 'fiat' and to_type == 'crypto':
+				try:
+					try:
+						response = self.coinmarketcap.conv(to_id, from_id)
+					except Exception as e:
+						return (False, False, '%s' % (e))
+					if response[0]:
+						try:
+							result = float(float(float(conv_value) * 1.0) / float(response[2][0][''.join(['price_',from_id.lower()])]))
+						except Exception as e:
+							return (False, False, '%s' % (e))
+						try:
+							return (True, True, ' '.join(["(from coinmarketcap.com):", ' '.join(['$', '{:,.2f}'.format(float(conv_value))]), from_name, "=" , '{:,.8f}'.format(float(result)), to_name]))
+						except Exception as e:
+							return (False, False, '%s' % (e))
+					elif response_to[1]:
+						return (False, True, response_to[2])
+					elif response_to[2]:
+						return (False, False, response_to[2])
+					else:
+						return (False, True, texts.err_internal)
+				except Exception as e:
+					return (False, False, '%s' % (e))
 			else:
 				return (False, False, False)
 		except Exception as e:
