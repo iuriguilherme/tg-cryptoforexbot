@@ -70,6 +70,11 @@ If you have a better idea than to use something other than SDR, let me know.
 
 For currency symbols reference, see https://en.wikipedia.org/wiki/ISO_4217
 """
+feedback = """
+Your message was sent. I think.
+Feedback is much appreciated and of the utmost importance for the development.
+Thank you very much, you are so kind!
+"""
 
 ## Errors
 err_config = """

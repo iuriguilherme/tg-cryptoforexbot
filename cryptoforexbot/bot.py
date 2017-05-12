@@ -145,8 +145,13 @@ class cryptoforex():
 				if response[0]:
 					self.log(self.log_str.cmd(' '.join(command_list)))
 					if response[0] == 'feedback':
-						## Change group_id to admin_id to send as private message
-						self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+						if response[1]:
+							## Change group_id to admin_id to send as private message
+							self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+							self.send(chat_id, texts.feedback)
+						else:
+							self.log(self.log_str.err(response[2]))
+							self.send(chat_id, response[2])
 					else:
 						self.send(chat_id, response[2])
 				elif response[1]:
@@ -154,6 +159,7 @@ class cryptoforex():
 					self.send(chat_id, response[2])
 				elif response[2]:
 					self.log(self.log_str.err(response[2]))
+					self.send(chat_id, texts.err_internal)
 				else:
 					self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))
 		## Regular user
@@ -162,8 +168,13 @@ class cryptoforex():
 			if response[0]:
 				self.log(self.log_str.cmd(' '.join(command_list)))
 				if response[0] == 'feedback':
-					## Change group_id to admin_id to send as private message
-					self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+					if response[1]:
+						## Change group_id to admin_id to send as private message
+						self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+						self.send(chat_id, texts.feedback)
+					else:
+						self.log(self.log_str.err(response[2]))
+						self.send(chat_id, response[2])
 				else:
 					self.send(chat_id, response[2])
 			elif response[1]:
@@ -171,6 +182,7 @@ class cryptoforex():
 				self.send(chat_id, response[2])
 			elif response[2]:
 				self.log(self.log_str.err(response[2]))
+				self.send(chat_id, texts.err_internal)
 			else:
 				self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))
 

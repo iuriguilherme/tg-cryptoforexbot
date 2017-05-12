@@ -4,10 +4,12 @@
 import re
 from cryptoforexbot import bot_commands, metadata, texts
 from plugins.log.log_str import log_str
+from plugins.validation.args import valid
 
 class user_commands():
 	def __init__(self):
 		self.log_str = log_str()
+		self.valid = valid()
 		self.bot_commands = bot_commands.bot_commands()
 	def parse(self, chat_id, command_list):
 		try:
@@ -19,7 +21,20 @@ class user_commands():
 			elif command_list[0] == '/info' or command_list[0] == ''.join(['/info', metadata.handle]):
 				return (True, True, texts.info)
 			elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
-				return (True, True, self.bot_commands.conv(command_list))
+				try:
+					if len(command_list) == 4:
+						response = self.bot_commands.conv(command_list)
+						if response[0]:
+							return (True, True, response[2])
+						elif response[1]:
+							return (False, True, response[2])
+						elif response[2]:
+							return (False, False, response[2])
+					else:
+						return (False, True, texts.err_param[1])
+				except Exception as e:
+					return (False, False, '%s' % (e))
+				return (False, True, texts.err_internal)
 			elif command_list[0] == '/price' or command_list[0] == ''.join(['/price', metadata.handle]):
 				return (True, True, self.bot_commands.price(command_list))
 			elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
@@ -32,7 +47,7 @@ class user_commands():
 					if len(command_list) > 1:
 						return ('feedback', True, ' '.join(command_list[1::1]))
 					else:
-						return (False, True, texts.err_param[5])
+						return ('feedback', False, texts.err_param[5])
 					return (False, False, False)
 				except Exception as e:
 					return (False, False, '%s' % (e))
