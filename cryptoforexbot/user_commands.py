@@ -42,7 +42,7 @@ class user_commands():
 										valid_convert = self.coinmarketcap_valid.coin(command_list[3])
 										if valid_convert[0]:
 											try:
-												response = self.bot_commands.conv(command_list[1], valid_crypto[1], valid_crypto[2], valid_convert[1], valid_convert[2])
+												response = self.bot_commands.conv(command_list[1], (valid_crypto[1], valid_crypto[2]), (valid_convert[1], valid_convert[2]))
 												if response[0]:
 													return (True, True, response[2])
 												elif response[1]:

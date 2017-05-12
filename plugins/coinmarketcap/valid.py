@@ -13,7 +13,7 @@ class valid():
 			for crypto in valid_cryptos:
 				for symbol in valid_cryptos[crypto]['symbols']:
 					if string.lower() == symbol.lower():
-						return (True, True, valid_cryptos[crypto]['coinmarketcap_id'])
+						return (True, True, (valid_cryptos[crypto]['coinmarketcap_id'], valid_cryptos[crypto]['name']))
 			return (False, True, "Unsupported crypto")
 		except Exception as e:
 			return (False, False, '%s' % (e))
@@ -24,7 +24,7 @@ class valid():
 			for convert in valid_converts:
 				for symbol in valid_converts[convert]['symbols']:
 					if string.lower() == symbol.lower():
-						return (True, True, str(valid_converts[convert]['coinmarketcap_id']))
+						return (True, True, (valid_converts[convert]['coinmarketcap_id'], valid_converts[convert]['name']))
 			return (False, True, "Unsupported fiat")
 		except Exception as e:
 			return (False, False, '%s' % (e))

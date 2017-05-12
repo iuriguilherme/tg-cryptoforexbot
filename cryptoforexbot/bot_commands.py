@@ -11,15 +11,14 @@ class bot_commands():
 	def __init__(self):
 		self.coinmarketcap = coinmarketcap()
 
-	def conv(self, conv_value, (from_type, from_id, from_name), (to_type, to_id, to_name)):
-		print('DEBUG: %s %s %s %s' % (from_type, from_id, to_type, to_id))
+	def conv(self, conv_value, (from_type, (from_id, from_name)), (to_type, (to_id, to_name))):
 		try:
 			if from_type == 'crypto' and to_type == 'fiat':
 				try:
 					response = self.coinmarketcap.conv(from_id, to_id)
 					if response[0]:
 						result = float(float(conv_value) * float(response[2][0][''.join(['price_',to_id.lower()])]))
-						return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_id, "=" , ' '.join(['$', '{:,.2f}'.format(float(result)), to_id])]))
+						return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_name, "=" , ' '.join(['$', '{:,.2f}'.format(float(result)), to_name])]))
 					elif response[1]:
 						return (False, True, response[2])
 					elif response[2]:
@@ -42,7 +41,7 @@ class bot_commands():
 						except Exception as e:
 							return (False, False, '%s' % (e))
 						try:
-							return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_id, "=" , '{:,.8f}'.format(float(result)), to_id]))
+							return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_name, "=" , '{:,.8f}'.format(float(result)), to_name]))
 						except Exception as e:
 							return (False, False, '%s' % (e))
 					elif response_to[1]:
