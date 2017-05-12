@@ -114,34 +114,17 @@ class bot_commands():
 				return (False, True, '%s' % (e))
 
 			reply = list()
-			reply.append("Symbols are case insensitive. Currently we only support converting from cryptocurrencies to fiat currencies available at coinmarketcap.")
+			reply.append("Aliases are case insensitive. Currently we only support currencies available at coinmarketcap.")
 			reply.append('')
-			reply.append('')
-
-			reply_from = list()
-			reply_from.append("Supported currencies you can convert <from>:")
-			reply_from.append('')
-
-			reply_from_currencies = list()
-			for crypto in cryptos_dict:
-				reply_from_currencies.append(''.join([cryptos_dict[crypto]['name'], ' - symbol can be any of: ']))
-				reply_from_currencies_symbols = list()
-				for symbol in cryptos_dict[crypto]['symbols']:
-					reply_from_currencies_symbols.append(symbol)
-				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
-				reply_from_currencies.append('\n')
-			reply_from.append(''.join(reply_from_currencies))
-
-			reply.append('\n'.join(reply_from))
 			reply.append('')
 
 			reply_to = list()
-			reply_to.append("Supported currencies you can convert <to>:")
+			reply_to.append("Available fiat currencies:")
 			reply_to.append('')
 
 			reply_to_currencies = list()
 			for convert in converts_dict:
-				reply_to_currencies.append(''.join([converts_dict[convert]['name'], ' - symbol can be any of: ']))
+				reply_to_currencies.append(''.join([converts_dict[convert]['name'], ' - aliases: ']))
 				reply_to_currencies_symbols = list()
 				for symbol in converts_dict[convert]['symbols']:
 					reply_to_currencies_symbols.append(symbol)
@@ -150,13 +133,30 @@ class bot_commands():
 			reply_to.append(''.join(reply_to_currencies))
 
 			reply.append('\n'.join(reply_to))
+			reply.append('')
+
+			reply_from = list()
+			reply_from.append("Available cryptocurrencies:")
+			reply_from.append('')
+
+			reply_from_currencies = list()
+			for crypto in cryptos_dict:
+				reply_from_currencies.append(''.join([cryptos_dict[crypto]['name'], ' - aliases: ']))
+				reply_from_currencies_symbols = list()
+				for symbol in cryptos_dict[crypto]['symbols']:
+					reply_from_currencies_symbols.append(symbol)
+				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
+				reply_from_currencies.append('\n')
+			reply_from.append(''.join(reply_from_currencies))
+
+			reply.append('\n'.join(reply_from))
 
 			try:
 				return (True, True, '\n'.join(reply))
 			except Exception as e:
 				return (False, True, '%s' % (e))
 		except Exception as e:
-			return (False, False, '%s' % (e))
+			return (False, True, '%s' % (e))
 		return (False, False, False)
 
 	def price(self, coin_id):

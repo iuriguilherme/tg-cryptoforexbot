@@ -118,7 +118,7 @@ class user_commands():
 				if response[0]:
 					return (True, True, response[2])
 				elif response[1]:
-					return (False, True, texts.err_internal)
+					return (False, True, response[2])
 				elif response[2]:
 					return (False, False, response[2])
 				else:
