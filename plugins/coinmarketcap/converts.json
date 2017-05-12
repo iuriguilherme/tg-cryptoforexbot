@@ -42,7 +42,7 @@
 			"loonie",
 			"buck",
 			"huard",
-			"piastre",
+			"piastre"
 		],
 		"coinmarketcap_id": "CAD",
 		"decoration": "C$%s",
@@ -79,8 +79,7 @@
 			"EUR",
 			"euro",
 			"euros",
-			"u'evró'",
-			"u'euró'",
+			"evro",
 			"eiro",
 			"euras",
 			"ewro"
