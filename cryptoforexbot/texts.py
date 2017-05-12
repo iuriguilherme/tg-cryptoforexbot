@@ -122,11 +122,27 @@ Example: /feedback%s This bot doesn't work!
 """ % (metadata.handle, metadata.handle),
 ]
 
-err_valid = """
+err_valid = [
+# 0
+"""
 You've sent an unsupported or inexistent currency.
 
 To see all available currencies, try /list%s
-""" % (metadata.handle)
+""" % (metadata.handle),
+# 1
+"""
+You've sent an invalid value or not a number.
+
+The decimal separator is a comma and it's optional.
+
+Valid examples for value:
+1
+1.00000000
+1000
+1,000.0000
+10000.0
+"""
+]
 
 err_group = [
 "This command is only available as a private message. Click on %s to message me." % (metadata.handle)

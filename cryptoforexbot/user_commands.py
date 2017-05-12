@@ -3,14 +3,16 @@
 
 import re
 from cryptoforexbot import bot_commands, metadata, texts
-from plugins.log.log_str import log_str
+#from plugins.log.log_str import log_str
 from plugins.validation.args import valid
+from plugins.coinmarketcap import valid as coinmarketcap_valid
 
 class user_commands():
 	def __init__(self):
-		self.log_str = log_str()
+#		self.log_str = log_str()
 		self.valid = valid()
 		self.bot_commands = bot_commands.bot_commands()
+		self.coinmarketcap_valid = coinmarketcap_valid.valid()
 	def parse(self, chat_id, command_list):
 		try:
 			## TODO: Use a better pythonic switch/case workaround
@@ -23,15 +25,35 @@ class user_commands():
 			elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
 				try:
 					if len(command_list) == 4:
-						response = self.bot_commands.conv(command_list)
-						if response[0]:
-							return (True, True, response[2])
-						elif response[1]:
-							return (False, True, response[2])
-						elif response[2]:
-							return (False, False, response[2])
+						if self.valid.is_number(command_list[1]):
+							valid_crypto = self.coinmarketcap_valid.crypto(command_list[2])
+							if valid_crypto:
+								valid_convert = self.coinmarketcap_valid.convert(command_list[3])
+								if valid_convert:
+									try:
+										response = self.bot_commands.conv(command_list[1], valid_crypto[2], valid_convert[2])
+										if response[0]:
+											return (True, True, response[2])
+										elif response[1]:
+											return (False, True, response[2])
+										elif response[2]:
+											return (False, False, response[2])
+										else:
+											return (False, False, False)
+											## This identation level is also known as "python street fighter"
+											## https://twitter.com/dr4goonis/status/476617165463105536
+									except Exception as e:
+										return (False, False, '%s' % (e))
+									return (False, True, texts.err_internal)
+								else:
+									return (False, True, texts.err_valid[0])
+							else:
+								return (False, True, texts.err_valid[0])
+						else:
+							return (False, True, texts.err_valid[1])
 					else:
 						return (False, True, texts.err_param[1])
+					return (False, False, False)
 				except Exception as e:
 					return (False, False, '%s' % (e))
 				return (False, True, texts.err_internal)

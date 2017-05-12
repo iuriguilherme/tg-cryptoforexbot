@@ -27,20 +27,14 @@ class coinmarketcap():
 		return False
 
 	def conv(self, conv_value=0.0, conv_from='BTC', conv_to='USD'):
-		safe_value = conv_value
-		safe_from = conv_from
-		safe_to = conv_to
-
-		check_from = self.test_crypto(valid.cryptos, safe_from)
-		check_to = self.test_convert(valid.converts, safe_to)
-		if check_from and check_to:
-			response = self.api.get_ticker_id(check_from, check_to)
-			if response:
-				result = float(float(safe_value) * float(response[0][''.join(['price_',check_to.lower()])]))
-				return ' '.join(["(from coinmarketcap.com):", '{:,}'.format(safe_value), safe_from, "=" , '{:,}'.format(result), safe_to])
-		else:
-			return texts.err_valid
-		return False
+		try:
+			response = self.api.get_ticker_id(conv_from, conv_to)
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		if response:
+			result = float(float(conv_value) * float(response[0][''.join(['price_',conv_to.lower()])]))
+			return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,}'.format(float(conv_value)), conv_from, "=" , '{:,}'.format(float(result)), conv_to]))
+		return (False, True, texts.err_internal)
 
 	def price(self, crypto='BTC'):
 		safe_crypto = crypto

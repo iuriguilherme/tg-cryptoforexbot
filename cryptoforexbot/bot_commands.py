@@ -6,32 +6,28 @@ import json
 
 from cryptoforexbot import texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
-from plugins.coinmarketcap import valid as coinmarketcap_valid
+#from plugins.coinmarketcap import valid as coinmarketcap_valid
 
 class bot_commands():
 
 	def __init__(self):
 		self.coinmarketcap = coinmarketcap()
-		self.coinmarketcap_valid = coinmarketcap_valid.valid()
+#		self.coinmarketcap_valid = coinmarketcap_valid.valid()
 
-	def conv(self, command=[]):
-		print(' '.join(['DEBUG:', ' '.join(command)]))
-		reply = texts.err_param[1]
-		float_pattern = re.compile('[\d.]+')
-		string_pattern = re.compile('\w+')
-		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
+	def conv(self, conv_value, conv_from, conv_to):
 		try:
-			conv_value = float(str(''.join(re.findall(float_pattern, command[1]))))
-			conv_from = str(''.join(re.findall(string_pattern, command[2])))
-			conv_to = str(''.join(re.findall(string_pattern, command[3])))
-			reply = texts.err_param[0]
-			try:
-				reply = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
-			except Exception as e:
-				print("DEBUG: %s" % (e))
+			response = self.coinmarketcap.conv(conv_value, conv_from, conv_to)
+			if response[0]:
+				return (True, True, response[2])
+			elif response[1]:
+				return (False, True, response[2])
+			elif response[2]:
+				return (False, False, response[2])
+			else:
+				return (False, True, texts.err_internal)
 		except Exception as e:
-			print("DEBUG: %s" % (e))
-		return reply
+			return (False, False, '%s' % (e))
+		return (False, True, texts.err_internal)
 
 	def list(self):
 		## TODO: Treat json exceptions, use three arguments for return
@@ -94,16 +90,16 @@ class bot_commands():
 		return reply
 
 	def debug(self, param):
-		try:
-			response = self.coinmarketcap_valid.convert(param)
-			if response[0]:
-				return (True, True, response[2])
-			elif response[1]:
-				return (False, True, response[2])
-			elif response[2]:
-				return (False, False, response[2])
-			return (False, False, False)
-		except Exception as e:
-			return (False, False, '%s' % (e))
+#		try:
+#			response = self.coinmarketcap_valid.convert(param)
+#			if response[0]:
+#				return (True, True, response[2])
+#			elif response[1]:
+#				return (False, True, response[2])
+#			elif response[2]:
+#				return (False, False, response[2])
+#			return (False, False, False)
+#		except Exception as e:
+#			return (False, False, '%s' % (e))
 		return (False, False, False)
 

@@ -3,27 +3,64 @@
 
 import re
 from cryptoforexbot import bot_commands, metadata, texts
+from plugins.validation.args import valid
+from plugins.coinmarketcap import valid as coinmarketcap_valid
 
 class group_commands():
 	def __init__(self):
+		self.valid = valid()
 		self.bot_commands = bot_commands.bot_commands()
+		self.coinmarketcap_valid = coinmarketcap_valid.valid()
 	def parse(self, chat_id, command_list):
 		## TODO: Use a better pythonic switch/case workaround
 		## Only answer if we are being addressed
 		## Unless it's the /conv command
 		#if re.search(''.join([metadata.handle, '$']), command_list[0]):
 		if command_list[0] == ''.join(['/help', metadata.handle]):
-			return (True, texts.err_group[0])
+			return (True, True, texts.err_group[0])
 		elif command_list[0] == ''.join(['/info', metadata.handle]):
-			return (True, texts.err_group[0])
+			return (True, True, texts.err_group[0])
 		elif command_list[0] == ''.join(['/list', metadata.handle]):
-			return (True, texts.err_group[0])
+			return (True, True, texts.err_group[0])
 		elif command_list[0] == ''.join(['/price', metadata.handle]):
-			return (True, self.bot_commands.price(command_list))
+			return (True, True, self.bot_commands.price(command_list))
 		elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
-			return (True, self.bot_commands.conv(command_list))
+				try:
+					if len(command_list) == 4:
+						if self.valid.is_number(command_list[1]):
+							valid_crypto = self.coinmarketcap_valid.crypto(command_list[2])
+							if valid_crypto:
+								valid_convert = self.coinmarketcap_valid.convert(command_list[3])
+								if valid_convert:
+									try:
+										response = self.bot_commands.conv(command_list[1], valid_crypto[2], valid_convert[2])
+										if response[0]:
+											return (True, True, response[2])
+										elif response[1]:
+											return (False, True, response[2])
+										elif response[2]:
+											return (False, False, response[2])
+										else:
+											return (False, False, False)
+											## This identation level is also known as "python street fighter"
+											## https://twitter.com/dr4goonis/status/476617165463105536
+									except Exception as e:
+										return (False, False, '%s' % (e))
+									return (False, True, texts.err_internal)
+								else:
+									return (False, True, texts.err_valid[0])
+							else:
+								return (False, True, texts.err_valid[0])
+						else:
+							return (False, True, texts.err_valid[1])
+					else:
+						return (False, True, texts.err_param[1])
+					return (False, False, False)
+				except Exception as e:
+					return (False, False, '%s' % (e))
+				return (False, True, texts.err_internal)
 		elif re.search(''.join([metadata.handle, '$']), command_list[0]):
-			return (True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command_list), metadata.handle)))
+			return (True, True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command_list), metadata.handle)))
 		else:
-			return (False, "Don't know what to do with '%s' from %s" % (' '.join(command_list), chat_id))
+			return (False, False, "Don't know what to do with '%s' from %s" % (' '.join(command_list), chat_id))
 
