@@ -108,6 +108,8 @@ class cryptoforex():
 						self.send(chat_id, response[2])
 				elif response[1]:
 					self.log(self.log_str.err(response[2]))
+				elif response[2]:
+					self.log(self.log_str.debug(response[2]))
 				else:
 					response = self.group_commands.parse(chat_id, command_list)
 					if response[0]:
@@ -133,6 +135,8 @@ class cryptoforex():
 					self.send(chat_id, response[2])
 			elif response[1]:
 				self.log(self.log_str.err(response[2]))
+			elif response[2]:
+				self.log(self.log_str.debug(response[2]))
 			else:
 				response = self.user_commands.parse(chat_id, command_list)
 				if response[0]:

@@ -1,4 +1,30 @@
 # vim:fileencoding=utf-8
-converts = ['USD', 'AUD', 'BRL', 'CAD', 'CHF', 'CNY', 'EUR', 'GBP', 'HKD', 'IDR', 'INR', 'JPY', 'KRW', 'MXN', 'RUB']
-cryptos = {'bitcoin': ['bitcoin', 'BITCOIN', 'Bitcoin', 'btc', 'BTC', 'Btc', 'xbt', 'XBT', 'Xbt'], 'ethereum': ['ethereum', 'ETH'], 'ripple': ['ripple', 'XRP'], 'litecoin': ['litecoin', 'LTC'], 'nem': ['nem', 'NEM', 'XEM'], 'dash': ['dash', 'DASH'], 'ethereum-classic': ['ethereum-classic', 'ETC'], 'monero': ['monero', 'XEM'], 'stellar': ['stellar'], 'steem': ['steem', 'STEEM'], 'golem-network-tokens': ['golem-network-tokens', 'GNT'], 'augur': ['augur'], 'maidsafecoin': ['maidsafecoin', 'MAID'], 'dogecoin': ['dogecoin', 'DOGE', 'XDG'], 'zcash': ['zcash'], 'gnosis-gno': ['gnosis-gno'], 'stratis': ['stratis'], 'bitshares': ['bitshares'], 'waves': ['waves'], 'bytecoin-bcn': ['bytecoin-bcn'], 'digixdao': ['digixdao'], 'factom': ['factom'], 'decred': ['decred', 'DECRED', 'Decred', 'dcr', 'DCR', 'Dcr'], 'pivx': ['pivx', 'PIVX', 'Pivx',  'piv', 'PIV','Piv']}
+## Tests for available coinmarketcap parameters (assuming our json files are updated)
+
+import json
+
+class valid():
+	def __init__(self):
+		pass
+	def crypto(self, string):
+		try:
+			valid_cryptos = json.load(open('plugins/coinmarketcap/cryptos.json'))
+			for crypto in valid_cryptos:
+				for symbol in valid_cryptos[crypto]['symbols']:
+					if string.lower() == symbol:
+						return (True, True, valid_cryptos[crypto]['coinmarketcap_id'])
+			return (False, True, "Unsupported crypto")
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
+	def convert(self, string):
+		try:
+			valid_converts = json.load(open('plugins/coinmarketcap/converts.json'))
+			for convert in valid_converts:
+				if string.lower() == convert.lower():
+					return (True, True, convert)
+			return (False, True, "Unsupported fiat")
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
 

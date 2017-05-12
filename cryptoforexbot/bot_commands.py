@@ -11,6 +11,7 @@ class bot_commands():
 
 	def __init__(self):
 		self.coinmarketcap = coinmarketcap()
+		self.coinmarketcap_valid = coinmarketcap_valid.valid()
 
 	def conv(self, command=[]):
 		print(' '.join(['DEBUG:', ' '.join(command)]))
@@ -53,4 +54,18 @@ class bot_commands():
 		except Exception as e:
 			print("DEBUG: %s" % (e))
 		return reply
+
+	def debug(self, param):
+		try:
+			response = self.coinmarketcap_valid.convert(param)
+			if response[0]:
+				return (True, True, response[2])
+			elif response[1]:
+				return (False, True, response[2])
+			elif response[2]:
+				return (False, False, response[2])
+			return (False, False, False)
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
 

@@ -1,0 +1,46 @@
+{
+	"BTC": {
+		"name": "Bitcoin",
+		"coinmarketcap_id": "bitcoin",
+		"symbols": [
+			"bitcoin",
+			"btc",
+			"xbt"
+		]
+	},
+	"ETH" : {
+		"name": "Ether",
+		"coinmarketcap_id": "ethereum",
+		"symbols": [
+			"ethereum",
+			"ether",
+			"eth"
+		]
+	},
+	"LTC" : {
+		"name": "Litecoin",
+		"coinmarketcap_id": "litecoin",
+		"symbols": [
+			"litecoin",
+			"ltc"
+		]
+	},
+	"PIV" : {
+		"name": "PIVX",
+		"coinmarketcap_id": "pivx",
+		"symbols": [
+			"pivx",
+			"darknet",
+			"dnet",
+			"piv"
+		]
+	},
+	"XRP" : {
+		"name": "Ripple",
+		"coinmarketcap_id": "ripple",
+		"symbols": [
+			"ripple",
+			"xrp"
+		]
+	}
+}

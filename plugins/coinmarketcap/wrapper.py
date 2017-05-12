@@ -11,6 +11,7 @@ class coinmarketcap():
 
 	def __init__(self):
 		self.api = api()
+		self.valid = valid.valid()
 
 	def test_crypto(self, d, t):
 		for l in d:
