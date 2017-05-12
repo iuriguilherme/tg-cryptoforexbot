@@ -13,3 +13,4 @@ v0.3.0.b, 2016-05-12 -- Adding /feedback command
 v0.3.4.b, 2016-05-12 -- Added group feedback
 v0.3.5.b, 2016-05-12 -- Added conversion from crypto to crypto
 v0.4.0.b, 2016-05-12 -- Added conversion from all to all
+v0.4.1.b, 2016-05-12 -- Updated fiat currencies information
