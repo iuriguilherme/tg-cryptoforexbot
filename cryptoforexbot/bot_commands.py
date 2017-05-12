@@ -3,7 +3,7 @@
 import re
 import json
 
-from cryptoforexbot import texts
+from cryptoforexbot import texts, metadata
 from plugins.coinmarketcap.wrapper import coinmarketcap
 
 class bot_commands():
@@ -159,9 +159,9 @@ class bot_commands():
 			return (False, False, '%s' % (e))
 		return (False, False, False)
 
-	def price(self, coin):
+	def price(self, coin_id):
 		try:
-			response = self.coinmarketcap.price(coin)
+			response = self.coinmarketcap.price(coin_id)
 			if response[0]:
 				return (True, True, """
 Price information for %s (from coinmarketcap.com)
@@ -192,16 +192,5 @@ Total supply:\t%s %s
 		return (False, True, texts.err_internal)
 
 	def debug(self, param):
-#		try:
-#			response = self.coinmarketcap_valid.convert(param)
-#			if response[0]:
-#				return (True, True, response[2])
-#			elif response[1]:
-#				return (False, True, response[2])
-#			elif response[2]:
-#				return (False, False, response[2])
-#			return (False, False, False)
-#		except Exception as e:
-#			return (False, False, '%s' % (e))
-		return (False, False, False)
+		return (True, True, ' '.join(param))
 

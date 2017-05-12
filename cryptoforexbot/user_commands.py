@@ -34,11 +34,9 @@ class user_commands():
 					if len(command_list) == 4:
 						if self.valid.is_number(command_list[1]):
 							try:
-								#valid_crypto = self.coinmarketcap_valid.crypto(command_list[2])
 								valid_crypto = self.coinmarketcap_valid.coin(command_list[2])
 								if valid_crypto[0]:
 									try:
-										#valid_convert = self.coinmarketcap_valid.convert(command_list[3])
 										valid_convert = self.coinmarketcap_valid.coin(command_list[3])
 										if valid_convert[0]:
 											try:
@@ -89,7 +87,7 @@ class user_commands():
 							valid_crypto = self.coinmarketcap_valid.crypto(command_list[1])
 							if valid_crypto[0]:
 								try:
-									response = self.bot_commands.price(valid_crypto[2])
+									response = self.bot_commands.price(valid_crypto[2][0])
 									if response[0]:
 										return (True, True, response[2])
 									elif response[1]:

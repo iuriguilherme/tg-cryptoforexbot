@@ -39,7 +39,7 @@ class group_commands():
 						valid_crypto = self.coinmarketcap_valid.crypto(command_list[1])
 						if valid_crypto[0]:
 							try:
-								response = self.bot_commands.price(valid_crypto[2])
+								response = self.bot_commands.price(valid_crypto[2][0])
 								if response[0]:
 									return (True, True, response[2])
 								elif response[1]:
@@ -70,13 +70,13 @@ class group_commands():
 				if len(command_list) == 4:
 					if self.valid.is_number(command_list[1]):
 						try:
-							valid_crypto = self.coinmarketcap_valid.crypto(command_list[2])
+							valid_crypto = self.coinmarketcap_valid.coin(command_list[2])
 							if valid_crypto[0]:
 								try:
-									valid_convert = self.coinmarketcap_valid.convert(command_list[3])
-									if valid_convert:
+									valid_convert = self.coinmarketcap_valid.coin(command_list[3])
+									if valid_convert[0]:
 										try:
-											response = self.bot_commands.conv(command_list[1], valid_crypto[2], valid_convert[2])
+											response = self.bot_commands.conv(command_list[1], (valid_crypto[1], valid_crypto[2]), (valid_convert[1], valid_convert[2]))
 											if response[0]:
 												return (True, True, response[2])
 											elif response[1]:
@@ -90,9 +90,12 @@ class group_commands():
 										except Exception as e:
 											return (False, False, '%s' % (e))
 										return (False, True, texts.err_internal)
-									else:
+									elif valid_convert[1]:
 										return (False, True, texts.err_valid[0])
-									return (False, False, False)
+									elif valid_convert[2]:
+										return (False, False, valid_convert[2])
+									else:
+										return (False, False, False)
 								except Exception as e:
 									return (False, False, '%s' % (e))
 								return (False, False, False)
