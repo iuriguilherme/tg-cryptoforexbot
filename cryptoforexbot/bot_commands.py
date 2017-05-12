@@ -13,7 +13,7 @@ class bot_commands():
 		self.coinmarketcap = coinmarketcap()
 
 	def conv(self, command=[]):
-		print(' '.join(['DEBUG:', command]))
+		print(' '.join(['DEBUG:', ' '.join(command)]))
 		reply = texts.err_param[1]
 		float_pattern = re.compile('[\d.]+')
 		string_pattern = re.compile('\w+')
@@ -39,7 +39,7 @@ class bot_commands():
 		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
 
 	def price(self, command=[]):
-		print(' '.join(['DEBUG:', command]))
+		print(' '.join(['DEBUG:', ' '.join(command)]))
 		reply = texts.err_param[2]
 		string_pattern = re.compile('\w+')
 		##TODO: When things go wrong, we want to know whether it's the API fault or a code screw up
