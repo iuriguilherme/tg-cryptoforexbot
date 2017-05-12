@@ -81,7 +81,7 @@ Try `pip install telepot`. Or you can try `pip install -r requirements.txt` from
 
 Enter the directory *cryptoforexbot*.  
 Rename the file `cryptoforexbot.cfg.example` to `cryptoforexbot.cfg`.  
-Edit that file, changing the value `token` in the `[telegram]` section to the one [@BotFather](https://telegram.me/botfather) told you.  
+Edit that file, changing the value `token` in the `[botfather]` section to the one [@BotFather](https://telegram.me/botfather) told you.  
 
 ### Running
 

@@ -10,3 +10,4 @@ v0.2.0.b, 2016-05-10 -- Changed log facility to group admin, added group admin f
 v0.2.1.b, 2016-05-11 -- Improved commands parsing
 v0.2.2.b, 2016-05-11 -- Started using json and better returns
 v0.3.0.b, 2016-05-12 -- Adding /feedback command
+v0.3.4.b, 2016-05-12 -- Added group feedback

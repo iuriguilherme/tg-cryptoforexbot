@@ -1,5 +1,4 @@
 # vim:fileencoding=utf-8
-## TODO: Debug logging
 
 from cryptoforexbot import texts
 from plugins.coinmarketcap.api import coinmarketcap as api
@@ -20,10 +19,8 @@ class coinmarketcap():
 		return (False, True, texts.err_internal)
 
 	def price(self, crypto='BTC'):
-		print('DEBUG: %s' % (crypto))
 		try:
 			response = self.api.get_ticker_id(crypto, '')
-			print('DEBUG: %s' % (response))
 		except Exception as e:
 			return (False, False, '%s' % (e))
 		if response:

@@ -3,10 +3,8 @@
 ## Requests documentation at http://docs.python-requests.org/en/latest
 
 import requests
-import re
 from cryptoforexbot import metadata
 
-## TODO: Rewrite all the "safe_" checks
 class coinmarketcap():
 
 	def __init__(self):

@@ -31,9 +31,6 @@ class cryptoforex():
 		self.config = ConfigParser.ConfigParser()
 		try:
 			self.config.read(self.config_file)
-			## If you replace the following line with something like
-			##   self.token = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"
-			##   , it will work too. Your code will be ugly, however.
 			self.token = str(self.config.get("botfather", "token"))
 			self.admin_id = int(self.config.get("admin", "id"))
 			self.group_id = int(self.config.get("admin", "group"))
