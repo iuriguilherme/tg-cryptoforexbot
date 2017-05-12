@@ -1,77 +1,188 @@
 {
 	"USD": {
-		"name": "U.S. Dollar",
-		"symbols" : [ "USD" ],
-		"coinmarketcap_id": "USD"
+		"name": "United States dollar",
+		"symbols" : [
+			"USD",
+			"dollar",
+			"dollars"
+		],
+		"coinmarketcap_id": "USD",
+		"decoration": "U$$ %s",
+		"plural": "United States dollars"
 	},
 	"AUD": {
-		"name": "Australian Dollar",
-		"symbols" : [ "AUD" ],
-		"coinmarketcap_id": "AUD"
+		"name": "Australian dollar",
+		"symbols" : [
+			"AUD",
+			"adollar",
+			"adollars"
+		],
+		"coinmarketcap_id": "AUD",
+		"decoration": "A$ %s",
+		"plural": "Australian dollars"
 	},
 	"BRL": {
-		"name": "Brazilian Real",
-		"symbols" : [ "BRL" ],
-		"coinmarketcap_id": "BRL"
+		"name": "Brazilian real",
+		"symbols" : [
+			"BRL",
+			"real",
+			"reais"
+		],
+		"coinmarketcap_id": "BRL",
+		"decoration": "R$ %s",
+		"plural": "Brazilian reais"
 	},
 	"CAD": {
-		"name": "CAD",
-		"symbols" : [ "CAD" ],
-		"coinmarketcap_id": "CAD"
+		"name": "Canadian dollar",
+		"symbols" : [
+			"CAD",
+			"cdollar",
+			"cdollars",
+			"can",
+			"loonie",
+			"buck",
+			"huard",
+			"piastre",
+		],
+		"coinmarketcap_id": "CAD",
+		"decoration": "C$%s",
+		"plural": "Canadian dollars"
 	},
 	"CHF": {
-		"name": "CHF",
-		"symbols" : [ "CHF" ],
-		"coinmarketcap_id": "CHF"
+		"name": "Swiss franc",
+		"symbols" : [
+			"CHF",
+			"franc",
+			"francs",
+			"fr",
+			"sfr",
+			"franken",
+			"franchi"
+		],
+		"coinmarketcap_id": "CHF",
+		"decoration": "%s francs",
+		"plural": "Swiss francs"
 	},
 	"CNY": {
-		"name": "CNY",
-		"symbols" : [ "CNY" ],
-		"coinmarketcap_id": "CNY"
+		"name": "Renminbi",
+		"symbols" : [
+			"CNY",
+			"renminbi"
+		],
+		"coinmarketcap_id": "CNY",
+		"decoration": "u'\u00A5'%s",
+		"plural": "Renminbi"
 	},
 	"EUR": {
 		"name": "Euro",
-		"symbols" : [ "EUR" ],
-		"coinmarketcap_id": "EUR"
+		"symbols" : [
+			"EUR",
+			"euro",
+			"euros",
+			"u'evró'",
+			"u'euró'",
+			"eiro",
+			"euras",
+			"ewro"
+		],
+		"coinmarketcap_id": "EUR",
+		"decoration": "u'\u20AC'%s",
+		"plural": "Euros"
 	},
 	"GBP": {
-		"name": "English Pound",
-		"symbols" : [ "GBP" ],
-		"coinmarketcap_id": "GBP"
+		"name": "Pound sterling",
+		"symbols" : [
+			"GBP",
+			"pound",
+			"pounds",
+			"punt",
+			"louis",
+			"poond",
+			"punnd",
+			"peuns",
+			"quid"
+		],
+		"coinmarketcap_id": "GBP",
+		"decoration": "u'\u00A3'%s",
+		"plural": "Great britain pounds"
 	},
 	"HKD": {
-		"name": "HKD",
-		"symbols" : [ "HKD" ],
-		"coinmarketcap_id": "HKD"
+		"name": "Hong Kong dollar",
+		"symbols" : [
+			"HKD",
+			"hdollar",
+			"hdollars",
+			"hkdollar",
+			"hkdollars"
+		],
+		"coinmarketcap_id": "HKD",
+		"decoration": "HK$ %s",
+		"plural": "Hong Kong dollars"
 	},
 	"IDR": {
-		"name": "IDR",
-		"symbols" : [ "IDR" ],
-		"coinmarketcap_id": "IDR"
+		"name": "Indonesian rupiah",
+		"symbols" : [
+			"IDR",
+			"rupiah",
+			"perak"
+		],
+		"coinmarketcap_id": "IDR",
+		"decoration": "Rp %s",
+		"plural": "Indonesian rupiah"
 	},
 	"INR": {
-		"name": "INR",
-		"symbols" : [ "INR" ],
-		"coinmarketcap_id": "INR"
+		"name": "Indian rupee",
+		"symbols" : [
+			"INR",
+			"rupee",
+			"rupees"
+		],
+		"coinmarketcap_id": "INR",
+		"decoration": "u'\u20B9'%s",
+		"plural": "Indian rupees"
 	},
 	"JPY": {
-		"name": "JPY",
-		"symbols" : [ "JPY" ],
-		"coinmarketcap_id": "JPY"
+		"name": "Japanese yen",
+		"symbols" : [
+			"JPY",
+			"yen"
+		],
+		"coinmarketcap_id": "JPY",
+		"decoration": "u'\u00A5'%s",
+		"plural": "Japanese yen"
 	},
 	"KRW": {
-		"name": "KRW",
-		"symbols" : [ "KRW" ],
-		"coinmarketcap_id": "KRW"
+		"name": "South Korean won",
+		"symbols" : [
+			"KRW",
+			"won"
+		],
+		"coinmarketcap_id": "KRW",
+		"decoration": "u'\u20A9'",
+		"plural": "South Korean won"
 	},
 	"MXN": {
-		"name": "MXN",
-		"symbols" : [ "MXN" ],
-		"coinmarketcap_id": "MXN"
+		"name": "Mexican peso",
+		"symbols" : [
+			"MXN",
+			"mex",
+			"peso",
+			"pesos"
+		],
+		"coinmarketcap_id": "MXN",
+		"decoration": "Mex$ %s",
+		"plural": "United States dollars"
 	},
 	"RUB": {
-		"name": "RUB",
-		"symbols" : [ "RUB" ],
-		"coinmarketcap_id": "RUB"
+		"name": "Russian ruble",
+		"symbols" : [
+			"RUB",
+			"ruble",
+			"rubles",
+			"rur"
+		],
+		"coinmarketcap_id": "RUB",
+		"decoration": "%s u'\u20BD'",
+		"plural": "Russian rubles"
 	}
 }
