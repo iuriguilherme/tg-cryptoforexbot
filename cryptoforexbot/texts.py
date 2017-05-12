@@ -108,7 +108,13 @@ Where <to> is a telegram id.
 Example: /send%s 0 This bot has been hacked
 """ % (metadata.handle, metadata.handle),
 # 4
-"Not implemented."
+"Not implemented.",
+# 5
+"""
+Incorrect parameters. Usage: /feedback%s <message>
+
+Example: /feedback%s This bot doesn't work!
+""" % (metadata.handle, metadata.handle),
 ]
 
 err_valid = """
@@ -121,4 +127,17 @@ err_group = [
 "This command is only available as a private message. Click on %s to message me." % (metadata.handle)
 ]
 
-err_internal = "Internal error. Please, if you may, notify the dev team so they can fix it: %s" % (metadata.bugtracker)
+err_internal = """
+Internal error.
+
+Please, if you may, notify the dev team so they can fix it.
+
+Either try to send us a message with /feedback%s
+
+Or open an issue on the bug tracker: %s
+
+Thank you!
+
+...and sorry =(
+""" % (metadata.handle, metadata.bugtracker)
+

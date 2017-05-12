@@ -27,6 +27,16 @@ class user_commands():
 				if response[0]:
 					return (True, True, response[1])
 				return (False, True, texts.err_internal)
+			elif command_list[0] == '/feedback' or command_list[0] == ''.join(['/feedback', metadata.handle]):
+				try:
+					if len(command_list) > 1:
+						return ('feedback', True, ' '.join(command_list[1::1]))
+					else:
+						return (False, True, texts.err_param[5])
+					return (False, False, False)
+				except Exception as e:
+					return (False, False, '%s' % (e))
+				return (False, False, False)
 			else:
 				return (True, True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help" % (' '.join(command_list))))
 		except Exception as e:

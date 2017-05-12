@@ -86,8 +86,8 @@ class cryptoforex():
 		command_list = list()
 		try:
 			chat_id = int(msg['chat']['id'])
-			for subcommand in msg['text'].split(' '):
-				pattern = re.compile('(^[/]{1}|[@]{1}|[,.]|-?\d+|\n|\w+)')
+			for subcommand in ' '.join(unicode(msg['text']).splitlines()).split(' '):
+				pattern = re.compile(u'(^[/]{1}|[@]{1}|[,.]|-?\d+|\n|\w+)', re.UNICODE)
 				item = ''.join(re.findall(pattern, subcommand))
 				if item != '':
 					command_list.append(item)
@@ -95,6 +95,8 @@ class cryptoforex():
 			self.log(self.log_str.err('Telepot error: %s' % (e)))
 
 		self.log(self.log_str.rcv(str(chat_id), ' '.join(command_list)))
+
+		## TODO: From this point below, this is once more becoming too big and redundant. Need a rewrite.
 		## If chat_id is negative, then we're talking with a group.
 		if chat_id < 0:
 			## Admin group
@@ -142,7 +144,11 @@ class cryptoforex():
 				response = self.user_commands.parse(chat_id, command_list)
 				if response[0]:
 					self.log(self.log_str.cmd(' '.join(command_list)))
-					self.send(chat_id, response[2])
+					if response[0] == 'feedback':
+						## Change group_id to admin_id to send as private message
+						self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+					else:
+						self.send(chat_id, response[2])
 				elif response[1]:
 					self.log(self.log_str.err(response[2]))
 					self.send(chat_id, response[2])
@@ -155,7 +161,11 @@ class cryptoforex():
 			response = self.user_commands.parse(chat_id, command_list)
 			if response[0]:
 				self.log(self.log_str.cmd(' '.join(command_list)))
-				self.send(chat_id, response[2])
+				if response[0] == 'feedback':
+					## Change group_id to admin_id to send as private message
+					self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+				else:
+					self.send(chat_id, response[2])
 			elif response[1]:
 				self.log(self.log_str.err(response[2]))
 				self.send(chat_id, response[2])
