@@ -14,7 +14,7 @@ class group_commands():
 	def parse(self, chat_id, command_list):
 		## TODO: Use a better pythonic switch/case workaround
 		## Only answer if we are being addressed
-		## Unless it's the /conv command
+		## Unless it's /conv or /price
 		#if re.search(''.join([metadata.handle, '$']), command_list[0]):
 		if command_list[0] == ''.join(['/help', metadata.handle]):
 			return (True, True, texts.err_group[0])
@@ -32,7 +32,7 @@ class group_commands():
 			except Exception as e:
 				return (False, False, '%s' % (e))
 			return (False, False, False)
-		elif command_list[0] == ''.join(['/price', metadata.handle]):
+		elif command_list[0] == '/price' or command_list[0] == ''.join(['/price', metadata.handle]):
 			try:
 				if len(command_list) == 2:
 					try:
