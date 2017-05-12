@@ -31,7 +31,7 @@ class admin_commands():
 		elif command_list[0] == '/debug' or command_list[0] == ''.join(['/debug', metadata.handle]):
 			if len(command_list) > 1:
 				if self.valid.is_safe_string(command_list[1]):
-					response = self.bot_commands.debug(command_list[1])
+					response = self.bot_commands.debug(command_list[1::1])
 					if response[0]:
 						return (True, True, response[2])
 					elif response[1]:
