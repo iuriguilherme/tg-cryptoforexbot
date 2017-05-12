@@ -38,9 +38,17 @@ Display price information for a currency.
 
 Example: `/info ETH`
 
-### /list
+#### /list
 
 Lists current available currencies that can be used with the other commands.
+
+#### /feedback
+
+Send feedback to the development team.
+
+Example: `/feedback This bot doesn't work!`
+
+---
 
 Make your own
 ---
@@ -73,7 +81,7 @@ Try `pip install telepot`. Or you can try `pip install -r requirements.txt` from
 
 Enter the directory *cryptoforexbot*.  
 Rename the file `cryptoforexbot.cfg.example` to `cryptoforexbot.cfg`.  
-Edit that file, changing the value `token` to the one [@BotFather](https://telegram.me/botfather) told you.  
+Edit that file, changing the value `token` in the `[telegram]` section to the one [@BotFather](https://telegram.me/botfather) told you.  
 
 ### Running
 
@@ -89,13 +97,33 @@ You should see something like this:
 
     [2017-05-09 13:37:26.113188] RCV: Received "hi" from 123456789
 
-Where `123456789` is your telegram id. Make sure you put that in the configuration file (`cryptoforexbot.cfg` as explained above, see **Configuring**).  
+Where `123456789` is your telegram id. Make sure you put that in the configuration file, in the `[admin]` section - the file is `cryptoforexbot/cryptoforexbot.cfg` as explained above, see **Configuring**.  
+
+Also, you may configure a group admin id, which looks like `-123456789`. This will help with debug logging and it's where the user feedback is sent.
+
+#### Admin commands
+
+The following additional admin commands are available:
+
+##### /admin
+
+Like `/help`, but for admin commands.
 
 ~~When the bot is successfully acknowledging you as an admin, send the `/admin` command to get help on how to manage the database.~~  
 
 ~~Using a local database to store values is important because querying external APIs everytime an user make a request would overhead the APIs, also they could be temporary unreachable because of network lag.~~  
 
 *database not yet implemented, see roadmap below*
+
+##### /send
+
+Send a message (from the bot) to any telegram user or group.
+
+Usage: `/send <id> <message>`
+
+##### /debug
+
+Command which can be used for debbuging purposes, defined at `cryptoforexbot/admin_commands.py` and freely hackable.
 
 ### Systemd
 
