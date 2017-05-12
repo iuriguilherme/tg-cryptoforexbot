@@ -1,17 +1,77 @@
-[
-	"USD",
-	"AUD",
-	"BRL",
-	"CAD",
-	"CHF",
-	"CNY",
-	"EUR",
-	"GBP",
-	"HKD",
-	"IDR",
-	"INR",
-	"JPY",
-	"KRW",
-	"MXN",
-	"RUB"
-]
+{
+	"USD": {
+		"name": "U.S. Dollar",
+		"symbols" : [ "USD" ],
+		"coinmarketcap_id": "USD"
+	},
+	"AUD": {
+		"name": "Australian Dollar",
+		"symbols" : [ "AUD" ],
+		"coinmarketcap_id": "AUD"
+	},
+	"BRL": {
+		"name": "Brazilian Real",
+		"symbols" : [ "BRL" ],
+		"coinmarketcap_id": "BRL"
+	},
+	"CAD": {
+		"name": "CAD",
+		"symbols" : [ "CAD" ],
+		"coinmarketcap_id": "CAD"
+	},
+	"CHF": {
+		"name": "CHF",
+		"symbols" : [ "CHF" ],
+		"coinmarketcap_id": "CHF"
+	},
+	"CNY": {
+		"name": "CNY",
+		"symbols" : [ "CNY" ],
+		"coinmarketcap_id": "CNY"
+	},
+	"EUR": {
+		"name": "Euro",
+		"symbols" : [ "EUR" ],
+		"coinmarketcap_id": "EUR"
+	},
+	"GBP": {
+		"name": "English Pound",
+		"symbols" : [ "GBP" ],
+		"coinmarketcap_id": "GBP"
+	},
+	"HKD": {
+		"name": "HKD",
+		"symbols" : [ "HKD" ],
+		"coinmarketcap_id": "HKD"
+	},
+	"IDR": {
+		"name": "IDR",
+		"symbols" : [ "IDR" ],
+		"coinmarketcap_id": "IDR"
+	},
+	"INR": {
+		"name": "INR",
+		"symbols" : [ "INR" ],
+		"coinmarketcap_id": "INR"
+	},
+	"JPY": {
+		"name": "JPY",
+		"symbols" : [ "JPY" ],
+		"coinmarketcap_id": "JPY"
+	},
+	"KRW": {
+		"name": "KRW",
+		"symbols" : [ "KRW" ],
+		"coinmarketcap_id": "KRW"
+	},
+	"MXN": {
+		"name": "MXN",
+		"symbols" : [ "MXN" ],
+		"coinmarketcap_id": "MXN"
+	},
+	"RUB": {
+		"name": "RUB",
+		"symbols" : [ "RUB" ],
+		"coinmarketcap_id": "RUB"
+	}
+}

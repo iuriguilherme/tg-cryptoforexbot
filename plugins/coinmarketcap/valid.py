@@ -2,6 +2,7 @@
 ## Tests for available coinmarketcap parameters (assuming our json files are updated)
 
 import json
+from cryptoforexbot import texts
 
 class valid():
 	def __init__(self):
@@ -11,7 +12,7 @@ class valid():
 			valid_cryptos = json.load(open('plugins/coinmarketcap/cryptos.json'))
 			for crypto in valid_cryptos:
 				for symbol in valid_cryptos[crypto]['symbols']:
-					if string.lower() == symbol:
+					if string.lower() == symbol.lower():
 						return (True, True, valid_cryptos[crypto]['coinmarketcap_id'])
 			return (False, True, "Unsupported crypto")
 		except Exception as e:
@@ -21,9 +22,28 @@ class valid():
 		try:
 			valid_converts = json.load(open('plugins/coinmarketcap/converts.json'))
 			for convert in valid_converts:
-				if string.lower() == convert.lower():
-					return (True, True, convert)
+				for symbol in valid_converts[convert]['symbols']:
+					if string.lower() == symbol.lower():
+						return (True, True, str(valid_converts[convert]['coinmarketcap_id']))
 			return (False, True, "Unsupported fiat")
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
+	def coin(self, string):
+		try:
+			valid_convert = self.convert(string)
+			if valid_convert[0]:
+				return (True, 'fiat', valid_convert[2])
+			elif valid_convert[1]:
+				valid_crypto = self.crypto(string)
+				if valid_crypto[0]:
+					return (True, 'crypto', valid_crypto[2])
+				elif valid_crypto[1]:
+					return (False, True, texts.err_valid[0])
+				elif valid_crypto[2]:
+					return (False, False, valid_crypto[2])
+				else:
+					return (False, False, False)
 		except Exception as e:
 			return (False, False, '%s' % (e))
 		return (False, False, False)
