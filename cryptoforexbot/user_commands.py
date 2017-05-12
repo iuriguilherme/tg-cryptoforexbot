@@ -10,19 +10,26 @@ class user_commands():
 		self.log_str = log_str()
 		self.bot_commands = bot_commands.bot_commands()
 	def parse(self, chat_id, command_list):
-		## TODO: Use a better pythonic switch/case workaround
-		if command_list[0] == '/start' or command_list[0] == ''.join(['/start', metadata.handle]):
-			return (True, texts.help)
-		elif command_list[0] == '/help' or command_list[0] == ''.join(['/help', metadata.handle]):
-			return (True, texts.help)
-		elif command_list[0] == '/info' or command_list[0] == ''.join(['/info', metadata.handle]):
-			return (True, texts.info)
-		elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
-			return (True, self.bot_commands.conv(command_list))
-		elif command_list[0] == '/price' or command_list[0] == ''.join(['/price', metadata.handle]):
-			return (True, self.bot_commands.price(command_list))
-		elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
-			return (True, self.bot_commands.list())
-		else:
-			return (True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help" % (' '.join(command_list))))
+		try:
+			## TODO: Use a better pythonic switch/case workaround
+			if command_list[0] == '/start' or command_list[0] == ''.join(['/start', metadata.handle]):
+				return (True, True, texts.help)
+			elif command_list[0] == '/help' or command_list[0] == ''.join(['/help', metadata.handle]):
+				return (True, True, texts.help)
+			elif command_list[0] == '/info' or command_list[0] == ''.join(['/info', metadata.handle]):
+				return (True, True, texts.info)
+			elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
+				return (True, True, self.bot_commands.conv(command_list))
+			elif command_list[0] == '/price' or command_list[0] == ''.join(['/price', metadata.handle]):
+				return (True, True, self.bot_commands.price(command_list))
+			elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
+				response = self.bot_commands.list()
+				if response[0]:
+					return (True, True, response[1])
+				return (False, True, texts.err_internal)
+			else:
+				return (True, True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help" % (' '.join(command_list))))
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
 

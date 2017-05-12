@@ -2,6 +2,7 @@
 ## TODO: Debug logging
 
 import re
+import json
 
 from cryptoforexbot import texts
 from plugins.coinmarketcap.wrapper import coinmarketcap
@@ -33,11 +34,48 @@ class bot_commands():
 		return reply
 
 	def list(self):
-		available_to = ' '.join(coinmarketcap_valid.converts)
-		available_from = list()
-		for c in coinmarketcap_valid.cryptos:
-			available_from.append(c)
-		return'Available <from> currencies: %s\n\nAvailable <to> currencies: %s' % (' '.join(available_from), available_to)
+		## TODO: Treat json exceptions, use three arguments for return
+		try:
+			cryptos_dict = json.load(open('plugins/coinmarketcap/cryptos.json'))
+			converts_dict = json.load(open('plugins/coinmarketcap/converts.json'))
+
+			reply = list()
+			reply.append("Symbols are case insensitive. Currently we only support converting from cryptocurrencies to fiat currencies available at coinmarketcap.")
+			reply.append('')
+			reply.append('')
+
+			reply_from = list()
+			reply_from.append("Supported currencies you can convert <from>:")
+			reply_from.append('')
+
+			reply_from_currencies = list()
+			for crypto in cryptos_dict:
+				reply_from_currencies.append(''.join([cryptos_dict[crypto]['name'], ' - symbol can be any of: ']))
+				reply_from_currencies_symbols = list()
+				for symbol in cryptos_dict[crypto]['symbols']:
+					reply_from_currencies_symbols.append(symbol)
+				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
+				reply_from_currencies.append('\n')
+			reply_from.append(''.join(reply_from_currencies))
+
+			reply.append('\n'.join(reply_from))
+			reply.append('')
+
+			reply_to = list()
+			reply_to.append("Supported currencies you can convert <to>:")
+			reply_to.append('')
+
+			reply_to_currencies = list()
+			for convert in converts_dict:
+				reply_to_currencies.append(''.join(convert))
+				reply_to_currencies.append('\n')
+			reply_to.append(''.join(reply_to_currencies))
+
+			reply.append('\n'.join(reply_to))
+
+			return (True, '\n'.join(reply))
+		except Exception:
+			return (False, texts.err_internal)
 
 	def price(self, command=[]):
 		print(' '.join(['DEBUG:', ' '.join(command)]))

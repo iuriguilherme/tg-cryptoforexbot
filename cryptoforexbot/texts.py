@@ -121,3 +121,4 @@ err_group = [
 "This command is only available as a private message. Click on %s to message me." % (metadata.handle)
 ]
 
+err_internal = "Internal error. Please, if you may, notify the dev team so they can fix it: %s" % (metadata.bugtracker)
