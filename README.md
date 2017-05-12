@@ -12,7 +12,7 @@ Usage
 
 You can use the bot [@criptoforexbot](https://telegram.me/cryptoforexbot) on [Telegram](https://telegram.org).  
 
-There is a telegram group if you are interested in following or helping the development: <https://t.me/joinchat/AAAAAA5gJhDL8TwBpxo5yw>  
+There is a telegram group if you are interested in following or helping the development: <https://t.me/joinchat/AAAAAA5gJhDL8TwBpxo5yw> **disable notifications, this group gets a LOT of messages**  
 
 ### Commands
 
@@ -36,7 +36,7 @@ Example: `/conv 0.003 BTC BRL`
 
 Display price information for a currency.
 
-Example: `/info ETH`
+Example: `/price ETH`
 
 #### /list
 
@@ -61,7 +61,7 @@ First get a token from [@BotFather](https://telegram.me/botfather) on Telegram. 
 
 ### Get the working code
 
-Do not just clone the main branch. I commit everything. Use the *stable* release tag:  
+Do not just clone the main branch. I commit everything. Use the [*stable* release tag](https://github.com/desci/tg-cryptoforexbot/releases/tag/stable):  
 
 ```bash
 $ git clone https://github.com/desci/tg-cryptoforexbot.git
