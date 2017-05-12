@@ -2,6 +2,7 @@
 
 import re
 import json
+import datetime
 
 from cryptoforexbot import texts, metadata
 from plugins.coinmarketcap.wrapper import coinmarketcap
@@ -166,21 +167,23 @@ class bot_commands():
 				return (True, True, """
 Price information for %s (from coinmarketcap.com)
 
-1 %s equals
-$ %s USD
+Marketcap: U$$ %s
+
+Price of 1 %s:
+U$$ %s USD
 %s BTC
 
 Price change since last
-hour:\t%s%s
-day:\t%s%s
-week:\t%s%s
+hour: %s%%
+day: %s%%
+week: %s%%
 
-Last 24 hours volume:\t$ %s USD
-Marketcap:\t$ %s USD
+Last 24 hours volume: U$$ %s
 
-Available supply:\t%s %s
-Total supply:\t%s %s
-""" % (response[2][0]['name'], response[2][0]['symbol'], '{:,}'.format(float(response[2][0]['price_usd'])), '{:,}'.format(float(response[2][0]['price_btc'])), response[2][0]['percent_change_1h'], '%', response[2][0]['percent_change_24h'], '%', response[2][0]['percent_change_7d'], '%', '{:,}'.format(float(response[2][0]['24h_volume_usd'])), '{:,}'.format(float(response[2][0]['market_cap_usd'])), '{:,}'.format(float(response[2][0]['available_supply'])), response[2][0]['symbol'], '{:,}'.format(float(response[2][0]['total_supply'])), response[2][0]['symbol']))
+Available supply: %s %s
+Total supply: %s %s
+
+""" % (response[2][0]['name'], '{:,.2f}'.format(float(response[2][0]['market_cap_usd'])), response[2][0]['symbol'], '{:,.2f}'.format(float(response[2][0]['price_usd'])), '{:,.8f}'.format(float(response[2][0]['price_btc'])), response[2][0]['percent_change_1h'], response[2][0]['percent_change_24h'], response[2][0]['percent_change_7d'], '{:,.2f}'.format(float(response[2][0]['24h_volume_usd'])), '{:,.8f}'.format(float(response[2][0]['available_supply'])), response[2][0]['symbol'], '{:,.8f}'.format(float(response[2][0]['total_supply'])), response[2][0]['symbol']))
 			elif response[1]:
 				return (False, True, response[2])
 			elif response[2]:
@@ -189,7 +192,7 @@ Total supply:\t%s %s
 				return (False, True, texts.err_internal)
 		except Exception as e:
 			return (False, False, '%s' % (e))
-		return (False, True, texts.err_internal)
+		return (False, False, False)
 
 	def debug(self, param):
 		return (True, True, ' '.join(param))
