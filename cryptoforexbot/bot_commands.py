@@ -11,28 +11,61 @@ class bot_commands():
 	def __init__(self):
 		self.coinmarketcap = coinmarketcap()
 
-	def conv(self, conv_value, type_from, conv_from, type_to, conv_to):
-		print('DEBUG: %s %s %s %s' % (type_from, conv_from, type_to, conv_to))
+	def conv(self, conv_value, (from_type, from_id, from_name), (to_type, to_id, to_name)):
+		print('DEBUG: %s %s %s %s' % (from_type, from_id, to_type, to_id))
 		try:
-			response = self.coinmarketcap.conv(conv_from, conv_to)
-			if response[0]:
-				result = float(float(conv_value) * float(response[2][0][''.join(['price_',conv_to.lower()])]))
-				return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,}'.format(float(conv_value)), conv_from, "=" , '{:,}'.format(float(result)), conv_to]))
-			elif response[1]:
-				return (False, True, response[2])
-			elif response[2]:
-				return (False, False, response[2])
-			else:
+			if from_type == 'crypto' and to_type == 'fiat':
+				try:
+					response = self.coinmarketcap.conv(from_id, to_id)
+					if response[0]:
+						result = float(float(conv_value) * float(response[2][0][''.join(['price_',to_id.lower()])]))
+						return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_id, "=" , ' '.join(['$', '{:,.2f}'.format(float(result)), to_id])]))
+					elif response[1]:
+						return (False, True, response[2])
+					elif response[2]:
+						return (False, False, response[2])
+					else:
+						return (False, True, texts.err_internal)
+				except Exception as e:
+					return (False, False, '%s' % (e))
 				return (False, True, texts.err_internal)
+			elif from_type == 'crypto' and to_type == 'crypto':
+				try:
+					try:
+						response_from = self.coinmarketcap.conv(from_id, '')
+						response_to = self.coinmarketcap.conv(to_id, '')
+					except Exception as e:
+						return (False, False, '%s' % (e))
+					if response_from[0] and response_to[0]:
+						try:
+							result = float(float(float(float(float(conv_value) / 1.0) * float(response_from[2][0]['price_btc'])) / float(response_to[2][0]['price_btc']) ) * 1.0 )
+						except Exception as e:
+							return (False, False, '%s' % (e))
+						try:
+							return (True, True, ' '.join(["(from coinmarketcap.com):", '{:,.8f}'.format(float(conv_value)), from_id, "=" , '{:,.8f}'.format(float(result)), to_id]))
+						except Exception as e:
+							return (False, False, '%s' % (e))
+					elif response_to[1]:
+						return (False, True, response_to[2])
+					elif response_to[2]:
+						return (False, False, response_to[2])
+					else:
+						return (False, True, texts.err_internal)
+				except Exception as e:
+					return (False, False, '%s' % (e))
+			else:
+				return (False, False, False)
 		except Exception as e:
 			return (False, False, '%s' % (e))
 		return (False, True, texts.err_internal)
 
 	def list(self):
-		## TODO: Treat json exceptions, use three arguments for return
 		try:
-			cryptos_dict = json.load(open('plugins/coinmarketcap/cryptos.json'))
-			converts_dict = json.load(open('plugins/coinmarketcap/converts.json'))
+			try:
+				cryptos_dict = json.load(open('plugins/coinmarketcap/cryptos.json'))
+				converts_dict = json.load(open('plugins/coinmarketcap/converts.json'))
+			except Exception as e:
+				return (False, True, '%s' % (e))
 
 			reply = list()
 			reply.append("Symbols are case insensitive. Currently we only support converting from cryptocurrencies to fiat currencies available at coinmarketcap.")
@@ -72,9 +105,13 @@ class bot_commands():
 
 			reply.append('\n'.join(reply_to))
 
-			return (True, '\n'.join(reply))
-		except Exception:
-			return (False, texts.err_internal)
+			try:
+				return (True, True, '\n'.join(reply))
+			except Exception as e:
+				return (False, True, '%s' % (e))
+		except Exception as e:
+			return (False, False, '%s' % (e))
+		return (False, False, False)
 
 	def price(self, coin):
 		try:

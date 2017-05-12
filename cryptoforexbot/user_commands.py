@@ -15,11 +15,20 @@ class user_commands():
 		try:
 			## TODO: Use a better pythonic switch/case workaround
 			if command_list[0] == '/start' or command_list[0] == ''.join(['/start', metadata.handle]):
-				return (True, True, texts.help)
+				try:
+					return (True, True, texts.help)
+				except:
+					return (False, True, texts.err_internal)
 			elif command_list[0] == '/help' or command_list[0] == ''.join(['/help', metadata.handle]):
-				return (True, True, texts.help)
+				try:
+					return (True, True, texts.help)
+				except:
+					return (False, True, texts.err_internal)
 			elif command_list[0] == '/info' or command_list[0] == ''.join(['/info', metadata.handle]):
-				return (True, True, texts.info)
+				try:
+					return (True, True, texts.info)
+				except:
+					return (False, True, texts.err_internal)
 			elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
 				try:
 					if len(command_list) == 4:
@@ -109,8 +118,14 @@ class user_commands():
 			elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
 				response = self.bot_commands.list()
 				if response[0]:
-					return (True, True, response[1])
-				return (False, True, texts.err_internal)
+					return (True, True, response[2])
+				elif response[1]:
+					return (False, True, texts.err_internal)
+				elif response[2]:
+					return (False, False, response[2])
+				else:
+					return (False, True, texts.err_internal)
+				return (False, False, False)
 			elif command_list[0] == '/feedback' or command_list[0] == ''.join(['/feedback', metadata.handle]):
 				try:
 					if len(command_list) > 1:
