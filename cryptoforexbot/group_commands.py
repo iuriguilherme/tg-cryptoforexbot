@@ -22,6 +22,16 @@ class group_commands():
 			return (True, True, texts.err_group[0])
 		elif command_list[0] == ''.join(['/list', metadata.handle]):
 			return (True, True, texts.err_group[0])
+		elif command_list[0] == ''.join(['/feedback', metadata.handle]):
+			try:
+				if len(command_list) > 1:
+					return ('feedback', True, ' '.join(command_list[1::1]))
+				else:
+					return ('feedback', False, texts.err_param[5])
+				return (False, False, False)
+			except Exception as e:
+				return (False, False, '%s' % (e))
+			return (False, False, False)
 		elif command_list[0] == ''.join(['/price', metadata.handle]):
 			try:
 				if len(command_list) == 2:
