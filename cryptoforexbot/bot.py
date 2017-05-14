@@ -95,25 +95,46 @@ class cryptoforex():
 
 		## TODO: From this point below, this is once more becoming too big and redundant. Need a rewrite.
 		## If chat_id is negative, then we're talking with a group.
-		if chat_id < 0:
-			## Admin group
-			if chat_id == self.group_id:
-				response = self.admin_commands.parse(chat_id, command_list)
-				if response[0]:
-					self.log(self.log_str.cmd(' '.join(command_list)))
-					if response[0] == 'send':
-						self.send(response[1], response[2])
-					else:
+		if ''.join(command_list) != '':
+			if chat_id < 0:
+				## Admin group
+				if chat_id == self.group_id:
+					response = self.admin_commands.parse(chat_id, command_list)
+					if response[0]:
+						self.log(self.log_str.cmd(' '.join(command_list)))
+						if response[0] == 'send':
+							self.send(response[1], response[2])
+						else:
+							self.send(chat_id, response[2])
+					elif response[1]:
+						self.log(self.log_str.err(response[2]))
 						self.send(chat_id, response[2])
-				elif response[1]:
-					self.log(self.log_str.err(response[2]))
-					self.send(chat_id, response[2])
-				elif response[2]:
-					self.log(self.log_str.err(response[2]))
+					elif response[2]:
+						self.log(self.log_str.err(response[2]))
+					else:
+						response = self.group_commands.parse(chat_id, command_list)
+						if response[0]:
+							self.log(self.log_str.cmd(' '.join(command_list)))
+							if response[0] == 'feedback':
+								if response[1]:
+									## Change group_id to admin_id to send as private message
+									self.send(self.group_id, '#feedback\nGroup %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+									self.send(chat_id, texts.feedback)
+								else:
+									self.log(self.log_str.err(response[2]))
+									self.send(chat_id, response[2])
+							else:
+								self.send(chat_id, response[2])
+						elif response[1]:
+							self.log(self.log_str.err(response[2]))
+							self.send(chat_id, response[2])
+						elif response[2]:
+							self.log(self.log_str.err(response[2]))
+						else:
+							self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))			## Regular group
 				else:
 					response = self.group_commands.parse(chat_id, command_list)
 					if response[0]:
-						self.log(self.log_str.cmd(' '.join(command_list)))
 						if response[0] == 'feedback':
 							if response[1]:
 								## Change group_id to admin_id to send as private message
@@ -131,17 +152,13 @@ class cryptoforex():
 						self.log(self.log_str.err(response[2]))
 					else:
 						self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))			## Regular group
-			else:
-				response = self.group_commands.parse(chat_id, command_list)
+			## Admin user
+			elif chat_id == self.admin_id:
+				response = self.admin_commands.parse(chat_id, command_list)
 				if response[0]:
-					if response[0] == 'feedback':
-						if response[1]:
-							## Change group_id to admin_id to send as private message
-							self.send(self.group_id, '#feedback\nGroup %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
-							self.send(chat_id, texts.feedback)
-						else:
-							self.log(self.log_str.err(response[2]))
-							self.send(chat_id, response[2])
+					self.log(self.log_str.cmd(' '.join(command_list)))
+					if response[0] == 'send':
+						self.send(response[1], response[2])
 					else:
 						self.send(chat_id, response[2])
 				elif response[1]:
@@ -150,21 +167,28 @@ class cryptoforex():
 				elif response[2]:
 					self.log(self.log_str.err(response[2]))
 				else:
-					self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))			## Regular group
-		## Admin user
-		elif chat_id == self.admin_id:
-			response = self.admin_commands.parse(chat_id, command_list)
-			if response[0]:
-				self.log(self.log_str.cmd(' '.join(command_list)))
-				if response[0] == 'send':
-					self.send(response[1], response[2])
-				else:
-					self.send(chat_id, response[2])
-			elif response[1]:
-				self.log(self.log_str.err(response[2]))
-				self.send(chat_id, response[2])
-			elif response[2]:
-				self.log(self.log_str.err(response[2]))
+					response = self.user_commands.parse(chat_id, command_list)
+					if response[0]:
+						self.log(self.log_str.cmd(' '.join(command_list)))
+						if response[0] == 'feedback':
+							if response[1]:
+								## Change group_id to admin_id to send as private message
+								self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
+								self.send(chat_id, texts.feedback)
+							else:
+								self.log(self.log_str.err(response[2]))
+								self.send(chat_id, response[2])
+						else:
+							self.send(chat_id, response[2])
+					elif response[1]:
+						self.log(self.log_str.err(response[2]))
+						self.send(chat_id, response[2])
+					elif response[2]:
+						self.log(self.log_str.err(response[2]))
+						self.send(chat_id, texts.err_internal)
+					else:
+						self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))
+			## Regular user
 			else:
 				response = self.user_commands.parse(chat_id, command_list)
 				if response[0]:
@@ -187,27 +211,4 @@ class cryptoforex():
 					self.send(chat_id, texts.err_internal)
 				else:
 					self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))
-		## Regular user
-		else:
-			response = self.user_commands.parse(chat_id, command_list)
-			if response[0]:
-				self.log(self.log_str.cmd(' '.join(command_list)))
-				if response[0] == 'feedback':
-					if response[1]:
-						## Change group_id to admin_id to send as private message
-						self.send(self.group_id, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]))
-						self.send(chat_id, texts.feedback)
-					else:
-						self.log(self.log_str.err(response[2]))
-						self.send(chat_id, response[2])
-				else:
-					self.send(chat_id, response[2])
-			elif response[1]:
-				self.log(self.log_str.err(response[2]))
-				self.send(chat_id, response[2])
-			elif response[2]:
-				self.log(self.log_str.err(response[2]))
-				self.send(chat_id, texts.err_internal)
-			else:
-				self.log(self.log_str.debug('%s to %s failed.' % (' '.join(command_list), chat_id)))
 
