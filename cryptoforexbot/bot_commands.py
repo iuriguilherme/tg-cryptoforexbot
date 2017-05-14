@@ -3,6 +3,7 @@
 import re
 import json
 import datetime
+import operator
 
 from cryptoforexbot import texts, metadata
 from plugins.coinmarketcap.wrapper import coinmarketcap
@@ -125,7 +126,7 @@ class bot_commands():
 			reply_to.append('')
 
 			reply_to_currencies = list()
-			for convert in converts_dict:
+			for convert in sorted(converts_dict, key=operator.itemgetter(0)):
 				reply_to_currencies.append(''.join([converts_dict[convert]['name'], ' - aliases: ']))
 				reply_to_currencies_symbols = list()
 				for symbol in converts_dict[convert]['symbols']:
@@ -143,18 +144,23 @@ class bot_commands():
 			reply_from.append("Available cryptocurrencies:")
 			reply_from.append('')
 
+			reply_full.append('\n'.join(reply_from))
+
 			reply_from_currencies = list()
-			for crypto in cryptos_dict:
-				reply_from_currencies.append(''.join([cryptos_dict[crypto]['name'], ' - aliases: ']))
-				reply_from_currencies_symbols = list()
-				for symbol in cryptos_dict[crypto]['symbols']:
-					reply_from_currencies_symbols.append(symbol)
-				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
-				reply_from_currencies.append('\n')
-				if len(''.join(reply_from_currencies)) > 3000:
-					reply_full.append(''.join(reply_from_currencies))
+			for crypto in sorted(cryptos_dict, key=operator.itemgetter(0)):
+				## TODO: This list command version is killing the telegram api and my patience
+#				reply_from_currencies.append(''.join([cryptos_dict[crypto]['name'], ' - aliases: ']))
+				reply_from_currencies.append(cryptos_dict[crypto]['coinmarketcap_id']) # new
+#				reply_from_currencies_symbols = list()
+#				for symbol in cryptos_dict[crypto]['symbols']:
+#					reply_from_currencies_symbols.append(symbol)
+#				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
+				if len(', '.join(reply_from_currencies)) > 3000:
+#					reply_full.append(''.join(reply_from_currencies))
+					reply_full.append(', '.join(reply_from_currencies)) # new
 					reply_from_currencies = list()
-			reply_full.append('\n'.join([''.join(reply_from_currencies), 'END']))
+#			reply_full.append('\n'.join([''.join(reply_from_currencies), 'END']))
+			reply_full.append('\n'.join([', '.join(reply_from_currencies), 'END'])) # new
 			
 			try:
 				return (True, True, reply_full)
