@@ -1,3 +1,3 @@
 # vim:fileencoding=utf-8
-__all__ = [ 'bot', 'commands', 'metadata', 'texts' ]
+__all__ = [ 'bot', 'command', 'user_commands', 'group_commands', 'admin_commands', 'metadata', 'texts' ]
 
