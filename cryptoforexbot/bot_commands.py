@@ -151,15 +151,11 @@ class bot_commands():
 					reply_from_currencies_symbols.append(symbol)
 				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
 				reply_from_currencies.append('\n')
-				if len(''.join(reply_from_currencies)) > 2000:
+				if len(''.join(reply_from_currencies)) > 3000:
 					reply_full.append(''.join(reply_from_currencies))
 					reply_from_currencies = list()
-			reply_from.append(''.join(reply_from_currencies))
-
-			reply.append('\n'.join(reply_from))
-
-			reply_full.append('\n'.join(reply))
-
+			reply_full.append('\n'.join([''.join(reply_from_currencies), 'END']))
+			
 			try:
 				return (True, True, reply_full)
 			except Exception as e:

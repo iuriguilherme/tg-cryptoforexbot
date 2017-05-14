@@ -116,9 +116,9 @@ class user_commands():
 			elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
 				response = self.bot_commands.list()
 				if response[0]:
-					return (True, 'list', response[2])
+					return ('list', True, response[2])
 				elif response[1]:
-					return (False, 'list', response[2])
+					return ('list', False, response[2])
 				elif response[2]:
 					return (False, False, response[2])
 				else:
@@ -127,9 +127,9 @@ class user_commands():
 			elif command_list[0] == '/feedback' or command_list[0] == ''.join(['/feedback', metadata.handle]):
 				try:
 					if len(command_list) > 1:
-						return (True, 'feedback', ' '.join(command_list[1::1]))
+						return ('feedback', True, ' '.join(command_list[1::1]))
 					else:
-						return (False, 'feedback', texts.err_param[5])
+						return ('feedback', False, texts.err_param[5])
 					return (False, False, False)
 				except Exception as e:
 					return (False, False, '%s' % (e))
