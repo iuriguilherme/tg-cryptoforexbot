@@ -87,6 +87,14 @@
    "8BIT"
   ]
  }, 
+ "9COIN": {
+  "coinmarketcap_id": "9coin", 
+  "name": "9COIN", 
+  "symbols": [
+   "9coin", 
+   "9COIN"
+  ]
+ }, 
  "ABN": {
   "coinmarketcap_id": "abncoin", 
   "name": "Abncoin", 
@@ -485,6 +493,14 @@
   "symbols": [
    "bitbay", 
    "BAY"
+  ]
+ }, 
+ "BCAP": {
+  "coinmarketcap_id": "bcap", 
+  "name": "BCAP", 
+  "symbols": [
+   "bcap", 
+   "BCAP"
   ]
  }, 
  "BCC": {
@@ -1304,6 +1320,14 @@
    "CNC"
   ]
  }, 
+ "CNNC": {
+  "coinmarketcap_id": "cannation", 
+  "name": "Cannation", 
+  "symbols": [
+   "cannation", 
+   "CNNC"
+  ]
+ }, 
  "CNO": {
   "coinmarketcap_id": "coin", 
   "name": "Coin(O)", 
@@ -1366,6 +1390,14 @@
   "symbols": [
    "capricoin", 
    "CPC"
+  ]
+ }, 
+ "CRAVE": {
+  "coinmarketcap_id": "crave", 
+  "name": "Crave", 
+  "symbols": [
+   "crave", 
+   "CRAVE"
   ]
  }, 
  "CRB": {
@@ -2305,6 +2337,14 @@
    "FUN"
   ]
  }, 
+ "FUNC": {
+  "coinmarketcap_id": "funcoin", 
+  "name": "FUNCoin", 
+  "symbols": [
+   "funcoin", 
+   "FUNC"
+  ]
+ }, 
  "FUND": {
   "coinmarketcap_id": "cryptofund", 
   "name": "Cryptofund", 
@@ -2745,6 +2785,14 @@
    "HMP"
   ]
  }, 
+ "HMQ": {
+  "coinmarketcap_id": "humaniq", 
+  "name": "Humaniq", 
+  "symbols": [
+   "humaniq", 
+   "HMQ"
+  ]
+ }, 
  "HNC": {
   "coinmarketcap_id": "helleniccoin", 
   "name": "Helleniccoin", 
@@ -3015,6 +3063,14 @@
   "symbols": [
    "islacoin", 
    "ISL"
+  ]
+ }, 
+ "ITI": {
+  "coinmarketcap_id": "iticoin", 
+  "name": "iTicoin", 
+  "symbols": [
+   "iticoin", 
+   "ITI"
   ]
  }, 
  "IVZ": {
@@ -3575,6 +3631,14 @@
   "symbols": [
    "mindcoin", 
    "MND"
+  ]
+ }, 
+ "MNE": {
+  "coinmarketcap_id": "minereum", 
+  "name": "Minereum", 
+  "symbols": [
+   "minereum", 
+   "MNE"
   ]
  }, 
  "MNM": {
@@ -5617,6 +5681,14 @@
   "symbols": [
    "unobtanium", 
    "UNO"
+  ]
+ }, 
+ "UNY": {
+  "coinmarketcap_id": "unity-ingot", 
+  "name": "Unity Ingot", 
+  "symbols": [
+   "unity-ingot", 
+   "UNY"
   ]
  }, 
  "UR": {
