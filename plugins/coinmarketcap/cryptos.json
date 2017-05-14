@@ -1,46 +1,6622 @@
 {
-	"BTC": {
-		"name": "Bitcoin",
-		"coinmarketcap_id": "bitcoin",
-		"symbols": [
-			"bitcoin",
-			"btc",
-			"xbt"
-		]
-	},
-	"ETH" : {
-		"name": "Ether",
-		"coinmarketcap_id": "ethereum",
-		"symbols": [
-			"ethereum",
-			"ether",
-			"eth"
-		]
-	},
-	"LTC" : {
-		"name": "Litecoin",
-		"coinmarketcap_id": "litecoin",
-		"symbols": [
-			"litecoin",
-			"ltc"
-		]
-	},
-	"PIV" : {
-		"name": "PIVX",
-		"coinmarketcap_id": "pivx",
-		"symbols": [
-			"pivx",
-			"darknet",
-			"dnet",
-			"piv"
-		]
-	},
-	"XRP" : {
-		"name": "Ripple",
-		"coinmarketcap_id": "ripple",
-		"symbols": [
-			"ripple",
-			"xrp"
-		]
-	}
+ "$$$": {
+  "coinmarketcap_id": "money", 
+  "name": "Money", 
+  "symbols": [
+   "money", 
+   "$$$"
+  ]
+ }, 
+ "1337": {
+  "coinmarketcap_id": "1337", 
+  "name": "1337", 
+  "symbols": [
+   "1337", 
+   "1337"
+  ]
+ }, 
+ "1CR": {
+  "coinmarketcap_id": "1credit", 
+  "name": "1CRedit", 
+  "symbols": [
+   "1credit", 
+   "1CR"
+  ]
+ }, 
+ "1ST": {
+  "coinmarketcap_id": "firstblood", 
+  "name": "FirstBlood", 
+  "symbols": [
+   "firstblood", 
+   "1ST"
+  ]
+ }, 
+ "2GIVE": {
+  "coinmarketcap_id": "2give", 
+  "name": "2GIVE", 
+  "symbols": [
+   "2give", 
+   "2GIVE"
+  ]
+ }, 
+ "42": {
+  "coinmarketcap_id": "42-coin", 
+  "name": "42-coin", 
+  "symbols": [
+   "42-coin", 
+   "42"
+  ]
+ }, 
+ "420G": {
+  "coinmarketcap_id": "ganjacoin", 
+  "name": "GanjaCoin", 
+  "symbols": [
+   "ganjacoin", 
+   "420G"
+  ]
+ }, 
+ "611": {
+  "coinmarketcap_id": "sixeleven", 
+  "name": "SixEleven", 
+  "symbols": [
+   "sixeleven", 
+   "611"
+  ]
+ }, 
+ "808": {
+  "coinmarketcap_id": "808coin", 
+  "name": "808Coin", 
+  "symbols": [
+   "808coin", 
+   "808"
+  ]
+ }, 
+ "888": {
+  "coinmarketcap_id": "octocoin", 
+  "name": "OctoCoin", 
+  "symbols": [
+   "octocoin", 
+   "888"
+  ]
+ }, 
+ "8BIT": {
+  "coinmarketcap_id": "8bit", 
+  "name": "8Bit", 
+  "symbols": [
+   "8bit", 
+   "8BIT"
+  ]
+ }, 
+ "ABN": {
+  "coinmarketcap_id": "abncoin", 
+  "name": "Abncoin", 
+  "symbols": [
+   "abncoin", 
+   "ABN"
+  ]
+ }, 
+ "ABY": {
+  "coinmarketcap_id": "applebyte", 
+  "name": "ArtByte", 
+  "symbols": [
+   "applebyte", 
+   "ABY"
+  ]
+ }, 
+ "AC": {
+  "coinmarketcap_id": "asiacoin", 
+  "name": "AsiaCoin", 
+  "symbols": [
+   "asiacoin", 
+   "AC"
+  ]
+ }, 
+ "ACCI": {
+  "coinmarketcap_id": "nxttyacci", 
+  "name": "NxttyACCI", 
+  "symbols": [
+   "nxttyacci", 
+   "ACCI"
+  ]
+ }, 
+ "ACES": {
+  "coinmarketcap_id": "aces", 
+  "name": "Aces", 
+  "symbols": [
+   "aces", 
+   "ACES"
+  ]
+ }, 
+ "ACN": {
+  "coinmarketcap_id": "avoncoin", 
+  "name": "Avoncoin", 
+  "symbols": [
+   "avoncoin", 
+   "ACN"
+  ]
+ }, 
+ "ACOIN": {
+  "coinmarketcap_id": "acoin", 
+  "name": "Acoin", 
+  "symbols": [
+   "acoin", 
+   "ACOIN"
+  ]
+ }, 
+ "ACP": {
+  "coinmarketcap_id": "anarchistsprime", 
+  "name": "AnarchistsPrime", 
+  "symbols": [
+   "anarchistsprime", 
+   "ACP"
+  ]
+ }, 
+ "ADC": {
+  "coinmarketcap_id": "audiocoin", 
+  "name": "AudioCoin", 
+  "symbols": [
+   "audiocoin", 
+   "ADC"
+  ]
+ }, 
+ "ADCN": {
+  "coinmarketcap_id": "asiadigicoin", 
+  "name": "Asiadigicoin", 
+  "symbols": [
+   "asiadigicoin", 
+   "ADCN"
+  ]
+ }, 
+ "ADT": {
+  "coinmarketcap_id": "the-aladin", 
+  "name": "The Aladin", 
+  "symbols": [
+   "the-aladin", 
+   "ADT"
+  ]
+ }, 
+ "ADZ": {
+  "coinmarketcap_id": "adzcoin", 
+  "name": "Adzcoin", 
+  "symbols": [
+   "adzcoin", 
+   "ADZ"
+  ]
+ }, 
+ "AEON": {
+  "coinmarketcap_id": "aeon", 
+  "name": "Aeon", 
+  "symbols": [
+   "aeon", 
+   "AEON"
+  ]
+ }, 
+ "AGLC": {
+  "coinmarketcap_id": "agrolifecoin", 
+  "name": "AgrolifeCoin", 
+  "symbols": [
+   "agrolifecoin", 
+   "AGLC"
+  ]
+ }, 
+ "AGRS": {
+  "coinmarketcap_id": "agoras-tokens", 
+  "name": "Agoras Tokens", 
+  "symbols": [
+   "agoras-tokens", 
+   "AGRS"
+  ]
+ }, 
+ "AIB": {
+  "coinmarketcap_id": "advanced-internet-blocks", 
+  "name": "Advanced Internet Blocks", 
+  "symbols": [
+   "advanced-internet-blocks", 
+   "AIB"
+  ]
+ }, 
+ "ALL": {
+  "coinmarketcap_id": "allion", 
+  "name": "Allion", 
+  "symbols": [
+   "allion", 
+   "ALL"
+  ]
+ }, 
+ "ALT": {
+  "coinmarketcap_id": "altcoin-alt", 
+  "name": "Altcoin", 
+  "symbols": [
+   "altcoin-alt", 
+   "ALT"
+  ]
+ }, 
+ "ALTC": {
+  "coinmarketcap_id": "antilitecoin", 
+  "name": "Antilitecoin", 
+  "symbols": [
+   "antilitecoin", 
+   "ALTC"
+  ]
+ }, 
+ "AMBER": {
+  "coinmarketcap_id": "ambercoin", 
+  "name": "AmberCoin", 
+  "symbols": [
+   "ambercoin", 
+   "AMBER"
+  ]
+ }, 
+ "AMIS": {
+  "coinmarketcap_id": "amis", 
+  "name": "AMIS", 
+  "symbols": [
+   "amis", 
+   "AMIS"
+  ]
+ }, 
+ "AMP": {
+  "coinmarketcap_id": "synereo", 
+  "name": "Synereo", 
+  "symbols": [
+   "synereo", 
+   "AMP"
+  ]
+ }, 
+ "AMS": {
+  "coinmarketcap_id": "amsterdamcoin", 
+  "name": "AmsterdamCoin", 
+  "symbols": [
+   "amsterdamcoin", 
+   "AMS"
+  ]
+ }, 
+ "ANC": {
+  "coinmarketcap_id": "anoncoin", 
+  "name": "Anoncoin", 
+  "symbols": [
+   "anoncoin", 
+   "ANC"
+  ]
+ }, 
+ "ANS": {
+  "coinmarketcap_id": "antshares", 
+  "name": "AntShares", 
+  "symbols": [
+   "antshares", 
+   "ANS"
+  ]
+ }, 
+ "ANTI": {
+  "coinmarketcap_id": "antibitcoin", 
+  "name": "AntiBitcoin", 
+  "symbols": [
+   "antibitcoin", 
+   "ANTI"
+  ]
+ }, 
+ "APC": {
+  "coinmarketcap_id": "alpacoin", 
+  "name": "AlpaCoin", 
+  "symbols": [
+   "alpacoin", 
+   "APC"
+  ]
+ }, 
+ "ARB": {
+  "coinmarketcap_id": "arbit", 
+  "name": "ARbit", 
+  "symbols": [
+   "arbit", 
+   "ARB"
+  ]
+ }, 
+ "ARC": {
+  "coinmarketcap_id": "arcade-token", 
+  "name": "Arcade Token", 
+  "symbols": [
+   "arcade-token", 
+   "ARC"
+  ]
+ }, 
+ "ARCO": {
+  "coinmarketcap_id": "aquariuscoin", 
+  "name": "AquariusCoin", 
+  "symbols": [
+   "aquariuscoin", 
+   "ARCO"
+  ]
+ }, 
+ "ARDR": {
+  "coinmarketcap_id": "ardor", 
+  "name": "Ardor", 
+  "symbols": [
+   "ardor", 
+   "ARDR"
+  ]
+ }, 
+ "ARG": {
+  "coinmarketcap_id": "argentum", 
+  "name": "Argentum", 
+  "symbols": [
+   "argentum", 
+   "ARG"
+  ]
+ }, 
+ "ARGUS": {
+  "coinmarketcap_id": "argus", 
+  "name": "Argus", 
+  "symbols": [
+   "argus", 
+   "ARGUS"
+  ]
+ }, 
+ "ARI": {
+  "coinmarketcap_id": "aricoin", 
+  "name": "Aricoin", 
+  "symbols": [
+   "aricoin", 
+   "ARI"
+  ]
+ }, 
+ "ARK": {
+  "coinmarketcap_id": "ark", 
+  "name": "Ark", 
+  "symbols": [
+   "ark", 
+   "ARK"
+  ]
+ }, 
+ "ASAFE": {
+  "coinmarketcap_id": "allsafe", 
+  "name": "AllSafe", 
+  "symbols": [
+   "allsafe", 
+   "ASAFE"
+  ]
+ }, 
+ "ASC": {
+  "coinmarketcap_id": "asiccoin", 
+  "name": "AsicCoin", 
+  "symbols": [
+   "asiccoin", 
+   "ASC"
+  ]
+ }, 
+ "ATMS": {
+  "coinmarketcap_id": "atmos", 
+  "name": "Atmos", 
+  "symbols": [
+   "atmos", 
+   "ATMS"
+  ]
+ }, 
+ "ATOM": {
+  "coinmarketcap_id": "atomic-coin", 
+  "name": "Atomic Coin", 
+  "symbols": [
+   "atomic-coin", 
+   "ATOM"
+  ]
+ }, 
+ "ATX": {
+  "coinmarketcap_id": "artex-coin", 
+  "name": "Artex Coin", 
+  "symbols": [
+   "artex-coin", 
+   "ATX"
+  ]
+ }, 
+ "AU": {
+  "coinmarketcap_id": "aurumcoin", 
+  "name": "AurumCoin", 
+  "symbols": [
+   "aurumcoin", 
+   "AU"
+  ]
+ }, 
+ "AUM": {
+  "coinmarketcap_id": "alexium", 
+  "name": "Alexium", 
+  "symbols": [
+   "alexium", 
+   "AUM"
+  ]
+ }, 
+ "AUR": {
+  "coinmarketcap_id": "auroracoin", 
+  "name": "Auroracoin", 
+  "symbols": [
+   "auroracoin", 
+   "AUR"
+  ]
+ }, 
+ "AV": {
+  "coinmarketcap_id": "avatarcoin", 
+  "name": "AvatarCoin", 
+  "symbols": [
+   "avatarcoin", 
+   "AV"
+  ]
+ }, 
+ "AXF": {
+  "coinmarketcap_id": "axfunds", 
+  "name": "AxFunds", 
+  "symbols": [
+   "axfunds", 
+   "AXF"
+  ]
+ }, 
+ "B3": {
+  "coinmarketcap_id": "b3coin", 
+  "name": "B3Coin", 
+  "symbols": [
+   "b3coin", 
+   "B3"
+  ]
+ }, 
+ "B@": {
+  "coinmarketcap_id": "bankcoin", 
+  "name": "Bankcoin", 
+  "symbols": [
+   "bankcoin", 
+   "B@"
+  ]
+ }, 
+ "BAC": {
+  "coinmarketcap_id": "bitalphacoin", 
+  "name": "BitAlphaCoin", 
+  "symbols": [
+   "bitalphacoin", 
+   "BAC"
+  ]
+ }, 
+ "BASH": {
+  "coinmarketcap_id": "luckchain", 
+  "name": "LuckChain", 
+  "symbols": [
+   "luckchain", 
+   "BASH"
+  ]
+ }, 
+ "BAY": {
+  "coinmarketcap_id": "bitbay", 
+  "name": "BitBay", 
+  "symbols": [
+   "bitbay", 
+   "BAY"
+  ]
+ }, 
+ "BCC": {
+  "coinmarketcap_id": "bitconnect", 
+  "name": "BitConnect", 
+  "symbols": [
+   "bitconnect", 
+   "BCC"
+  ]
+ }, 
+ "BCF": {
+  "coinmarketcap_id": "bitcoinfast", 
+  "name": "BitcoinFast", 
+  "symbols": [
+   "bitcoinfast", 
+   "BCF"
+  ]
+ }, 
+ "BCN": {
+  "coinmarketcap_id": "bytecoin-bcn", 
+  "name": "Bytecoin", 
+  "symbols": [
+   "bytecoin-bcn", 
+   "BCN"
+  ]
+ }, 
+ "BCY": {
+  "coinmarketcap_id": "bitcrystals", 
+  "name": "Bitcrystals", 
+  "symbols": [
+   "bitcrystals", 
+   "BCY"
+  ]
+ }, 
+ "BELA": {
+  "coinmarketcap_id": "belacoin", 
+  "name": "BelaCoin", 
+  "symbols": [
+   "belacoin", 
+   "BELA"
+  ]
+ }, 
+ "BENJI": {
+  "coinmarketcap_id": "benjirolls", 
+  "name": "BenjiRolls", 
+  "symbols": [
+   "benjirolls", 
+   "BENJI"
+  ]
+ }, 
+ "BERN": {
+  "coinmarketcap_id": "berncash", 
+  "name": "BERNcash", 
+  "symbols": [
+   "berncash", 
+   "BERN"
+  ]
+ }, 
+ "BEST": {
+  "coinmarketcap_id": "bestchain", 
+  "name": "BestChain", 
+  "symbols": [
+   "bestchain", 
+   "BEST"
+  ]
+ }, 
+ "BGC": {
+  "coinmarketcap_id": "bagcoin", 
+  "name": "BagCoin", 
+  "symbols": [
+   "bagcoin", 
+   "BGC"
+  ]
+ }, 
+ "BIC": {
+  "coinmarketcap_id": "bikercoin", 
+  "name": "Bikercoin", 
+  "symbols": [
+   "bikercoin", 
+   "BIC"
+  ]
+ }, 
+ "BIGUP": {
+  "coinmarketcap_id": "bigup", 
+  "name": "BigUp", 
+  "symbols": [
+   "bigup", 
+   "BIGUP"
+  ]
+ }, 
+ "BIOB": {
+  "coinmarketcap_id": "biobar", 
+  "name": "BioBar", 
+  "symbols": [
+   "biobar", 
+   "BIOB"
+  ]
+ }, 
+ "BIOS": {
+  "coinmarketcap_id": "bios-crypto", 
+  "name": "BiosCrypto", 
+  "symbols": [
+   "bios-crypto", 
+   "BIOS"
+  ]
+ }, 
+ "BIP": {
+  "coinmarketcap_id": "bipcoin", 
+  "name": "BipCoin", 
+  "symbols": [
+   "bipcoin", 
+   "BIP"
+  ]
+ }, 
+ "BIT": {
+  "coinmarketcap_id": "first-bitcoin", 
+  "name": "First Bitcoin", 
+  "symbols": [
+   "first-bitcoin", 
+   "BIT"
+  ]
+ }, 
+ "BITB": {
+  "coinmarketcap_id": "bitbean", 
+  "name": "BitBean", 
+  "symbols": [
+   "bitbean", 
+   "BITB"
+  ]
+ }, 
+ "BITBTC": {
+  "coinmarketcap_id": "bitbtc", 
+  "name": "bitBTC", 
+  "symbols": [
+   "bitbtc", 
+   "BITBTC"
+  ]
+ }, 
+ "BITCNY": {
+  "coinmarketcap_id": "bitcny", 
+  "name": "bitCNY", 
+  "symbols": [
+   "bitcny", 
+   "BITCNY"
+  ]
+ }, 
+ "BITEUR": {
+  "coinmarketcap_id": "biteur", 
+  "name": "bitEUR", 
+  "symbols": [
+   "biteur", 
+   "BITEUR"
+  ]
+ }, 
+ "BITGOLD": {
+  "coinmarketcap_id": "bitgold", 
+  "name": "bitGold", 
+  "symbols": [
+   "bitgold", 
+   "BITGOLD"
+  ]
+ }, 
+ "BITS": {
+  "coinmarketcap_id": "bitstar", 
+  "name": "Bitstar", 
+  "symbols": [
+   "bitstar", 
+   "BITS"
+  ]
+ }, 
+ "BITSILVER": {
+  "coinmarketcap_id": "bitsilver", 
+  "name": "bitSilver", 
+  "symbols": [
+   "bitsilver", 
+   "BITSILVER"
+  ]
+ }, 
+ "BITUSD": {
+  "coinmarketcap_id": "bitusd", 
+  "name": "bitUSD", 
+  "symbols": [
+   "bitusd", 
+   "BITUSD"
+  ]
+ }, 
+ "BITZ": {
+  "coinmarketcap_id": "bitz", 
+  "name": "Bitz", 
+  "symbols": [
+   "bitz", 
+   "BITZ"
+  ]
+ }, 
+ "BLAZR": {
+  "coinmarketcap_id": "blazercoin", 
+  "name": "BlazerCoin", 
+  "symbols": [
+   "blazercoin", 
+   "BLAZR"
+  ]
+ }, 
+ "BLC": {
+  "coinmarketcap_id": "blakecoin", 
+  "name": "Blakecoin", 
+  "symbols": [
+   "blakecoin", 
+   "BLC"
+  ]
+ }, 
+ "BLITZ": {
+  "coinmarketcap_id": "blitzcash", 
+  "name": "Blitzcash", 
+  "symbols": [
+   "blitzcash", 
+   "BLITZ"
+  ]
+ }, 
+ "BLK": {
+  "coinmarketcap_id": "blackcoin", 
+  "name": "BlackCoin", 
+  "symbols": [
+   "blackcoin", 
+   "BLK"
+  ]
+ }, 
+ "BLOCK": {
+  "coinmarketcap_id": "blocknet", 
+  "name": "Blocknet", 
+  "symbols": [
+   "blocknet", 
+   "BLOCK"
+  ]
+ }, 
+ "BLOCKPAY": {
+  "coinmarketcap_id": "blockpay", 
+  "name": "BlockPay", 
+  "symbols": [
+   "blockpay", 
+   "BLOCKPAY"
+  ]
+ }, 
+ "BLRY": {
+  "coinmarketcap_id": "billarycoin", 
+  "name": "BillaryCoin", 
+  "symbols": [
+   "billarycoin", 
+   "BLRY"
+  ]
+ }, 
+ "BLU": {
+  "coinmarketcap_id": "bluecoin", 
+  "name": "BlueCoin", 
+  "symbols": [
+   "bluecoin", 
+   "BLU"
+  ]
+ }, 
+ "BLZ": {
+  "coinmarketcap_id": "blazecoin", 
+  "name": "BlazeCoin", 
+  "symbols": [
+   "blazecoin", 
+   "BLZ"
+  ]
+ }, 
+ "BOAT": {
+  "coinmarketcap_id": "doubloon", 
+  "name": "Doubloon", 
+  "symbols": [
+   "doubloon", 
+   "BOAT"
+  ]
+ }, 
+ "BOB": {
+  "coinmarketcap_id": "dobbscoin", 
+  "name": "Dobbscoin", 
+  "symbols": [
+   "dobbscoin", 
+   "BOB"
+  ]
+ }, 
+ "BOLI": {
+  "coinmarketcap_id": "bolivarcoin", 
+  "name": "Bolivarcoin", 
+  "symbols": [
+   "bolivarcoin", 
+   "BOLI"
+  ]
+ }, 
+ "BOND": {
+  "coinmarketcap_id": "bond", 
+  "name": "Bond", 
+  "symbols": [
+   "bond", 
+   "BOND"
+  ]
+ }, 
+ "BOST": {
+  "coinmarketcap_id": "boostcoin", 
+  "name": "BoostCoin", 
+  "symbols": [
+   "boostcoin", 
+   "BOST"
+  ]
+ }, 
+ "BPC": {
+  "coinmarketcap_id": "bitpark-coin", 
+  "name": "Bitpark Coin", 
+  "symbols": [
+   "bitpark-coin", 
+   "BPC"
+  ]
+ }, 
+ "BRAIN": {
+  "coinmarketcap_id": "braincoin", 
+  "name": "Braincoin", 
+  "symbols": [
+   "braincoin", 
+   "BRAIN"
+  ]
+ }, 
+ "BRIT": {
+  "coinmarketcap_id": "britcoin", 
+  "name": "BritCoin", 
+  "symbols": [
+   "britcoin", 
+   "BRIT"
+  ]
+ }, 
+ "BRK": {
+  "coinmarketcap_id": "breakout", 
+  "name": "Breakout", 
+  "symbols": [
+   "breakout", 
+   "BRK"
+  ]
+ }, 
+ "BRX": {
+  "coinmarketcap_id": "breakout-stake", 
+  "name": "Breakout Stake", 
+  "symbols": [
+   "breakout-stake", 
+   "BRX"
+  ]
+ }, 
+ "BSC": {
+  "coinmarketcap_id": "bowscoin", 
+  "name": "BowsCoin", 
+  "symbols": [
+   "bowscoin", 
+   "BSC"
+  ]
+ }, 
+ "BSD": {
+  "coinmarketcap_id": "bitsend", 
+  "name": "BitSend", 
+  "symbols": [
+   "bitsend", 
+   "BSD"
+  ]
+ }, 
+ "BSTAR": {
+  "coinmarketcap_id": "blackstar", 
+  "name": "Blackstar", 
+  "symbols": [
+   "blackstar", 
+   "BSTAR"
+  ]
+ }, 
+ "BSTY": {
+  "coinmarketcap_id": "globalboost-y", 
+  "name": "GlobalBoost-Y", 
+  "symbols": [
+   "globalboost-y", 
+   "BSTY"
+  ]
+ }, 
+ "BTA": {
+  "coinmarketcap_id": "bata", 
+  "name": "Bata", 
+  "symbols": [
+   "bata", 
+   "BTA"
+  ]
+ }, 
+ "BTB": {
+  "coinmarketcap_id": "bitbar", 
+  "name": "BitBar", 
+  "symbols": [
+   "bitbar", 
+   "BTB"
+  ]
+ }, 
+ "BTC": {
+  "coinmarketcap_id": "bitcoin", 
+  "name": "Bitcoin", 
+  "symbols": [
+   "bitcoin", 
+   "btc", 
+   "xbt"
+  ]
+ }, 
+ "BTCD": {
+  "coinmarketcap_id": "bitcoindark", 
+  "name": "BitcoinDark", 
+  "symbols": [
+   "bitcoindark", 
+   "BTCD"
+  ]
+ }, 
+ "BTCR": {
+  "coinmarketcap_id": "bitcurrency", 
+  "name": "Bitcurrency", 
+  "symbols": [
+   "bitcurrency", 
+   "BTCR"
+  ]
+ }, 
+ "BTCS": {
+  "coinmarketcap_id": "bitcoin-scrypt", 
+  "name": "Bitcoin Scrypt", 
+  "symbols": [
+   "bitcoin-scrypt", 
+   "BTCS"
+  ]
+ }, 
+ "BTD": {
+  "coinmarketcap_id": "bitcloud", 
+  "name": "Bitcloud", 
+  "symbols": [
+   "bitcloud", 
+   "BTD"
+  ]
+ }, 
+ "BTG": {
+  "coinmarketcap_id": "bitgem", 
+  "name": "Bitgem", 
+  "symbols": [
+   "bitgem", 
+   "BTG"
+  ]
+ }, 
+ "BTM": {
+  "coinmarketcap_id": "bitmark", 
+  "name": "Bitmark", 
+  "symbols": [
+   "bitmark", 
+   "BTM"
+  ]
+ }, 
+ "BTQ": {
+  "coinmarketcap_id": "bitquark", 
+  "name": "BitQuark", 
+  "symbols": [
+   "bitquark", 
+   "BTQ"
+  ]
+ }, 
+ "BTS": {
+  "coinmarketcap_id": "bitshares", 
+  "name": "BitShares", 
+  "symbols": [
+   "bitshares", 
+   "BTS"
+  ]
+ }, 
+ "BTSR": {
+  "coinmarketcap_id": "btsr", 
+  "name": "BTSR", 
+  "symbols": [
+   "btsr", 
+   "BTSR"
+  ]
+ }, 
+ "BTU": {
+  "coinmarketcap_id": "bitcoin-unlimited", 
+  "name": "Bitcoin Unlimited (Futures)", 
+  "symbols": [
+   "bitcoin-unlimited", 
+   "BTU"
+  ]
+ }, 
+ "BTX": {
+  "coinmarketcap_id": "bitcointx", 
+  "name": "BitcoinTX", 
+  "symbols": [
+   "bitcointx", 
+   "BTX"
+  ]
+ }, 
+ "BUCKS": {
+  "coinmarketcap_id": "swagbucks", 
+  "name": "SwagBucks", 
+  "symbols": [
+   "swagbucks", 
+   "BUCKS"
+  ]
+ }, 
+ "BUK": {
+  "coinmarketcap_id": "cryptobuck", 
+  "name": "CryptoBuck", 
+  "symbols": [
+   "cryptobuck", 
+   "BUK"
+  ]
+ }, 
+ "BUMBA": {
+  "coinmarketcap_id": "bumbacoin", 
+  "name": "BumbaCoin", 
+  "symbols": [
+   "bumbacoin", 
+   "BUMBA"
+  ]
+ }, 
+ "BUN": {
+  "coinmarketcap_id": "bunnycoin", 
+  "name": "BunnyCoin", 
+  "symbols": [
+   "bunnycoin", 
+   "BUN"
+  ]
+ }, 
+ "BURN": {
+  "coinmarketcap_id": "president-sanders", 
+  "name": "President Sanders", 
+  "symbols": [
+   "president-sanders", 
+   "BURN"
+  ]
+ }, 
+ "BURST": {
+  "coinmarketcap_id": "burst", 
+  "name": "Burst", 
+  "symbols": [
+   "burst", 
+   "BURST"
+  ]
+ }, 
+ "BVC": {
+  "coinmarketcap_id": "beavercoin", 
+  "name": "BeaverCoin", 
+  "symbols": [
+   "beavercoin", 
+   "BVC"
+  ]
+ }, 
+ "BXC": {
+  "coinmarketcap_id": "bitcedi", 
+  "name": "Bitcedi", 
+  "symbols": [
+   "bitcedi", 
+   "BXC"
+  ]
+ }, 
+ "BXT": {
+  "coinmarketcap_id": "bittokens", 
+  "name": "BitTokens", 
+  "symbols": [
+   "bittokens", 
+   "BXT"
+  ]
+ }, 
+ "BYC": {
+  "coinmarketcap_id": "bytecent", 
+  "name": "Bytecent", 
+  "symbols": [
+   "bytecent", 
+   "BYC"
+  ]
+ }, 
+ "C2": {
+  "coinmarketcap_id": "coin2-1", 
+  "name": "Coin2.1", 
+  "symbols": [
+   "coin2-1", 
+   "C2"
+  ]
+ }, 
+ "CAB": {
+  "coinmarketcap_id": "cabbage", 
+  "name": "Cabbage", 
+  "symbols": [
+   "cabbage", 
+   "CAB"
+  ]
+ }, 
+ "CADASTRAL": {
+  "coinmarketcap_id": "bitland", 
+  "name": "Bitland", 
+  "symbols": [
+   "bitland", 
+   "CADASTRAL"
+  ]
+ }, 
+ "CAGE": {
+  "coinmarketcap_id": "cagecoin", 
+  "name": "CageCoin", 
+  "symbols": [
+   "cagecoin", 
+   "CAGE"
+  ]
+ }, 
+ "CALC": {
+  "coinmarketcap_id": "caliphcoin", 
+  "name": "CaliphCoin", 
+  "symbols": [
+   "caliphcoin", 
+   "CALC"
+  ]
+ }, 
+ "CANN": {
+  "coinmarketcap_id": "cannabiscoin", 
+  "name": "CannabisCoin", 
+  "symbols": [
+   "cannabiscoin", 
+   "CANN"
+  ]
+ }, 
+ "CAP": {
+  "coinmarketcap_id": "bottlecaps", 
+  "name": "Bottlecaps", 
+  "symbols": [
+   "bottlecaps", 
+   "CAP"
+  ]
+ }, 
+ "CARBON": {
+  "coinmarketcap_id": "carboncoin", 
+  "name": "Carboncoin", 
+  "symbols": [
+   "carboncoin", 
+   "CARBON"
+  ]
+ }, 
+ "CASH": {
+  "coinmarketcap_id": "cashcoin", 
+  "name": "Cashcoin", 
+  "symbols": [
+   "cashcoin", 
+   "CASH"
+  ]
+ }, 
+ "CASINO": {
+  "coinmarketcap_id": "casino", 
+  "name": "Casino", 
+  "symbols": [
+   "casino", 
+   "CASINO"
+  ]
+ }, 
+ "CBD": {
+  "coinmarketcap_id": "cbd-crystals", 
+  "name": "CBD Crystals", 
+  "symbols": [
+   "cbd-crystals", 
+   "CBD"
+  ]
+ }, 
+ "CBX": {
+  "coinmarketcap_id": "cryptogenic-bullion", 
+  "name": "Crypto Bullion", 
+  "symbols": [
+   "cryptogenic-bullion", 
+   "CBX"
+  ]
+ }, 
+ "CC": {
+  "coinmarketcap_id": "cybercoin", 
+  "name": "CyberCoin", 
+  "symbols": [
+   "cybercoin", 
+   "CC"
+  ]
+ }, 
+ "CCM100": {
+  "coinmarketcap_id": "ccminer", 
+  "name": "CCMiner", 
+  "symbols": [
+   "ccminer", 
+   "CCM100"
+  ]
+ }, 
+ "CCN": {
+  "coinmarketcap_id": "cannacoin", 
+  "name": "Cannacoin", 
+  "symbols": [
+   "cannacoin", 
+   "CCN"
+  ]
+ }, 
+ "CCRB": {
+  "coinmarketcap_id": "cryptocarbon", 
+  "name": "CryptoCarbon", 
+  "symbols": [
+   "cryptocarbon", 
+   "CCRB"
+  ]
+ }, 
+ "CDN": {
+  "coinmarketcap_id": "canada-ecoin", 
+  "name": "Canada eCoin", 
+  "symbols": [
+   "canada-ecoin", 
+   "CDN"
+  ]
+ }, 
+ "CESC": {
+  "coinmarketcap_id": "cryptoescudo", 
+  "name": "CryptoEscudo", 
+  "symbols": [
+   "cryptoescudo", 
+   "CESC"
+  ]
+ }, 
+ "CF": {
+  "coinmarketcap_id": "californium", 
+  "name": "Californium", 
+  "symbols": [
+   "californium", 
+   "CF"
+  ]
+ }, 
+ "CHAO": {
+  "coinmarketcap_id": "23-skidoo", 
+  "name": "23 Skidoo", 
+  "symbols": [
+   "23-skidoo", 
+   "CHAO"
+  ]
+ }, 
+ "CHC": {
+  "coinmarketcap_id": "chaincoin", 
+  "name": "ChainCoin", 
+  "symbols": [
+   "chaincoin", 
+   "CHC"
+  ]
+ }, 
+ "CHESS": {
+  "coinmarketcap_id": "chesscoin", 
+  "name": "ChessCoin", 
+  "symbols": [
+   "chesscoin", 
+   "CHESS"
+  ]
+ }, 
+ "CHOOF": {
+  "coinmarketcap_id": "choofcoin", 
+  "name": "ChoofCoin", 
+  "symbols": [
+   "choofcoin", 
+   "CHOOF"
+  ]
+ }, 
+ "CJ": {
+  "coinmarketcap_id": "cryptojacks", 
+  "name": "Cryptojacks", 
+  "symbols": [
+   "cryptojacks", 
+   "CJ"
+  ]
+ }, 
+ "CLAM": {
+  "coinmarketcap_id": "clams", 
+  "name": "Clams", 
+  "symbols": [
+   "clams", 
+   "CLAM"
+  ]
+ }, 
+ "CLINT": {
+  "coinmarketcap_id": "clinton", 
+  "name": "Clinton", 
+  "symbols": [
+   "clinton", 
+   "CLINT"
+  ]
+ }, 
+ "CLOAK": {
+  "coinmarketcap_id": "cloakcoin", 
+  "name": "CloakCoin", 
+  "symbols": [
+   "cloakcoin", 
+   "CLOAK"
+  ]
+ }, 
+ "CLUB": {
+  "coinmarketcap_id": "clubcoin", 
+  "name": "ClubCoin", 
+  "symbols": [
+   "clubcoin", 
+   "CLUB"
+  ]
+ }, 
+ "CME": {
+  "coinmarketcap_id": "cashme", 
+  "name": "Cashme", 
+  "symbols": [
+   "cashme", 
+   "CME"
+  ]
+ }, 
+ "CMT": {
+  "coinmarketcap_id": "comet", 
+  "name": "Comet", 
+  "symbols": [
+   "comet", 
+   "CMT"
+  ]
+ }, 
+ "CNC": {
+  "coinmarketcap_id": "chncoin", 
+  "name": "CHNCoin", 
+  "symbols": [
+   "chncoin", 
+   "CNC"
+  ]
+ }, 
+ "CNO": {
+  "coinmarketcap_id": "coin", 
+  "name": "Coin(O)", 
+  "symbols": [
+   "coin", 
+   "CNO"
+  ]
+ }, 
+ "CNT": {
+  "coinmarketcap_id": "centurion", 
+  "name": "Centurion", 
+  "symbols": [
+   "centurion", 
+   "CNT"
+  ]
+ }, 
+ "CON": {
+  "coinmarketcap_id": "paycon", 
+  "name": "PayCon", 
+  "symbols": [
+   "paycon", 
+   "CON"
+  ]
+ }, 
+ "CONX": {
+  "coinmarketcap_id": "concoin", 
+  "name": "Concoin", 
+  "symbols": [
+   "concoin", 
+   "CONX"
+  ]
+ }, 
+ "CORG": {
+  "coinmarketcap_id": "corgicoin", 
+  "name": "CorgiCoin", 
+  "symbols": [
+   "corgicoin", 
+   "CORG"
+  ]
+ }, 
+ "COVAL": {
+  "coinmarketcap_id": "circuits-of-value", 
+  "name": "Circuits of Value", 
+  "symbols": [
+   "circuits-of-value", 
+   "COVAL"
+  ]
+ }, 
+ "COXST": {
+  "coinmarketcap_id": "coexistcoin", 
+  "name": "CoExistCoin", 
+  "symbols": [
+   "coexistcoin", 
+   "COXST"
+  ]
+ }, 
+ "CPC": {
+  "coinmarketcap_id": "capricoin", 
+  "name": "Capricoin", 
+  "symbols": [
+   "capricoin", 
+   "CPC"
+  ]
+ }, 
+ "CRB": {
+  "coinmarketcap_id": "creditbit", 
+  "name": "Creditbit", 
+  "symbols": [
+   "creditbit", 
+   "CRB"
+  ]
+ }, 
+ "CREVA": {
+  "coinmarketcap_id": "crevacoin", 
+  "name": "CrevaCoin", 
+  "symbols": [
+   "crevacoin", 
+   "CREVA"
+  ]
+ }, 
+ "CRT": {
+  "coinmarketcap_id": "crtcoin", 
+  "name": "CRTCoin", 
+  "symbols": [
+   "crtcoin", 
+   "CRT"
+  ]
+ }, 
+ "CRW": {
+  "coinmarketcap_id": "crown", 
+  "name": "Crown", 
+  "symbols": [
+   "crown", 
+   "CRW"
+  ]
+ }, 
+ "CRX": {
+  "coinmarketcap_id": "chronos", 
+  "name": "Chronos", 
+  "symbols": [
+   "chronos", 
+   "CRX"
+  ]
+ }, 
+ "CSC": {
+  "coinmarketcap_id": "casinocoin", 
+  "name": "CasinoCoin", 
+  "symbols": [
+   "casinocoin", 
+   "CSC"
+  ]
+ }, 
+ "CSH": {
+  "coinmarketcap_id": "cashout", 
+  "name": "Cashout", 
+  "symbols": [
+   "cashout", 
+   "CSH"
+  ]
+ }, 
+ "CTO": {
+  "coinmarketcap_id": "crypto", 
+  "name": "Crypto", 
+  "symbols": [
+   "crypto", 
+   "CTO"
+  ]
+ }, 
+ "CUBE": {
+  "coinmarketcap_id": "digicube", 
+  "name": "DigiCube", 
+  "symbols": [
+   "digicube", 
+   "CUBE"
+  ]
+ }, 
+ "CURE": {
+  "coinmarketcap_id": "curecoin", 
+  "name": "CureCoin", 
+  "symbols": [
+   "curecoin", 
+   "CURE"
+  ]
+ }, 
+ "CV2": {
+  "coinmarketcap_id": "colossuscoin-v2", 
+  "name": "Colossuscoin V2", 
+  "symbols": [
+   "colossuscoin-v2", 
+   "CV2"
+  ]
+ }, 
+ "CWXT": {
+  "coinmarketcap_id": "cryptoworldx-token", 
+  "name": "CryptoWorldX Token", 
+  "symbols": [
+   "cryptoworldx-token", 
+   "CWXT"
+  ]
+ }, 
+ "CXT": {
+  "coinmarketcap_id": "coinonat", 
+  "name": "Coinonat", 
+  "symbols": [
+   "coinonat", 
+   "CXT"
+  ]
+ }, 
+ "CYC": {
+  "coinmarketcap_id": "cycling-coin", 
+  "name": "Cycling Coin", 
+  "symbols": [
+   "cycling-coin", 
+   "CYC"
+  ]
+ }, 
+ "CYP": {
+  "coinmarketcap_id": "cypher", 
+  "name": "Cypher", 
+  "symbols": [
+   "cypher", 
+   "CYP"
+  ]
+ }, 
+ "DAR": {
+  "coinmarketcap_id": "darcrus", 
+  "name": "Darcrus", 
+  "symbols": [
+   "darcrus", 
+   "DAR"
+  ]
+ }, 
+ "DASH": {
+  "coinmarketcap_id": "dash", 
+  "name": "Dash", 
+  "symbols": [
+   "dash", 
+   "DASH"
+  ]
+ }, 
+ "DASHS": {
+  "coinmarketcap_id": "dashs", 
+  "name": "Dashs", 
+  "symbols": [
+   "dashs", 
+   "DASHS"
+  ]
+ }, 
+ "DBG": {
+  "coinmarketcap_id": "digital-bullion-gold", 
+  "name": "Digital Bullion Gold", 
+  "symbols": [
+   "digital-bullion-gold", 
+   "DBG"
+  ]
+ }, 
+ "DBIC": {
+  "coinmarketcap_id": "dubaicoin", 
+  "name": "DubaiCoin", 
+  "symbols": [
+   "dubaicoin", 
+   "DBIC"
+  ]
+ }, 
+ "DBIX": {
+  "coinmarketcap_id": "dubaicoin-dbix", 
+  "name": "DubaiCoin", 
+  "symbols": [
+   "dubaicoin-dbix", 
+   "DBIX"
+  ]
+ }, 
+ "DBTC": {
+  "coinmarketcap_id": "debitcoin", 
+  "name": "Debitcoin", 
+  "symbols": [
+   "debitcoin", 
+   "DBTC"
+  ]
+ }, 
+ "DCR": {
+  "coinmarketcap_id": "decred", 
+  "name": "Decred", 
+  "symbols": [
+   "decred", 
+   "DCR"
+  ]
+ }, 
+ "DCRE": {
+  "coinmarketcap_id": "deltacredits", 
+  "name": "DeltaCredits", 
+  "symbols": [
+   "deltacredits", 
+   "DCRE"
+  ]
+ }, 
+ "DCT": {
+  "coinmarketcap_id": "decent", 
+  "name": "Decent (Pre-Launch)", 
+  "symbols": [
+   "decent", 
+   "DCT"
+  ]
+ }, 
+ "DEM": {
+  "coinmarketcap_id": "deutsche-emark", 
+  "name": "Deutsche eMark", 
+  "symbols": [
+   "deutsche-emark", 
+   "DEM"
+  ]
+ }, 
+ "DES": {
+  "coinmarketcap_id": "destiny", 
+  "name": "Destiny", 
+  "symbols": [
+   "destiny", 
+   "DES"
+  ]
+ }, 
+ "DEUS": {
+  "coinmarketcap_id": "deuscoin", 
+  "name": "DeusCoin", 
+  "symbols": [
+   "deuscoin", 
+   "DEUS"
+  ]
+ }, 
+ "DEX": {
+  "coinmarketcap_id": "instantdex", 
+  "name": "InstantDEX", 
+  "symbols": [
+   "instantdex", 
+   "DEX"
+  ]
+ }, 
+ "DGB": {
+  "coinmarketcap_id": "digibyte", 
+  "name": "DigiByte", 
+  "symbols": [
+   "digibyte", 
+   "DGB"
+  ]
+ }, 
+ "DGC": {
+  "coinmarketcap_id": "digitalcoin", 
+  "name": "Digitalcoin", 
+  "symbols": [
+   "digitalcoin", 
+   "DGC"
+  ]
+ }, 
+ "DGCS": {
+  "coinmarketcap_id": "digital-credits", 
+  "name": "Digital Credits", 
+  "symbols": [
+   "digital-credits", 
+   "DGCS"
+  ]
+ }, 
+ "DGD": {
+  "coinmarketcap_id": "digixdao", 
+  "name": "DigixDAO", 
+  "symbols": [
+   "digixdao", 
+   "DGD"
+  ]
+ }, 
+ "DIBC": {
+  "coinmarketcap_id": "dibcoin", 
+  "name": "DIBCOIN", 
+  "symbols": [
+   "dibcoin", 
+   "DIBC"
+  ]
+ }, 
+ "DIME": {
+  "coinmarketcap_id": "dimecoin", 
+  "name": "Dimecoin", 
+  "symbols": [
+   "dimecoin", 
+   "DIME"
+  ]
+ }, 
+ "DISK": {
+  "coinmarketcap_id": "darklisk", 
+  "name": "DarkLisk", 
+  "symbols": [
+   "darklisk", 
+   "DISK"
+  ]
+ }, 
+ "DIX": {
+  "coinmarketcap_id": "dix-asset", 
+  "name": "Dix Asset", 
+  "symbols": [
+   "dix-asset", 
+   "DIX"
+  ]
+ }, 
+ "DLC": {
+  "coinmarketcap_id": "dollarcoin", 
+  "name": "Dollarcoin", 
+  "symbols": [
+   "dollarcoin", 
+   "DLC"
+  ]
+ }, 
+ "DLISK": {
+  "coinmarketcap_id": "dappster", 
+  "name": "DAPPSTER", 
+  "symbols": [
+   "dappster", 
+   "DLISK"
+  ]
+ }, 
+ "DMC": {
+  "coinmarketcap_id": "dynamiccoin", 
+  "name": "DynamicCoin", 
+  "symbols": [
+   "dynamiccoin", 
+   "DMC"
+  ]
+ }, 
+ "DMD": {
+  "coinmarketcap_id": "diamond", 
+  "name": "Diamond", 
+  "symbols": [
+   "diamond", 
+   "DMD"
+  ]
+ }, 
+ "DOGE": {
+  "coinmarketcap_id": "dogecoin", 
+  "name": "Dogecoin", 
+  "symbols": [
+   "dogecoin", 
+   "DOGE"
+  ]
+ }, 
+ "DOLLAR": {
+  "coinmarketcap_id": "dollar-online", 
+  "name": "Dollar Online", 
+  "symbols": [
+   "dollar-online", 
+   "DOLLAR"
+  ]
+ }, 
+ "DOPE": {
+  "coinmarketcap_id": "dopecoin", 
+  "name": "DopeCoin", 
+  "symbols": [
+   "dopecoin", 
+   "DOPE"
+  ]
+ }, 
+ "DOT": {
+  "coinmarketcap_id": "dotcoin", 
+  "name": "Dotcoin", 
+  "symbols": [
+   "dotcoin", 
+   "DOT"
+  ]
+ }, 
+ "DP": {
+  "coinmarketcap_id": "digitalprice", 
+  "name": "DigitalPrice", 
+  "symbols": [
+   "digitalprice", 
+   "DP"
+  ]
+ }, 
+ "DPAY": {
+  "coinmarketcap_id": "dpay", 
+  "name": "DPAY", 
+  "symbols": [
+   "dpay", 
+   "DPAY"
+  ]
+ }, 
+ "DRACO": {
+  "coinmarketcap_id": "dt-token", 
+  "name": "DT Token", 
+  "symbols": [
+   "dt-token", 
+   "DRACO"
+  ]
+ }, 
+ "DRAGON": {
+  "coinmarketcap_id": "btcdragon", 
+  "name": "BTCDragon", 
+  "symbols": [
+   "btcdragon", 
+   "DRAGON"
+  ]
+ }, 
+ "DRM": {
+  "coinmarketcap_id": "dreamcoin", 
+  "name": "Dreamcoin", 
+  "symbols": [
+   "dreamcoin", 
+   "DRM"
+  ]
+ }, 
+ "DRS": {
+  "coinmarketcap_id": "digital-rupees", 
+  "name": "Digital Rupees", 
+  "symbols": [
+   "digital-rupees", 
+   "DRS"
+  ]
+ }, 
+ "DSH": {
+  "coinmarketcap_id": "dashcoin", 
+  "name": "Dashcoin", 
+  "symbols": [
+   "dashcoin", 
+   "DSH"
+  ]
+ }, 
+ "DTB": {
+  "coinmarketcap_id": "databits", 
+  "name": "Databits", 
+  "symbols": [
+   "databits", 
+   "DTB"
+  ]
+ }, 
+ "DTF": {
+  "coinmarketcap_id": "digitalfund", 
+  "name": "Digitalfund", 
+  "symbols": [
+   "digitalfund", 
+   "DTF"
+  ]
+ }, 
+ "DUB": {
+  "coinmarketcap_id": "dubstep", 
+  "name": "Dubstep", 
+  "symbols": [
+   "dubstep", 
+   "DUB"
+  ]
+ }, 
+ "DUO": {
+  "coinmarketcap_id": "parallelcoin", 
+  "name": "ParallelCoin", 
+  "symbols": [
+   "parallelcoin", 
+   "DUO"
+  ]
+ }, 
+ "DVC": {
+  "coinmarketcap_id": "devcoin", 
+  "name": "Devcoin", 
+  "symbols": [
+   "devcoin", 
+   "DVC"
+  ]
+ }, 
+ "DWC": {
+  "coinmarketcap_id": "deepwebcash", 
+  "name": "DeepWebCash", 
+  "symbols": [
+   "deepwebcash", 
+   "DWC"
+  ]
+ }, 
+ "DYN": {
+  "coinmarketcap_id": "dynamic", 
+  "name": "Dynamic", 
+  "symbols": [
+   "dynamic", 
+   "DYN"
+  ]
+ }, 
+ "EAC": {
+  "coinmarketcap_id": "earthcoin", 
+  "name": "EarthCoin", 
+  "symbols": [
+   "earthcoin", 
+   "EAC"
+  ]
+ }, 
+ "EB3": {
+  "coinmarketcap_id": "eb3-coin", 
+  "name": "EB3 Coin", 
+  "symbols": [
+   "eb3-coin", 
+   "EB3"
+  ]
+ }, 
+ "EBT": {
+  "coinmarketcap_id": "ebittree-coin", 
+  "name": "Ebittree Coin", 
+  "symbols": [
+   "ebittree-coin", 
+   "EBT"
+  ]
+ }, 
+ "ECC": {
+  "coinmarketcap_id": "eccoin", 
+  "name": "E-Currency Coin ", 
+  "symbols": [
+   "eccoin", 
+   "ECC"
+  ]
+ }, 
+ "ECN": {
+  "coinmarketcap_id": "e-coin", 
+  "name": "E-coin", 
+  "symbols": [
+   "e-coin", 
+   "ECN"
+  ]
+ }, 
+ "EDG": {
+  "coinmarketcap_id": "edgeless", 
+  "name": "Edgeless", 
+  "symbols": [
+   "edgeless", 
+   "EDG"
+  ]
+ }, 
+ "EDR": {
+  "coinmarketcap_id": "e-dinar-coin", 
+  "name": "E-Dinar Coin", 
+  "symbols": [
+   "e-dinar-coin", 
+   "EDR"
+  ]
+ }, 
+ "EDRC": {
+  "coinmarketcap_id": "edrcoin", 
+  "name": "EDRCoin", 
+  "symbols": [
+   "edrcoin", 
+   "EDRC"
+  ]
+ }, 
+ "EFL": {
+  "coinmarketcap_id": "e-gulden", 
+  "name": "e-Gulden", 
+  "symbols": [
+   "e-gulden", 
+   "EFL"
+  ]
+ }, 
+ "EGC": {
+  "coinmarketcap_id": "evergreencoin", 
+  "name": "EvergreenCoin", 
+  "symbols": [
+   "evergreencoin", 
+   "EGC"
+  ]
+ }, 
+ "EGG": {
+  "coinmarketcap_id": "eggcoin", 
+  "name": "EggCoin", 
+  "symbols": [
+   "eggcoin", 
+   "EGG"
+  ]
+ }, 
+ "EGO": {
+  "coinmarketcap_id": "ego", 
+  "name": "EGO", 
+  "symbols": [
+   "ego", 
+   "EGO"
+  ]
+ }, 
+ "EL": {
+  "coinmarketcap_id": "elcoin-el", 
+  "name": "Elcoin", 
+  "symbols": [
+   "elcoin-el", 
+   "EL"
+  ]
+ }, 
+ "ELC": {
+  "coinmarketcap_id": "elacoin", 
+  "name": "Elacoin", 
+  "symbols": [
+   "elacoin", 
+   "ELC"
+  ]
+ }, 
+ "ELE": {
+  "coinmarketcap_id": "elementrem", 
+  "name": "Elementrem", 
+  "symbols": [
+   "elementrem", 
+   "ELE"
+  ]
+ }, 
+ "ELS": {
+  "coinmarketcap_id": "elysium", 
+  "name": "Elysium", 
+  "symbols": [
+   "elysium", 
+   "ELS"
+  ]
+ }, 
+ "EMC": {
+  "coinmarketcap_id": "emercoin", 
+  "name": "Emercoin", 
+  "symbols": [
+   "emercoin", 
+   "EMC"
+  ]
+ }, 
+ "EMC2": {
+  "coinmarketcap_id": "einsteinium", 
+  "name": "Einsteinium", 
+  "symbols": [
+   "einsteinium", 
+   "EMC2"
+  ]
+ }, 
+ "EMD": {
+  "coinmarketcap_id": "emerald", 
+  "name": "Emerald Crypto", 
+  "symbols": [
+   "emerald", 
+   "EMD"
+  ]
+ }, 
+ "EMV": {
+  "coinmarketcap_id": "ethereum-movie-venture", 
+  "name": "Ethereum Movie Venture", 
+  "symbols": [
+   "ethereum-movie-venture", 
+   "EMV"
+  ]
+ }, 
+ "ENRG": {
+  "coinmarketcap_id": "energycoin", 
+  "name": "Energycoin", 
+  "symbols": [
+   "energycoin", 
+   "ENRG"
+  ]
+ }, 
+ "ENT": {
+  "coinmarketcap_id": "eternity", 
+  "name": "Eternity", 
+  "symbols": [
+   "eternity", 
+   "ENT"
+  ]
+ }, 
+ "ENV": {
+  "coinmarketcap_id": "environ", 
+  "name": "Environ", 
+  "symbols": [
+   "environ", 
+   "ENV"
+  ]
+ }, 
+ "ERC": {
+  "coinmarketcap_id": "europecoin", 
+  "name": "EuropeCoin", 
+  "symbols": [
+   "europecoin", 
+   "ERC"
+  ]
+ }, 
+ "ERY": {
+  "coinmarketcap_id": "eryllium", 
+  "name": "Eryllium", 
+  "symbols": [
+   "eryllium", 
+   "ERY"
+  ]
+ }, 
+ "ESP": {
+  "coinmarketcap_id": "espers", 
+  "name": "Espers", 
+  "symbols": [
+   "espers", 
+   "ESP"
+  ]
+ }, 
+ "ETC": {
+  "coinmarketcap_id": "ethereum-classic", 
+  "name": "Ethereum Classic", 
+  "symbols": [
+   "ethereum-classic", 
+   "ETC"
+  ]
+ }, 
+ "ETH": {
+  "coinmarketcap_id": "ethereum", 
+  "name": "Ether", 
+  "symbols": [
+   "ethereum", 
+   "ether", 
+   "eth"
+  ]
+ }, 
+ "EUC": {
+  "coinmarketcap_id": "eurocoin", 
+  "name": "Eurocoin", 
+  "symbols": [
+   "eurocoin", 
+   "EUC"
+  ]
+ }, 
+ "EVIL": {
+  "coinmarketcap_id": "evil-coin", 
+  "name": "Evil Coin", 
+  "symbols": [
+   "evil-coin", 
+   "EVIL"
+  ]
+ }, 
+ "EVO": {
+  "coinmarketcap_id": "evotion", 
+  "name": "Evotion", 
+  "symbols": [
+   "evotion", 
+   "EVO"
+  ]
+ }, 
+ "EXCL": {
+  "coinmarketcap_id": "exclusivecoin", 
+  "name": "ExclusiveCoin", 
+  "symbols": [
+   "exclusivecoin", 
+   "EXCL"
+  ]
+ }, 
+ "EXP": {
+  "coinmarketcap_id": "expanse", 
+  "name": "Expanse", 
+  "symbols": [
+   "expanse", 
+   "EXP"
+  ]
+ }, 
+ "FAIR": {
+  "coinmarketcap_id": "faircoin", 
+  "name": "FairCoin", 
+  "symbols": [
+   "faircoin", 
+   "FAIR"
+  ]
+ }, 
+ "FAZZ": {
+  "coinmarketcap_id": "fazzcoin", 
+  "name": "Fazzcoin", 
+  "symbols": [
+   "fazzcoin", 
+   "FAZZ"
+  ]
+ }, 
+ "FC2": {
+  "coinmarketcap_id": "fuelcoin", 
+  "name": "FuelCoin", 
+  "symbols": [
+   "fuelcoin", 
+   "FC2"
+  ]
+ }, 
+ "FCN": {
+  "coinmarketcap_id": "fantomcoin", 
+  "name": "Fantomcoin", 
+  "symbols": [
+   "fantomcoin", 
+   "FCN"
+  ]
+ }, 
+ "FCT": {
+  "coinmarketcap_id": "factom", 
+  "name": "Factom", 
+  "symbols": [
+   "factom", 
+   "FCT"
+  ]
+ }, 
+ "FDC": {
+  "coinmarketcap_id": "future-digital-currency", 
+  "name": "Future Digital Currency", 
+  "symbols": [
+   "future-digital-currency", 
+   "FDC"
+  ]
+ }, 
+ "FEDS": {
+  "coinmarketcap_id": "fedorashare", 
+  "name": "FedoraShare", 
+  "symbols": [
+   "fedorashare", 
+   "FEDS"
+  ]
+ }, 
+ "FFC": {
+  "coinmarketcap_id": "fireflycoin", 
+  "name": "FireFlyCoin", 
+  "symbols": [
+   "fireflycoin", 
+   "FFC"
+  ]
+ }, 
+ "FIRE": {
+  "coinmarketcap_id": "firecoin", 
+  "name": "Firecoin", 
+  "symbols": [
+   "firecoin", 
+   "FIRE"
+  ]
+ }, 
+ "FJC": {
+  "coinmarketcap_id": "fujicoin", 
+  "name": "FujiCoin", 
+  "symbols": [
+   "fujicoin", 
+   "FJC"
+  ]
+ }, 
+ "FLAX": {
+  "coinmarketcap_id": "flaxscript", 
+  "name": "Flaxscript", 
+  "symbols": [
+   "flaxscript", 
+   "FLAX"
+  ]
+ }, 
+ "FLDC": {
+  "coinmarketcap_id": "foldingcoin", 
+  "name": "FoldingCoin", 
+  "symbols": [
+   "foldingcoin", 
+   "FLDC"
+  ]
+ }, 
+ "FLO": {
+  "coinmarketcap_id": "florincoin", 
+  "name": "FlorinCoin", 
+  "symbols": [
+   "florincoin", 
+   "FLO"
+  ]
+ }, 
+ "FLT": {
+  "coinmarketcap_id": "fluttercoin", 
+  "name": "FlutterCoin", 
+  "symbols": [
+   "fluttercoin", 
+   "FLT"
+  ]
+ }, 
+ "FLVR": {
+  "coinmarketcap_id": "flavorcoin", 
+  "name": "FlavorCoin", 
+  "symbols": [
+   "flavorcoin", 
+   "FLVR"
+  ]
+ }, 
+ "FLY": {
+  "coinmarketcap_id": "flycoin", 
+  "name": "Flycoin", 
+  "symbols": [
+   "flycoin", 
+   "FLY"
+  ]
+ }, 
+ "FRC": {
+  "coinmarketcap_id": "freicoin", 
+  "name": "Freicoin", 
+  "symbols": [
+   "freicoin", 
+   "FRC"
+  ]
+ }, 
+ "FRGC": {
+  "coinmarketcap_id": "fargocoin", 
+  "name": "Fargocoin", 
+  "symbols": [
+   "fargocoin", 
+   "FRGC"
+  ]
+ }, 
+ "FRK": {
+  "coinmarketcap_id": "franko", 
+  "name": "Franko", 
+  "symbols": [
+   "franko", 
+   "FRK"
+  ]
+ }, 
+ "FRN": {
+  "coinmarketcap_id": "francs", 
+  "name": "Francs", 
+  "symbols": [
+   "francs", 
+   "FRN"
+  ]
+ }, 
+ "FRST": {
+  "coinmarketcap_id": "firstcoin", 
+  "name": "FirstCoin", 
+  "symbols": [
+   "firstcoin", 
+   "FRST"
+  ]
+ }, 
+ "FRWC": {
+  "coinmarketcap_id": "frankywillcoin", 
+  "name": "FrankyWillCoin", 
+  "symbols": [
+   "frankywillcoin", 
+   "FRWC"
+  ]
+ }, 
+ "FST": {
+  "coinmarketcap_id": "fastcoin", 
+  "name": "Fastcoin", 
+  "symbols": [
+   "fastcoin", 
+   "FST"
+  ]
+ }, 
+ "FTC": {
+  "coinmarketcap_id": "feathercoin", 
+  "name": "Feathercoin", 
+  "symbols": [
+   "feathercoin", 
+   "FTC"
+  ]
+ }, 
+ "FUN": {
+  "coinmarketcap_id": "alphabet-coin-fund", 
+  "name": "Alphabet Coin Fund", 
+  "symbols": [
+   "alphabet-coin-fund", 
+   "FUN"
+  ]
+ }, 
+ "FUND": {
+  "coinmarketcap_id": "cryptofund", 
+  "name": "Cryptofund", 
+  "symbols": [
+   "cryptofund", 
+   "FUND"
+  ]
+ }, 
+ "FUNK": {
+  "coinmarketcap_id": "the-cypherfunks", 
+  "name": "The Cypherfunks", 
+  "symbols": [
+   "the-cypherfunks", 
+   "FUNK"
+  ]
+ }, 
+ "FUZZ": {
+  "coinmarketcap_id": "fuzzballs", 
+  "name": "FuzzBalls", 
+  "symbols": [
+   "fuzzballs", 
+   "FUZZ"
+  ]
+ }, 
+ "G3N": {
+  "coinmarketcap_id": "genstake", 
+  "name": "G3N", 
+  "symbols": [
+   "genstake", 
+   "G3N"
+  ]
+ }, 
+ "GAIA": {
+  "coinmarketcap_id": "gaia", 
+  "name": "GAIA", 
+  "symbols": [
+   "gaia", 
+   "GAIA"
+  ]
+ }, 
+ "GAIN": {
+  "coinmarketcap_id": "ugain", 
+  "name": "UGAIN", 
+  "symbols": [
+   "ugain", 
+   "GAIN"
+  ]
+ }, 
+ "GAM": {
+  "coinmarketcap_id": "gambit", 
+  "name": "Gambit", 
+  "symbols": [
+   "gambit", 
+   "GAM"
+  ]
+ }, 
+ "GAME": {
+  "coinmarketcap_id": "gamecredits", 
+  "name": "GameCredits", 
+  "symbols": [
+   "gamecredits", 
+   "GAME"
+  ]
+ }, 
+ "GAP": {
+  "coinmarketcap_id": "gapcoin", 
+  "name": "Gapcoin", 
+  "symbols": [
+   "gapcoin", 
+   "GAP"
+  ]
+ }, 
+ "GARY": {
+  "coinmarketcap_id": "president-johnson", 
+  "name": "President Johnson", 
+  "symbols": [
+   "president-johnson", 
+   "GARY"
+  ]
+ }, 
+ "GAY": {
+  "coinmarketcap_id": "gaycoin", 
+  "name": "GAYcoin", 
+  "symbols": [
+   "gaycoin", 
+   "GAY"
+  ]
+ }, 
+ "GB": {
+  "coinmarketcap_id": "goldblocks", 
+  "name": "GoldBlocks", 
+  "symbols": [
+   "goldblocks", 
+   "GB"
+  ]
+ }, 
+ "GBC": {
+  "coinmarketcap_id": "gbcgoldcoin", 
+  "name": "GBCGoldCoin", 
+  "symbols": [
+   "gbcgoldcoin", 
+   "GBC"
+  ]
+ }, 
+ "GBG": {
+  "coinmarketcap_id": "golos-gold", 
+  "name": "Golos Gold", 
+  "symbols": [
+   "golos-gold", 
+   "GBG"
+  ]
+ }, 
+ "GBRC": {
+  "coinmarketcap_id": "global-business-revolution", 
+  "name": "Global Business Revolution", 
+  "symbols": [
+   "global-business-revolution", 
+   "GBRC"
+  ]
+ }, 
+ "GBT": {
+  "coinmarketcap_id": "gamebet-coin", 
+  "name": "GameBet Coin", 
+  "symbols": [
+   "gamebet-coin", 
+   "GBT"
+  ]
+ }, 
+ "GBYTE": {
+  "coinmarketcap_id": "byteball", 
+  "name": "Byteball", 
+  "symbols": [
+   "byteball", 
+   "GBYTE"
+  ]
+ }, 
+ "GCC": {
+  "coinmarketcap_id": "thegcccoin", 
+  "name": "TheGCCcoin", 
+  "symbols": [
+   "thegcccoin", 
+   "GCC"
+  ]
+ }, 
+ "GCN": {
+  "coinmarketcap_id": "gcoin", 
+  "name": "GCoin", 
+  "symbols": [
+   "gcoin", 
+   "GCN"
+  ]
+ }, 
+ "GCR": {
+  "coinmarketcap_id": "global-currency-reserve", 
+  "name": "Global Currency Reserve", 
+  "symbols": [
+   "global-currency-reserve", 
+   "GCR"
+  ]
+ }, 
+ "GEERT": {
+  "coinmarketcap_id": "geertcoin", 
+  "name": "GeertCoin", 
+  "symbols": [
+   "geertcoin", 
+   "GEERT"
+  ]
+ }, 
+ "GEMZ": {
+  "coinmarketcap_id": "gems", 
+  "name": "GetGems", 
+  "symbols": [
+   "gems", 
+   "GEMZ"
+  ]
+ }, 
+ "GEO": {
+  "coinmarketcap_id": "geocoin", 
+  "name": "GeoCoin", 
+  "symbols": [
+   "geocoin", 
+   "GEO"
+  ]
+ }, 
+ "GLC": {
+  "coinmarketcap_id": "globalcoin", 
+  "name": "GlobalCoin", 
+  "symbols": [
+   "globalcoin", 
+   "GLC"
+  ]
+ }, 
+ "GLD": {
+  "coinmarketcap_id": "goldcoin", 
+  "name": "GoldCoin", 
+  "symbols": [
+   "goldcoin", 
+   "GLD"
+  ]
+ }, 
+ "GMB": {
+  "coinmarketcap_id": "gambleo", 
+  "name": "Gambleo", 
+  "symbols": [
+   "gambleo", 
+   "GMB"
+  ]
+ }, 
+ "GMF": {
+  "coinmarketcap_id": "grumfork", 
+  "name": "Grumfork", 
+  "symbols": [
+   "grumfork", 
+   "GMF"
+  ]
+ }, 
+ "GML": {
+  "coinmarketcap_id": "gameleaguecoin", 
+  "name": "GameLeagueCoin", 
+  "symbols": [
+   "gameleaguecoin", 
+   "GML"
+  ]
+ }, 
+ "GMX": {
+  "coinmarketcap_id": "goldmaxcoin", 
+  "name": "GoldMaxCoin", 
+  "symbols": [
+   "goldmaxcoin", 
+   "GMX"
+  ]
+ }, 
+ "GNO": {
+  "coinmarketcap_id": "gnosis-gno", 
+  "name": "Gnosis", 
+  "symbols": [
+   "gnosis-gno", 
+   "GNO"
+  ]
+ }, 
+ "GNT": {
+  "coinmarketcap_id": "golem-network-tokens", 
+  "name": "Golem", 
+  "symbols": [
+   "golem-network-tokens", 
+   "GNT"
+  ]
+ }, 
+ "GOLOS": {
+  "coinmarketcap_id": "golos", 
+  "name": "Golos", 
+  "symbols": [
+   "golos", 
+   "GOLOS"
+  ]
+ }, 
+ "GP": {
+  "coinmarketcap_id": "goldpieces", 
+  "name": "GoldPieces", 
+  "symbols": [
+   "goldpieces", 
+   "GP"
+  ]
+ }, 
+ "GPL": {
+  "coinmarketcap_id": "gold-pressed-latinum", 
+  "name": "Gold Pressed Latinum", 
+  "symbols": [
+   "gold-pressed-latinum", 
+   "GPL"
+  ]
+ }, 
+ "GPU": {
+  "coinmarketcap_id": "gpu-coin", 
+  "name": "GPU Coin", 
+  "symbols": [
+   "gpu-coin", 
+   "GPU"
+  ]
+ }, 
+ "GRC": {
+  "coinmarketcap_id": "gridcoin", 
+  "name": "GridCoin", 
+  "symbols": [
+   "gridcoin", 
+   "GRC"
+  ]
+ }, 
+ "GREV2": {
+  "coinmarketcap_id": "greencoin", 
+  "name": "Greencoin", 
+  "symbols": [
+   "greencoin", 
+   "GREV2"
+  ]
+ }, 
+ "GRN": {
+  "coinmarketcap_id": "granitecoin", 
+  "name": "Granite", 
+  "symbols": [
+   "granitecoin", 
+   "GRN"
+  ]
+ }, 
+ "GRS": {
+  "coinmarketcap_id": "groestlcoin", 
+  "name": "Groestlcoin", 
+  "symbols": [
+   "groestlcoin", 
+   "GRS"
+  ]
+ }, 
+ "GRT": {
+  "coinmarketcap_id": "grantcoin", 
+  "name": "Grantcoin", 
+  "symbols": [
+   "grantcoin", 
+   "GRT"
+  ]
+ }, 
+ "GUA": {
+  "coinmarketcap_id": "guarany", 
+  "name": "Guarany", 
+  "symbols": [
+   "guarany", 
+   "GUA"
+  ]
+ }, 
+ "GUC": {
+  "coinmarketcap_id": "goldunioncoin", 
+  "name": "GoldUnionCoin", 
+  "symbols": [
+   "goldunioncoin", 
+   "GUC"
+  ]
+ }, 
+ "GUN": {
+  "coinmarketcap_id": "guncoin", 
+  "name": "Guncoin", 
+  "symbols": [
+   "guncoin", 
+   "GUN"
+  ]
+ }, 
+ "GUP": {
+  "coinmarketcap_id": "guppy", 
+  "name": "Matchpool", 
+  "symbols": [
+   "guppy", 
+   "GUP"
+  ]
+ }, 
+ "HAL": {
+  "coinmarketcap_id": "halcyon", 
+  "name": "Halcyon", 
+  "symbols": [
+   "halcyon", 
+   "HAL"
+  ]
+ }, 
+ "HAM": {
+  "coinmarketcap_id": "hamradiocoin", 
+  "name": "HamRadioCoin", 
+  "symbols": [
+   "hamradiocoin", 
+   "HAM"
+  ]
+ }, 
+ "HBN": {
+  "coinmarketcap_id": "hobonickels", 
+  "name": "HoboNickels", 
+  "symbols": [
+   "hobonickels", 
+   "HBN"
+  ]
+ }, 
+ "HCC": {
+  "coinmarketcap_id": "happy-creator-coin", 
+  "name": "Happy Creator Coin", 
+  "symbols": [
+   "happy-creator-coin", 
+   "HCC"
+  ]
+ }, 
+ "HEAT": {
+  "coinmarketcap_id": "heat-ledger", 
+  "name": "HEAT", 
+  "symbols": [
+   "heat-ledger", 
+   "HEAT"
+  ]
+ }, 
+ "HILL": {
+  "coinmarketcap_id": "president-clinton", 
+  "name": "President Clinton", 
+  "symbols": [
+   "president-clinton", 
+   "HILL"
+  ]
+ }, 
+ "HIRO": {
+  "coinmarketcap_id": "hirocoin", 
+  "name": "Hirocoin", 
+  "symbols": [
+   "hirocoin", 
+   "HIRO"
+  ]
+ }, 
+ "HKG": {
+  "coinmarketcap_id": "hacker-gold", 
+  "name": "Hacker Gold", 
+  "symbols": [
+   "hacker-gold", 
+   "HKG"
+  ]
+ }, 
+ "HLB": {
+  "coinmarketcap_id": "lepaoquan", 
+  "name": "Lepaoquan", 
+  "symbols": [
+   "lepaoquan", 
+   "HLB"
+  ]
+ }, 
+ "HMC": {
+  "coinmarketcap_id": "hommalicoin", 
+  "name": "Hommalicoin", 
+  "symbols": [
+   "hommalicoin", 
+   "HMC"
+  ]
+ }, 
+ "HMP": {
+  "coinmarketcap_id": "hempcoin-hmp", 
+  "name": "HempCoin", 
+  "symbols": [
+   "hempcoin-hmp", 
+   "HMP"
+  ]
+ }, 
+ "HNC": {
+  "coinmarketcap_id": "helleniccoin", 
+  "name": "Helleniccoin", 
+  "symbols": [
+   "helleniccoin", 
+   "HNC"
+  ]
+ }, 
+ "HODL": {
+  "coinmarketcap_id": "hodlcoin", 
+  "name": "HOdlcoin", 
+  "symbols": [
+   "hodlcoin", 
+   "HODL"
+  ]
+ }, 
+ "HONEY": {
+  "coinmarketcap_id": "honey", 
+  "name": "Honey", 
+  "symbols": [
+   "honey", 
+   "HONEY"
+  ]
+ }, 
+ "HPC": {
+  "coinmarketcap_id": "happycoin", 
+  "name": "Happycoin", 
+  "symbols": [
+   "happycoin", 
+   "HPC"
+  ]
+ }, 
+ "HTC": {
+  "coinmarketcap_id": "hitcoin", 
+  "name": "HitCoin", 
+  "symbols": [
+   "hitcoin", 
+   "HTC"
+  ]
+ }, 
+ "HTML5": {
+  "coinmarketcap_id": "htmlcoin", 
+  "name": "HTMLCOIN", 
+  "symbols": [
+   "htmlcoin", 
+   "HTML5"
+  ]
+ }, 
+ "HUC": {
+  "coinmarketcap_id": "huntercoin", 
+  "name": "HunterCoin", 
+  "symbols": [
+   "huntercoin", 
+   "HUC"
+  ]
+ }, 
+ "HUSH": {
+  "coinmarketcap_id": "hush", 
+  "name": "Hush", 
+  "symbols": [
+   "hush", 
+   "HUSH"
+  ]
+ }, 
+ "HVCO": {
+  "coinmarketcap_id": "high-voltage", 
+  "name": "High Voltage", 
+  "symbols": [
+   "high-voltage", 
+   "HVCO"
+  ]
+ }, 
+ "HXX": {
+  "coinmarketcap_id": "hexx", 
+  "name": "Hexx", 
+  "symbols": [
+   "hexx", 
+   "HXX"
+  ]
+ }, 
+ "HYP": {
+  "coinmarketcap_id": "hyperstake", 
+  "name": "HyperStake", 
+  "symbols": [
+   "hyperstake", 
+   "HYP"
+  ]
+ }, 
+ "HZ": {
+  "coinmarketcap_id": "next-horizon", 
+  "name": "Horizon", 
+  "symbols": [
+   "next-horizon", 
+   "HZ"
+  ]
+ }, 
+ "I0C": {
+  "coinmarketcap_id": "i0coin", 
+  "name": "I0Coin", 
+  "symbols": [
+   "i0coin", 
+   "I0C"
+  ]
+ }, 
+ "IBANK": {
+  "coinmarketcap_id": "ibank", 
+  "name": "iBank", 
+  "symbols": [
+   "ibank", 
+   "IBANK"
+  ]
+ }, 
+ "ICASH": {
+  "coinmarketcap_id": "icash", 
+  "name": "iCash", 
+  "symbols": [
+   "icash", 
+   "ICASH"
+  ]
+ }, 
+ "ICN": {
+  "coinmarketcap_id": "iconomi", 
+  "name": "Iconomi", 
+  "symbols": [
+   "iconomi", 
+   "ICN"
+  ]
+ }, 
+ "ICOB": {
+  "coinmarketcap_id": "icobid", 
+  "name": "ICOBID", 
+  "symbols": [
+   "icobid", 
+   "ICOB"
+  ]
+ }, 
+ "ICON": {
+  "coinmarketcap_id": "iconic", 
+  "name": "Iconic", 
+  "symbols": [
+   "iconic", 
+   "ICON"
+  ]
+ }, 
+ "ICOO": {
+  "coinmarketcap_id": "ico-openledger", 
+  "name": "ICO OpenLedger", 
+  "symbols": [
+   "ico-openledger", 
+   "ICOO"
+  ]
+ }, 
+ "IEC": {
+  "coinmarketcap_id": "ivugeocoin", 
+  "name": "IvugeoCoin", 
+  "symbols": [
+   "ivugeocoin", 
+   "IEC"
+  ]
+ }, 
+ "IFC": {
+  "coinmarketcap_id": "infinitecoin", 
+  "name": "Infinitecoin", 
+  "symbols": [
+   "infinitecoin", 
+   "IFC"
+  ]
+ }, 
+ "IFLT": {
+  "coinmarketcap_id": "inflationcoin", 
+  "name": "InflationCoin", 
+  "symbols": [
+   "inflationcoin", 
+   "IFLT"
+  ]
+ }, 
+ "IMPCH": {
+  "coinmarketcap_id": "impeachcoin", 
+  "name": "Impeachcoin", 
+  "symbols": [
+   "impeachcoin", 
+   "IMPCH"
+  ]
+ }, 
+ "IMPS": {
+  "coinmarketcap_id": "impulsecoin", 
+  "name": "ImpulseCoin", 
+  "symbols": [
+   "impulsecoin", 
+   "IMPS"
+  ]
+ }, 
+ "IMS": {
+  "coinmarketcap_id": "independent-money-system", 
+  "name": "Independent Money System", 
+  "symbols": [
+   "independent-money-system", 
+   "IMS"
+  ]
+ }, 
+ "IMX": {
+  "coinmarketcap_id": "impact", 
+  "name": "Impact", 
+  "symbols": [
+   "impact", 
+   "IMX"
+  ]
+ }, 
+ "INCNT": {
+  "coinmarketcap_id": "incent", 
+  "name": "Incent", 
+  "symbols": [
+   "incent", 
+   "INCNT"
+  ]
+ }, 
+ "INFX": {
+  "coinmarketcap_id": "influxcoin", 
+  "name": "Influxcoin", 
+  "symbols": [
+   "influxcoin", 
+   "INFX"
+  ]
+ }, 
+ "INPAY": {
+  "coinmarketcap_id": "inpay", 
+  "name": "Inpay", 
+  "symbols": [
+   "inpay", 
+   "INPAY"
+  ]
+ }, 
+ "INSANE": {
+  "coinmarketcap_id": "insanecoin", 
+  "name": "InsaneCoin", 
+  "symbols": [
+   "insanecoin", 
+   "INSANE"
+  ]
+ }, 
+ "IOC": {
+  "coinmarketcap_id": "iocoin", 
+  "name": "I/O Coin", 
+  "symbols": [
+   "iocoin", 
+   "IOC"
+  ]
+ }, 
+ "ION": {
+  "coinmarketcap_id": "ion", 
+  "name": "ION", 
+  "symbols": [
+   "ion", 
+   "ION"
+  ]
+ }, 
+ "IOP": {
+  "coinmarketcap_id": "internet-of-people", 
+  "name": "Internet of People", 
+  "symbols": [
+   "internet-of-people", 
+   "IOP"
+  ]
+ }, 
+ "ISL": {
+  "coinmarketcap_id": "islacoin", 
+  "name": "IslaCoin", 
+  "symbols": [
+   "islacoin", 
+   "ISL"
+  ]
+ }, 
+ "IVZ": {
+  "coinmarketcap_id": "invisiblecoin", 
+  "name": "InvisibleCoin", 
+  "symbols": [
+   "invisiblecoin", 
+   "IVZ"
+  ]
+ }, 
+ "IXC": {
+  "coinmarketcap_id": "ixcoin", 
+  "name": "Ixcoin", 
+  "symbols": [
+   "ixcoin", 
+   "IXC"
+  ]
+ }, 
+ "J": {
+  "coinmarketcap_id": "joincoin", 
+  "name": "Joincoin", 
+  "symbols": [
+   "joincoin", 
+   "J"
+  ]
+ }, 
+ "JIN": {
+  "coinmarketcap_id": "jin-coin", 
+  "name": "Jin Coin", 
+  "symbols": [
+   "jin-coin", 
+   "JIN"
+  ]
+ }, 
+ "JINN": {
+  "coinmarketcap_id": "jinn", 
+  "name": "Jinn", 
+  "symbols": [
+   "jinn", 
+   "JINN"
+  ]
+ }, 
+ "JIO": {
+  "coinmarketcap_id": "jio-token", 
+  "name": "JIO Token", 
+  "symbols": [
+   "jio-token", 
+   "JIO"
+  ]
+ }, 
+ "JNS": {
+  "coinmarketcap_id": "janus", 
+  "name": "Janus", 
+  "symbols": [
+   "janus", 
+   "JNS"
+  ]
+ }, 
+ "JOBS": {
+  "coinmarketcap_id": "jobscoin", 
+  "name": "JobsCoin", 
+  "symbols": [
+   "jobscoin", 
+   "JOBS"
+  ]
+ }, 
+ "JWL": {
+  "coinmarketcap_id": "jewels", 
+  "name": "Jewels", 
+  "symbols": [
+   "jewels", 
+   "JWL"
+  ]
+ }, 
+ "KASHH": {
+  "coinmarketcap_id": "kashhcoin", 
+  "name": "KashhCoin", 
+  "symbols": [
+   "kashhcoin", 
+   "KASHH"
+  ]
+ }, 
+ "KED": {
+  "coinmarketcap_id": "darsek", 
+  "name": "Darsek", 
+  "symbols": [
+   "darsek", 
+   "KED"
+  ]
+ }, 
+ "KLC": {
+  "coinmarketcap_id": "kilocoin", 
+  "name": "KiloCoin", 
+  "symbols": [
+   "kilocoin", 
+   "KLC"
+  ]
+ }, 
+ "KMD": {
+  "coinmarketcap_id": "komodo", 
+  "name": "Komodo", 
+  "symbols": [
+   "komodo", 
+   "KMD"
+  ]
+ }, 
+ "KOBO": {
+  "coinmarketcap_id": "kobocoin", 
+  "name": "Kobocoin", 
+  "symbols": [
+   "kobocoin", 
+   "KOBO"
+  ]
+ }, 
+ "KORE": {
+  "coinmarketcap_id": "korecoin", 
+  "name": "KoreCoin", 
+  "symbols": [
+   "korecoin", 
+   "KORE"
+  ]
+ }, 
+ "KRB": {
+  "coinmarketcap_id": "karbowanec", 
+  "name": "Karbowanec", 
+  "symbols": [
+   "karbowanec", 
+   "KRB"
+  ]
+ }, 
+ "KTN": {
+  "coinmarketcap_id": "karmatoken", 
+  "name": "KarmaToken", 
+  "symbols": [
+   "karmatoken", 
+   "KTN"
+  ]
+ }, 
+ "KURT": {
+  "coinmarketcap_id": "kurrent", 
+  "name": "Kurrent", 
+  "symbols": [
+   "kurrent", 
+   "KURT"
+  ]
+ }, 
+ "KUSH": {
+  "coinmarketcap_id": "kushcoin", 
+  "name": "KushCoin", 
+  "symbols": [
+   "kushcoin", 
+   "KUSH"
+  ]
+ }, 
+ "LANA": {
+  "coinmarketcap_id": "lanacoin", 
+  "name": "LanaCoin", 
+  "symbols": [
+   "lanacoin", 
+   "LANA"
+  ]
+ }, 
+ "LAZ": {
+  "coinmarketcap_id": "lazaruscoin", 
+  "name": "Lazaruscoin", 
+  "symbols": [
+   "lazaruscoin", 
+   "LAZ"
+  ]
+ }, 
+ "LBC": {
+  "coinmarketcap_id": "library-credit", 
+  "name": "LBRY Credits", 
+  "symbols": [
+   "library-credit", 
+   "LBC"
+  ]
+ }, 
+ "LDCN": {
+  "coinmarketcap_id": "landcoin", 
+  "name": "LandCoin", 
+  "symbols": [
+   "landcoin", 
+   "LDCN"
+  ]
+ }, 
+ "LDOGE": {
+  "coinmarketcap_id": "litedoge", 
+  "name": "LiteDoge", 
+  "symbols": [
+   "litedoge", 
+   "LDOGE"
+  ]
+ }, 
+ "LEA": {
+  "coinmarketcap_id": "leacoin", 
+  "name": "LeaCoin", 
+  "symbols": [
+   "leacoin", 
+   "LEA"
+  ]
+ }, 
+ "LEC": {
+  "coinmarketcap_id": "lecoin", 
+  "name": "LeCoin", 
+  "symbols": [
+   "lecoin", 
+   "LEC"
+  ]
+ }, 
+ "LEO": {
+  "coinmarketcap_id": "leocoin", 
+  "name": "LEOcoin", 
+  "symbols": [
+   "leocoin", 
+   "LEO"
+  ]
+ }, 
+ "LEPEN": {
+  "coinmarketcap_id": "lepen", 
+  "name": "LePen", 
+  "symbols": [
+   "lepen", 
+   "LEPEN"
+  ]
+ }, 
+ "LEX": {
+  "coinmarketcap_id": "lex4all", 
+  "name": "Lex4All", 
+  "symbols": [
+   "lex4all", 
+   "LEX"
+  ]
+ }, 
+ "LFC": {
+  "coinmarketcap_id": "biglifecoin", 
+  "name": "BigLifeCoin", 
+  "symbols": [
+   "biglifecoin", 
+   "LFC"
+  ]
+ }, 
+ "LIR": {
+  "coinmarketcap_id": "letitride", 
+  "name": "LetItRide", 
+  "symbols": [
+   "letitride", 
+   "LIR"
+  ]
+ }, 
+ "LKC": {
+  "coinmarketcap_id": "linkedcoin", 
+  "name": "LinkedCoin", 
+  "symbols": [
+   "linkedcoin", 
+   "LKC"
+  ]
+ }, 
+ "LKK": {
+  "coinmarketcap_id": "lykke", 
+  "name": "Lykke", 
+  "symbols": [
+   "lykke", 
+   "LKK"
+  ]
+ }, 
+ "LMC": {
+  "coinmarketcap_id": "lomocoin", 
+  "name": "LoMoCoin", 
+  "symbols": [
+   "lomocoin", 
+   "LMC"
+  ]
+ }, 
+ "LOG": {
+  "coinmarketcap_id": "woodcoin", 
+  "name": "Woodcoin", 
+  "symbols": [
+   "woodcoin", 
+   "LOG"
+  ]
+ }, 
+ "LOT": {
+  "coinmarketcap_id": "lottocoin", 
+  "name": "LottoCoin", 
+  "symbols": [
+   "lottocoin", 
+   "LOT"
+  ]
+ }, 
+ "LSK": {
+  "coinmarketcap_id": "lisk", 
+  "name": "Lisk", 
+  "symbols": [
+   "lisk", 
+   "LSK"
+  ]
+ }, 
+ "LTB": {
+  "coinmarketcap_id": "litebar", 
+  "name": "LiteBar", 
+  "symbols": [
+   "litebar", 
+   "LTB"
+  ]
+ }, 
+ "LTBC": {
+  "coinmarketcap_id": "ltbcoin", 
+  "name": "LTBcoin", 
+  "symbols": [
+   "ltbcoin", 
+   "LTBC"
+  ]
+ }, 
+ "LTC": {
+  "coinmarketcap_id": "litecoin", 
+  "name": "Litecoin", 
+  "symbols": [
+   "litecoin", 
+   "ltc"
+  ]
+ }, 
+ "LTCR": {
+  "coinmarketcap_id": "litecred", 
+  "name": "Litecred", 
+  "symbols": [
+   "litecred", 
+   "LTCR"
+  ]
+ }, 
+ "LTH": {
+  "coinmarketcap_id": "lathaan", 
+  "name": "LAthaan", 
+  "symbols": [
+   "lathaan", 
+   "LTH"
+  ]
+ }, 
+ "LUN": {
+  "coinmarketcap_id": "lunyr", 
+  "name": "Lunyr", 
+  "symbols": [
+   "lunyr", 
+   "LUN"
+  ]
+ }, 
+ "LUNA": {
+  "coinmarketcap_id": "luna-coin", 
+  "name": "Luna Coin", 
+  "symbols": [
+   "luna-coin", 
+   "LUNA"
+  ]
+ }, 
+ "LVPS": {
+  "coinmarketcap_id": "levoplus", 
+  "name": "LevoPlus", 
+  "symbols": [
+   "levoplus", 
+   "LVPS"
+  ]
+ }, 
+ "MAC": {
+  "coinmarketcap_id": "machinecoin", 
+  "name": "Machinecoin", 
+  "symbols": [
+   "machinecoin", 
+   "MAC"
+  ]
+ }, 
+ "MAD": {
+  "coinmarketcap_id": "satoshimadness", 
+  "name": "SatoshiMadness", 
+  "symbols": [
+   "satoshimadness", 
+   "MAD"
+  ]
+ }, 
+ "MAID": {
+  "coinmarketcap_id": "maidsafecoin", 
+  "name": "MaidSafeCoin", 
+  "symbols": [
+   "maidsafecoin", 
+   "MAID"
+  ]
+ }, 
+ "MALC": {
+  "coinmarketcap_id": "malcoin", 
+  "name": "Malcoin", 
+  "symbols": [
+   "malcoin", 
+   "MALC"
+  ]
+ }, 
+ "MAR": {
+  "coinmarketcap_id": "marijuanacoin", 
+  "name": "Marijuanacoin", 
+  "symbols": [
+   "marijuanacoin", 
+   "MAR"
+  ]
+ }, 
+ "MARX": {
+  "coinmarketcap_id": "marxcoin", 
+  "name": "MarxCoin", 
+  "symbols": [
+   "marxcoin", 
+   "MARX"
+  ]
+ }, 
+ "MAVRO": {
+  "coinmarketcap_id": "mavro", 
+  "name": "Mavro", 
+  "symbols": [
+   "mavro", 
+   "MAVRO"
+  ]
+ }, 
+ "MAX": {
+  "coinmarketcap_id": "maxcoin", 
+  "name": "MaxCoin", 
+  "symbols": [
+   "maxcoin", 
+   "MAX"
+  ]
+ }, 
+ "MBIT": {
+  "coinmarketcap_id": "mbitbooks", 
+  "name": "Mbitbooks", 
+  "symbols": [
+   "mbitbooks", 
+   "MBIT"
+  ]
+ }, 
+ "MBL": {
+  "coinmarketcap_id": "mobilecash", 
+  "name": "MobileCash", 
+  "symbols": [
+   "mobilecash", 
+   "MBL"
+  ]
+ }, 
+ "MCRN": {
+  "coinmarketcap_id": "macron", 
+  "name": "MACRON", 
+  "symbols": [
+   "macron", 
+   "MCRN"
+  ]
+ }, 
+ "MEC": {
+  "coinmarketcap_id": "megacoin", 
+  "name": "Megacoin", 
+  "symbols": [
+   "megacoin", 
+   "MEC"
+  ]
+ }, 
+ "MED": {
+  "coinmarketcap_id": "mediterraneancoin", 
+  "name": "MediterraneanCoin", 
+  "symbols": [
+   "mediterraneancoin", 
+   "MED"
+  ]
+ }, 
+ "MEOW": {
+  "coinmarketcap_id": "kittehcoin", 
+  "name": "Kittehcoin", 
+  "symbols": [
+   "kittehcoin", 
+   "MEOW"
+  ]
+ }, 
+ "MER": {
+  "coinmarketcap_id": "mercury", 
+  "name": "Mercury", 
+  "symbols": [
+   "mercury", 
+   "MER"
+  ]
+ }, 
+ "METAL": {
+  "coinmarketcap_id": "metalcoin", 
+  "name": "MetalCoin", 
+  "symbols": [
+   "metalcoin", 
+   "METAL"
+  ]
+ }, 
+ "MG": {
+  "coinmarketcap_id": "mind-gene", 
+  "name": "Mind Gene", 
+  "symbols": [
+   "mind-gene", 
+   "MG"
+  ]
+ }, 
+ "MGC": {
+  "coinmarketcap_id": "mergecoin", 
+  "name": "MergeCoin", 
+  "symbols": [
+   "mergecoin", 
+   "MGC"
+  ]
+ }, 
+ "MGM": {
+  "coinmarketcap_id": "magnum", 
+  "name": "Magnum", 
+  "symbols": [
+   "magnum", 
+   "MGM"
+  ]
+ }, 
+ "MI": {
+  "coinmarketcap_id": "xiaomicoin", 
+  "name": "Xiaomicoin", 
+  "symbols": [
+   "xiaomicoin", 
+   "MI"
+  ]
+ }, 
+ "MILO": {
+  "coinmarketcap_id": "milocoin", 
+  "name": "MiloCoin", 
+  "symbols": [
+   "milocoin", 
+   "MILO"
+  ]
+ }, 
+ "MINT": {
+  "coinmarketcap_id": "mintcoin", 
+  "name": "Mintcoin", 
+  "symbols": [
+   "mintcoin", 
+   "MINT"
+  ]
+ }, 
+ "MLN": {
+  "coinmarketcap_id": "melon", 
+  "name": "Melon", 
+  "symbols": [
+   "melon", 
+   "MLN"
+  ]
+ }, 
+ "MMXVI": {
+  "coinmarketcap_id": "mmxvi", 
+  "name": "MMXVI", 
+  "symbols": [
+   "mmxvi", 
+   "MMXVI"
+  ]
+ }, 
+ "MND": {
+  "coinmarketcap_id": "mindcoin", 
+  "name": "MindCoin", 
+  "symbols": [
+   "mindcoin", 
+   "MND"
+  ]
+ }, 
+ "MNM": {
+  "coinmarketcap_id": "mineum", 
+  "name": "Mineum", 
+  "symbols": [
+   "mineum", 
+   "MNM"
+  ]
+ }, 
+ "MOIN": {
+  "coinmarketcap_id": "moin", 
+  "name": "Moin", 
+  "symbols": [
+   "moin", 
+   "MOIN"
+  ]
+ }, 
+ "MOJO": {
+  "coinmarketcap_id": "mojocoin", 
+  "name": "MojoCoin", 
+  "symbols": [
+   "mojocoin", 
+   "MOJO"
+  ]
+ }, 
+ "MONA": {
+  "coinmarketcap_id": "monacoin", 
+  "name": "MonaCoin", 
+  "symbols": [
+   "monacoin", 
+   "MONA"
+  ]
+ }, 
+ "MONETA": {
+  "coinmarketcap_id": "moneta2", 
+  "name": "Moneta", 
+  "symbols": [
+   "moneta2", 
+   "MONETA"
+  ]
+ }, 
+ "MONEY": {
+  "coinmarketcap_id": "moneycoin", 
+  "name": "MoneyCoin", 
+  "symbols": [
+   "moneycoin", 
+   "MONEY"
+  ]
+ }, 
+ "MOON": {
+  "coinmarketcap_id": "mooncoin", 
+  "name": "Mooncoin", 
+  "symbols": [
+   "mooncoin", 
+   "MOON"
+  ]
+ }, 
+ "MOTO": {
+  "coinmarketcap_id": "motocoin", 
+  "name": "Motocoin", 
+  "symbols": [
+   "motocoin", 
+   "MOTO"
+  ]
+ }, 
+ "MSCN": {
+  "coinmarketcap_id": "master-swiscoin", 
+  "name": "Master Swiscoin", 
+  "symbols": [
+   "master-swiscoin", 
+   "MSCN"
+  ]
+ }, 
+ "MST": {
+  "coinmarketcap_id": "mustangcoin", 
+  "name": "MustangCoin", 
+  "symbols": [
+   "mustangcoin", 
+   "MST"
+  ]
+ }, 
+ "MTLMC3": {
+  "coinmarketcap_id": "metal-music-coin", 
+  "name": "Metal Music Coin", 
+  "symbols": [
+   "metal-music-coin", 
+   "MTLMC3"
+  ]
+ }, 
+ "MTM": {
+  "coinmarketcap_id": "mtmgaming", 
+  "name": "MTMGaming", 
+  "symbols": [
+   "mtmgaming", 
+   "MTM"
+  ]
+ }, 
+ "MUE": {
+  "coinmarketcap_id": "monetaryunit", 
+  "name": "MonetaryUnit", 
+  "symbols": [
+   "monetaryunit", 
+   "MUE"
+  ]
+ }, 
+ "MUG": {
+  "coinmarketcap_id": "mikethemug", 
+  "name": "MikeTheMug", 
+  "symbols": [
+   "mikethemug", 
+   "MUG"
+  ]
+ }, 
+ "MUSE": {
+  "coinmarketcap_id": "bitshares-music", 
+  "name": "MUSE", 
+  "symbols": [
+   "bitshares-music", 
+   "MUSE"
+  ]
+ }, 
+ "MUSIC": {
+  "coinmarketcap_id": "musicoin", 
+  "name": "Musicoin", 
+  "symbols": [
+   "musicoin", 
+   "MUSIC"
+  ]
+ }, 
+ "MXT": {
+  "coinmarketcap_id": "martexcoin", 
+  "name": "MarteXcoin", 
+  "symbols": [
+   "martexcoin", 
+   "MXT"
+  ]
+ }, 
+ "MZC": {
+  "coinmarketcap_id": "mazacoin", 
+  "name": "MazaCoin", 
+  "symbols": [
+   "mazacoin", 
+   "MZC"
+  ]
+ }, 
+ "NAUT": {
+  "coinmarketcap_id": "nautiluscoin", 
+  "name": "NautilusCoin", 
+  "symbols": [
+   "nautiluscoin", 
+   "NAUT"
+  ]
+ }, 
+ "NAV": {
+  "coinmarketcap_id": "nav-coin", 
+  "name": "NAV Coin", 
+  "symbols": [
+   "nav-coin", 
+   "NAV"
+  ]
+ }, 
+ "NBE": {
+  "coinmarketcap_id": "bitcentavo", 
+  "name": "BitCentavo", 
+  "symbols": [
+   "bitcentavo", 
+   "NBE"
+  ]
+ }, 
+ "NBIT": {
+  "coinmarketcap_id": "netbit", 
+  "name": "netBit", 
+  "symbols": [
+   "netbit", 
+   "NBIT"
+  ]
+ }, 
+ "NEOS": {
+  "coinmarketcap_id": "neoscoin", 
+  "name": "NeosCoin", 
+  "symbols": [
+   "neoscoin", 
+   "NEOS"
+  ]
+ }, 
+ "NET": {
+  "coinmarketcap_id": "netcoin", 
+  "name": "NetCoin", 
+  "symbols": [
+   "netcoin", 
+   "NET"
+  ]
+ }, 
+ "NETKO": {
+  "coinmarketcap_id": "netko", 
+  "name": "Netko", 
+  "symbols": [
+   "netko", 
+   "NETKO"
+  ]
+ }, 
+ "NEU": {
+  "coinmarketcap_id": "neucoin", 
+  "name": "NeuCoin", 
+  "symbols": [
+   "neucoin", 
+   "NEU"
+  ]
+ }, 
+ "NEVA": {
+  "coinmarketcap_id": "nevacoin", 
+  "name": "NevaCoin", 
+  "symbols": [
+   "nevacoin", 
+   "NEVA"
+  ]
+ }, 
+ "NEWB": {
+  "coinmarketcap_id": "newbium", 
+  "name": "Newbium", 
+  "symbols": [
+   "newbium", 
+   "NEWB"
+  ]
+ }, 
+ "NKA": {
+  "coinmarketcap_id": "incakoin", 
+  "name": "IncaKoin", 
+  "symbols": [
+   "incakoin", 
+   "NKA"
+  ]
+ }, 
+ "NLC2": {
+  "coinmarketcap_id": "nolimitcoin", 
+  "name": "NoLimitCoin", 
+  "symbols": [
+   "nolimitcoin", 
+   "NLC2"
+  ]
+ }, 
+ "NLG": {
+  "coinmarketcap_id": "gulden", 
+  "name": "Gulden", 
+  "symbols": [
+   "gulden", 
+   "NLG"
+  ]
+ }, 
+ "NMC": {
+  "coinmarketcap_id": "namecoin", 
+  "name": "Namecoin", 
+  "symbols": [
+   "namecoin", 
+   "NMC"
+  ]
+ }, 
+ "NOBL": {
+  "coinmarketcap_id": "noblecoin", 
+  "name": "NobleCoin", 
+  "symbols": [
+   "noblecoin", 
+   "NOBL"
+  ]
+ }, 
+ "NODC": {
+  "coinmarketcap_id": "nodecoin", 
+  "name": "NodeCoin", 
+  "symbols": [
+   "nodecoin", 
+   "NODC"
+  ]
+ }, 
+ "NOTE": {
+  "coinmarketcap_id": "dnotes", 
+  "name": "DNotes", 
+  "symbols": [
+   "dnotes", 
+   "NOTE"
+  ]
+ }, 
+ "NSR": {
+  "coinmarketcap_id": "nushares", 
+  "name": "NuShares", 
+  "symbols": [
+   "nushares", 
+   "NSR"
+  ]
+ }, 
+ "NTCC": {
+  "coinmarketcap_id": "neptune-classic", 
+  "name": "Neptune Classic", 
+  "symbols": [
+   "neptune-classic", 
+   "NTCC"
+  ]
+ }, 
+ "NTRN": {
+  "coinmarketcap_id": "neutron", 
+  "name": "Neutron", 
+  "symbols": [
+   "neutron", 
+   "NTRN"
+  ]
+ }, 
+ "NVC": {
+  "coinmarketcap_id": "novacoin", 
+  "name": "Novacoin", 
+  "symbols": [
+   "novacoin", 
+   "NVC"
+  ]
+ }, 
+ "NXC": {
+  "coinmarketcap_id": "nexium", 
+  "name": "Nexium", 
+  "symbols": [
+   "nexium", 
+   "NXC"
+  ]
+ }, 
+ "NXS": {
+  "coinmarketcap_id": "nexus", 
+  "name": "Nexus", 
+  "symbols": [
+   "nexus", 
+   "NXS"
+  ]
+ }, 
+ "NXT": {
+  "coinmarketcap_id": "nxt", 
+  "name": "Nxt", 
+  "symbols": [
+   "nxt", 
+   "NXT"
+  ]
+ }, 
+ "NYAN": {
+  "coinmarketcap_id": "nyancoin", 
+  "name": "Nyancoin", 
+  "symbols": [
+   "nyancoin", 
+   "NYAN"
+  ]
+ }, 
+ "NYC": {
+  "coinmarketcap_id": "newyorkcoin", 
+  "name": "NewYorkCoin", 
+  "symbols": [
+   "newyorkcoin", 
+   "NYC"
+  ]
+ }, 
+ "OBITS": {
+  "coinmarketcap_id": "obits", 
+  "name": "OBITS", 
+  "symbols": [
+   "obits", 
+   "OBITS"
+  ]
+ }, 
+ "OCEAN": {
+  "coinmarketcap_id": "burstocean", 
+  "name": "BurstOcean", 
+  "symbols": [
+   "burstocean", 
+   "OCEAN"
+  ]
+ }, 
+ "OCOW": {
+  "coinmarketcap_id": "ocow", 
+  "name": "OCOW", 
+  "symbols": [
+   "ocow", 
+   "OCOW"
+  ]
+ }, 
+ "OK": {
+  "coinmarketcap_id": "okcash", 
+  "name": "OKCash", 
+  "symbols": [
+   "okcash", 
+   "OK"
+  ]
+ }, 
+ "OMC": {
+  "coinmarketcap_id": "omicron", 
+  "name": "Omicron", 
+  "symbols": [
+   "omicron", 
+   "OMC"
+  ]
+ }, 
+ "OMNI": {
+  "coinmarketcap_id": "omni", 
+  "name": "Omni", 
+  "symbols": [
+   "omni", 
+   "OMNI"
+  ]
+ }, 
+ "OP": {
+  "coinmarketcap_id": "operand", 
+  "name": "Operand", 
+  "symbols": [
+   "operand", 
+   "OP"
+  ]
+ }, 
+ "OPAL": {
+  "coinmarketcap_id": "opal", 
+  "name": "Opal", 
+  "symbols": [
+   "opal", 
+   "OPAL"
+  ]
+ }, 
+ "OPES": {
+  "coinmarketcap_id": "opescoin", 
+  "name": "Opescoin", 
+  "symbols": [
+   "opescoin", 
+   "OPES"
+  ]
+ }, 
+ "ORB": {
+  "coinmarketcap_id": "orbitcoin", 
+  "name": "Orbitcoin", 
+  "symbols": [
+   "orbitcoin", 
+   "ORB"
+  ]
+ }, 
+ "ORLY": {
+  "coinmarketcap_id": "orlycoin", 
+  "name": "Orlycoin", 
+  "symbols": [
+   "orlycoin", 
+   "ORLY"
+  ]
+ }, 
+ "OS76": {
+  "coinmarketcap_id": "osmiumcoin", 
+  "name": "OsmiumCoin", 
+  "symbols": [
+   "osmiumcoin", 
+   "OS76"
+  ]
+ }, 
+ "P7C": {
+  "coinmarketcap_id": "p7coin", 
+  "name": "P7Coin", 
+  "symbols": [
+   "p7coin", 
+   "P7C"
+  ]
+ }, 
+ "PAC": {
+  "coinmarketcap_id": "paccoin", 
+  "name": "Paccoin", 
+  "symbols": [
+   "paccoin", 
+   "PAC"
+  ]
+ }, 
+ "PAK": {
+  "coinmarketcap_id": "pakcoin", 
+  "name": "Pakcoin", 
+  "symbols": [
+   "pakcoin", 
+   "PAK"
+  ]
+ }, 
+ "PANGEA": {
+  "coinmarketcap_id": "pangea-poker", 
+  "name": "Pangea Poker", 
+  "symbols": [
+   "pangea-poker", 
+   "PANGEA"
+  ]
+ }, 
+ "PASC": {
+  "coinmarketcap_id": "pascal-coin", 
+  "name": "Pascal Coin", 
+  "symbols": [
+   "pascal-coin", 
+   "PASC"
+  ]
+ }, 
+ "PASL": {
+  "coinmarketcap_id": "pascal-lite", 
+  "name": "Pascal Lite", 
+  "symbols": [
+   "pascal-lite", 
+   "PASL"
+  ]
+ }, 
+ "PAYP": {
+  "coinmarketcap_id": "paypeer", 
+  "name": "PayPeer", 
+  "symbols": [
+   "paypeer", 
+   "PAYP"
+  ]
+ }, 
+ "PBC": {
+  "coinmarketcap_id": "pabyosicoin", 
+  "name": "PabyosiCoin", 
+  "symbols": [
+   "pabyosicoin", 
+   "PBC"
+  ]
+ }, 
+ "PCS": {
+  "coinmarketcap_id": "pabyosi-coin-special", 
+  "name": "Pabyosi Coin (Special)", 
+  "symbols": [
+   "pabyosi-coin-special", 
+   "PCS"
+  ]
+ }, 
+ "PDC": {
+  "coinmarketcap_id": "project-decorum", 
+  "name": "Project Decorum", 
+  "symbols": [
+   "project-decorum", 
+   "PDC"
+  ]
+ }, 
+ "PDG": {
+  "coinmarketcap_id": "pinkdog", 
+  "name": "PinkDog", 
+  "symbols": [
+   "pinkdog", 
+   "PDG"
+  ]
+ }, 
+ "PEPE": {
+  "coinmarketcap_id": "memetic", 
+  "name": "PepeCoin", 
+  "symbols": [
+   "memetic", 
+   "PEPE"
+  ]
+ }, 
+ "PEPECASH": {
+  "coinmarketcap_id": "pepe-cash", 
+  "name": "Pepe Cash", 
+  "symbols": [
+   "pepe-cash", 
+   "PEPECASH"
+  ]
+ }, 
+ "PEX": {
+  "coinmarketcap_id": "posex", 
+  "name": "PosEx", 
+  "symbols": [
+   "posex", 
+   "PEX"
+  ]
+ }, 
+ "PHO": {
+  "coinmarketcap_id": "photon", 
+  "name": "Photon", 
+  "symbols": [
+   "photon", 
+   "PHO"
+  ]
+ }, 
+ "PHS": {
+  "coinmarketcap_id": "philosopher-stones", 
+  "name": "Philosopher Stones", 
+  "symbols": [
+   "philosopher-stones", 
+   "PHS"
+  ]
+ }, 
+ "PI": {
+  "coinmarketcap_id": "picoin", 
+  "name": "PiCoin", 
+  "symbols": [
+   "picoin", 
+   "PI"
+  ]
+ }, 
+ "PIE": {
+  "coinmarketcap_id": "piecoin", 
+  "name": "PIECoin", 
+  "symbols": [
+   "piecoin", 
+   "PIE"
+  ]
+ }, 
+ "PIGGY": {
+  "coinmarketcap_id": "piggycoin", 
+  "name": "Piggycoin", 
+  "symbols": [
+   "piggycoin", 
+   "PIGGY"
+  ]
+ }, 
+ "PINK": {
+  "coinmarketcap_id": "pinkcoin", 
+  "name": "PinkCoin", 
+  "symbols": [
+   "pinkcoin", 
+   "PINK"
+  ]
+ }, 
+ "PIO": {
+  "coinmarketcap_id": "pioneershares", 
+  "name": "Pioneershares", 
+  "symbols": [
+   "pioneershares", 
+   "PIO"
+  ]
+ }, 
+ "PIP": {
+  "coinmarketcap_id": "pipcoin", 
+  "name": "PipCoin", 
+  "symbols": [
+   "pipcoin", 
+   "PIP"
+  ]
+ }, 
+ "PIVX": {
+  "coinmarketcap_id": "pivx", 
+  "name": "PIVX", 
+  "symbols": [
+   "pivx", 
+   "darknet", 
+   "dnet", 
+   "piv"
+  ]
+ }, 
+ "PIZZA": {
+  "coinmarketcap_id": "pizzacoin", 
+  "name": "PizzaCoin", 
+  "symbols": [
+   "pizzacoin", 
+   "PIZZA"
+  ]
+ }, 
+ "PKB": {
+  "coinmarketcap_id": "parkbyte", 
+  "name": "ParkByte", 
+  "symbols": [
+   "parkbyte", 
+   "PKB"
+  ]
+ }, 
+ "PLNC": {
+  "coinmarketcap_id": "plncoin", 
+  "name": "PLNcoin", 
+  "symbols": [
+   "plncoin", 
+   "PLNC"
+  ]
+ }, 
+ "PLU": {
+  "coinmarketcap_id": "pluton", 
+  "name": "Pluton", 
+  "symbols": [
+   "pluton", 
+   "PLU"
+  ]
+ }, 
+ "PND": {
+  "coinmarketcap_id": "pandacoin-pnd", 
+  "name": "Pandacoin", 
+  "symbols": [
+   "pandacoin-pnd", 
+   "PND"
+  ]
+ }, 
+ "POKE": {
+  "coinmarketcap_id": "pokecoin", 
+  "name": "PokeCoin", 
+  "symbols": [
+   "pokecoin", 
+   "POKE"
+  ]
+ }, 
+ "PONZI": {
+  "coinmarketcap_id": "ponzicoin", 
+  "name": "PonziCoin", 
+  "symbols": [
+   "ponzicoin", 
+   "PONZI"
+  ]
+ }, 
+ "POP": {
+  "coinmarketcap_id": "popularcoin", 
+  "name": "PopularCoin", 
+  "symbols": [
+   "popularcoin", 
+   "POP"
+  ]
+ }, 
+ "POST": {
+  "coinmarketcap_id": "postcoin", 
+  "name": "PostCoin", 
+  "symbols": [
+   "postcoin", 
+   "POST"
+  ]
+ }, 
+ "POSW": {
+  "coinmarketcap_id": "posw-coin", 
+  "name": "PoSW Coin", 
+  "symbols": [
+   "posw-coin", 
+   "POSW"
+  ]
+ }, 
+ "POT": {
+  "coinmarketcap_id": "potcoin", 
+  "name": "PotCoin", 
+  "symbols": [
+   "potcoin", 
+   "POT"
+  ]
+ }, 
+ "PPC": {
+  "coinmarketcap_id": "peercoin", 
+  "name": "Peercoin", 
+  "symbols": [
+   "peercoin", 
+   "PPC"
+  ]
+ }, 
+ "PR": {
+  "coinmarketcap_id": "prototanium", 
+  "name": "Prototanium", 
+  "symbols": [
+   "prototanium", 
+   "PR"
+  ]
+ }, 
+ "PRC": {
+  "coinmarketcap_id": "prcoin", 
+  "name": "PRCoin", 
+  "symbols": [
+   "prcoin", 
+   "PRC"
+  ]
+ }, 
+ "PRES": {
+  "coinmarketcap_id": "president-trump", 
+  "name": "President Trump", 
+  "symbols": [
+   "president-trump", 
+   "PRES"
+  ]
+ }, 
+ "PRM": {
+  "coinmarketcap_id": "prismchain", 
+  "name": "PrismChain", 
+  "symbols": [
+   "prismchain", 
+   "PRM"
+  ]
+ }, 
+ "PROC": {
+  "coinmarketcap_id": "procurrency", 
+  "name": "ProCurrency", 
+  "symbols": [
+   "procurrency", 
+   "PROC"
+  ]
+ }, 
+ "PRX": {
+  "coinmarketcap_id": "printerium", 
+  "name": "Printerium", 
+  "symbols": [
+   "printerium", 
+   "PRX"
+  ]
+ }, 
+ "PSB": {
+  "coinmarketcap_id": "pesobit", 
+  "name": "Pesobit", 
+  "symbols": [
+   "pesobit", 
+   "PSB"
+  ]
+ }, 
+ "PSY": {
+  "coinmarketcap_id": "psilocybin", 
+  "name": "Psilocybin", 
+  "symbols": [
+   "psilocybin", 
+   "PSY"
+  ]
+ }, 
+ "PTC": {
+  "coinmarketcap_id": "pesetacoin", 
+  "name": "Pesetacoin", 
+  "symbols": [
+   "pesetacoin", 
+   "PTC"
+  ]
+ }, 
+ "PULSE": {
+  "coinmarketcap_id": "pulse", 
+  "name": "Pulse", 
+  "symbols": [
+   "pulse", 
+   "PULSE"
+  ]
+ }, 
+ "PUT": {
+  "coinmarketcap_id": "putincoin", 
+  "name": "PutinCoin", 
+  "symbols": [
+   "putincoin", 
+   "PUT"
+  ]
+ }, 
+ "PWR": {
+  "coinmarketcap_id": "powercoin", 
+  "name": "Powercoin", 
+  "symbols": [
+   "powercoin", 
+   "PWR"
+  ]
+ }, 
+ "PX": {
+  "coinmarketcap_id": "px", 
+  "name": "PX", 
+  "symbols": [
+   "px", 
+   "PX"
+  ]
+ }, 
+ "PXC": {
+  "coinmarketcap_id": "phoenixcoin", 
+  "name": "Phoenixcoin", 
+  "symbols": [
+   "phoenixcoin", 
+   "PXC"
+  ]
+ }, 
+ "PXI": {
+  "coinmarketcap_id": "prime-xi", 
+  "name": "Prime-XI", 
+  "symbols": [
+   "prime-xi", 
+   "PXI"
+  ]
+ }, 
+ "QBC": {
+  "coinmarketcap_id": "quebecoin", 
+  "name": "Quebecoin", 
+  "symbols": [
+   "quebecoin", 
+   "QBC"
+  ]
+ }, 
+ "QBK": {
+  "coinmarketcap_id": "qibuck", 
+  "name": "Qibuck", 
+  "symbols": [
+   "qibuck", 
+   "QBK"
+  ]
+ }, 
+ "QBT": {
+  "coinmarketcap_id": "cubits", 
+  "name": "Cubits", 
+  "symbols": [
+   "cubits", 
+   "QBT"
+  ]
+ }, 
+ "QCN": {
+  "coinmarketcap_id": "quazarcoin", 
+  "name": "QuazarCoin", 
+  "symbols": [
+   "quazarcoin", 
+   "QCN"
+  ]
+ }, 
+ "QORA": {
+  "coinmarketcap_id": "qora", 
+  "name": "Qora", 
+  "symbols": [
+   "qora", 
+   "QORA"
+  ]
+ }, 
+ "QRK": {
+  "coinmarketcap_id": "quark", 
+  "name": "Quark", 
+  "symbols": [
+   "quark", 
+   "QRK"
+  ]
+ }, 
+ "QTL": {
+  "coinmarketcap_id": "quatloo", 
+  "name": "Quatloo", 
+  "symbols": [
+   "quatloo", 
+   "QTL"
+  ]
+ }, 
+ "QWARK": {
+  "coinmarketcap_id": "qwark", 
+  "name": "Qwark", 
+  "symbols": [
+   "qwark", 
+   "QWARK"
+  ]
+ }, 
+ "RADS": {
+  "coinmarketcap_id": "radium", 
+  "name": "Radium", 
+  "symbols": [
+   "radium", 
+   "RADS"
+  ]
+ }, 
+ "RAIN": {
+  "coinmarketcap_id": "condensate", 
+  "name": "Condensate", 
+  "symbols": [
+   "condensate", 
+   "RAIN"
+  ]
+ }, 
+ "RAREPEPEPRTY": {
+  "coinmarketcap_id": "rare-pepe-party", 
+  "name": "Rare Pepe Party", 
+  "symbols": [
+   "rare-pepe-party", 
+   "RAREPEPEPRTY"
+  ]
+ }, 
+ "RBIES": {
+  "coinmarketcap_id": "rubies", 
+  "name": "Rubies", 
+  "symbols": [
+   "rubies", 
+   "RBIES"
+  ]
+ }, 
+ "RBT": {
+  "coinmarketcap_id": "rimbit", 
+  "name": "Rimbit", 
+  "symbols": [
+   "rimbit", 
+   "RBT"
+  ]
+ }, 
+ "RBX": {
+  "coinmarketcap_id": "ripto-bux", 
+  "name": "Ripto Bux", 
+  "symbols": [
+   "ripto-bux", 
+   "RBX"
+  ]
+ }, 
+ "RBY": {
+  "coinmarketcap_id": "rubycoin", 
+  "name": "Rubycoin", 
+  "symbols": [
+   "rubycoin", 
+   "RBY"
+  ]
+ }, 
+ "RC": {
+  "coinmarketcap_id": "russiacoin", 
+  "name": "RussiaCoin", 
+  "symbols": [
+   "russiacoin", 
+   "RC"
+  ]
+ }, 
+ "RCN": {
+  "coinmarketcap_id": "rcoin", 
+  "name": "Rcoin", 
+  "symbols": [
+   "rcoin", 
+   "RCN"
+  ]
+ }, 
+ "RDD": {
+  "coinmarketcap_id": "reddcoin", 
+  "name": "ReddCoin", 
+  "symbols": [
+   "reddcoin", 
+   "RDD"
+  ]
+ }, 
+ "RED": {
+  "coinmarketcap_id": "redcoin", 
+  "name": "RedCoin", 
+  "symbols": [
+   "redcoin", 
+   "RED"
+  ]
+ }, 
+ "REE": {
+  "coinmarketcap_id": "reecoin", 
+  "name": "ReeCoin", 
+  "symbols": [
+   "reecoin", 
+   "REE"
+  ]
+ }, 
+ "REP": {
+  "coinmarketcap_id": "augur", 
+  "name": "Augur", 
+  "symbols": [
+   "augur", 
+   "REP"
+  ]
+ }, 
+ "REV": {
+  "coinmarketcap_id": "revenu", 
+  "name": "Revenu", 
+  "symbols": [
+   "revenu", 
+   "REV"
+  ]
+ }, 
+ "RHFC": {
+  "coinmarketcap_id": "rhfcoin", 
+  "name": "RHFCoin", 
+  "symbols": [
+   "rhfcoin", 
+   "RHFC"
+  ]
+ }, 
+ "RIC": {
+  "coinmarketcap_id": "riecoin", 
+  "name": "Riecoin", 
+  "symbols": [
+   "riecoin", 
+   "RIC"
+  ]
+ }, 
+ "RICHX": {
+  "coinmarketcap_id": "richcoin", 
+  "name": "RichCoin", 
+  "symbols": [
+   "richcoin", 
+   "RICHX"
+  ]
+ }, 
+ "RIDE": {
+  "coinmarketcap_id": "ride-my-car", 
+  "name": "Ride My Car", 
+  "symbols": [
+   "ride-my-car", 
+   "RIDE"
+  ]
+ }, 
+ "RISE": {
+  "coinmarketcap_id": "rise", 
+  "name": "Rise", 
+  "symbols": [
+   "rise", 
+   "RISE"
+  ]
+ }, 
+ "RLC": {
+  "coinmarketcap_id": "rlc", 
+  "name": "iExec RLC", 
+  "symbols": [
+   "rlc", 
+   "RLC"
+  ]
+ }, 
+ "RNS": {
+  "coinmarketcap_id": "renos", 
+  "name": "Renos", 
+  "symbols": [
+   "renos", 
+   "RNS"
+  ]
+ }, 
+ "ROUND": {
+  "coinmarketcap_id": "round", 
+  "name": "Round", 
+  "symbols": [
+   "round", 
+   "ROUND"
+  ]
+ }, 
+ "ROYAL": {
+  "coinmarketcap_id": "royalcoin", 
+  "name": "RoyalCoin", 
+  "symbols": [
+   "royalcoin", 
+   "ROYAL"
+  ]
+ }, 
+ "RPC": {
+  "coinmarketcap_id": "ronpaulcoin", 
+  "name": "RonPaulCoin", 
+  "symbols": [
+   "ronpaulcoin", 
+   "RPC"
+  ]
+ }, 
+ "RUBIT": {
+  "coinmarketcap_id": "rublebit", 
+  "name": "RubleBit", 
+  "symbols": [
+   "rublebit", 
+   "RUBIT"
+  ]
+ }, 
+ "RYCN": {
+  "coinmarketcap_id": "royalcoin-2", 
+  "name": "RoyalCoin 2", 
+  "symbols": [
+   "royalcoin-2", 
+   "RYCN"
+  ]
+ }, 
+ "SAFEX": {
+  "coinmarketcap_id": "safe-exchange-coin", 
+  "name": "Safe Exchange Coin", 
+  "symbols": [
+   "safe-exchange-coin", 
+   "SAFEX"
+  ]
+ }, 
+ "SAK": {
+  "coinmarketcap_id": "sharkcoin", 
+  "name": "Sharkcoin", 
+  "symbols": [
+   "sharkcoin", 
+   "SAK"
+  ]
+ }, 
+ "SANDG": {
+  "coinmarketcap_id": "save-and-gain", 
+  "name": "Save and Gain", 
+  "symbols": [
+   "save-and-gain", 
+   "SANDG"
+  ]
+ }, 
+ "SATOSHICARD": {
+  "coinmarketcap_id": "satoshicard", 
+  "name": "SATOSHICARD", 
+  "symbols": [
+   "satoshicard", 
+   "SATOSHICARD"
+  ]
+ }, 
+ "SBD": {
+  "coinmarketcap_id": "steem-dollars", 
+  "name": "Steem Dollars", 
+  "symbols": [
+   "steem-dollars", 
+   "SBD"
+  ]
+ }, 
+ "SC": {
+  "coinmarketcap_id": "siacoin", 
+  "name": "Siacoin", 
+  "symbols": [
+   "siacoin", 
+   "SC"
+  ]
+ }, 
+ "SCORE": {
+  "coinmarketcap_id": "scorecoin", 
+  "name": "Scorecoin", 
+  "symbols": [
+   "scorecoin", 
+   "SCORE"
+  ]
+ }, 
+ "SCOT": {
+  "coinmarketcap_id": "scotcoin", 
+  "name": "Scotcoin", 
+  "symbols": [
+   "scotcoin", 
+   "SCOT"
+  ]
+ }, 
+ "SCRT": {
+  "coinmarketcap_id": "secretcoin", 
+  "name": "SecretCoin", 
+  "symbols": [
+   "secretcoin", 
+   "SCRT"
+  ]
+ }, 
+ "SCS": {
+  "coinmarketcap_id": "speedcash", 
+  "name": "Speedcash", 
+  "symbols": [
+   "speedcash", 
+   "SCS"
+  ]
+ }, 
+ "SDC": {
+  "coinmarketcap_id": "shadowcash", 
+  "name": "ShadowCash", 
+  "symbols": [
+   "shadowcash", 
+   "SDC"
+  ]
+ }, 
+ "SDP": {
+  "coinmarketcap_id": "sydpak", 
+  "name": "SydPak", 
+  "symbols": [
+   "sydpak", 
+   "SDP"
+  ]
+ }, 
+ "SEQ": {
+  "coinmarketcap_id": "sequence", 
+  "name": "Sequence", 
+  "symbols": [
+   "sequence", 
+   "SEQ"
+  ]
+ }, 
+ "SFC": {
+  "coinmarketcap_id": "solarflarecoin", 
+  "name": "Solarflarecoin", 
+  "symbols": [
+   "solarflarecoin", 
+   "SFC"
+  ]
+ }, 
+ "SH": {
+  "coinmarketcap_id": "shilling", 
+  "name": "Shilling", 
+  "symbols": [
+   "shilling", 
+   "SH"
+  ]
+ }, 
+ "SHELL": {
+  "coinmarketcap_id": "shellpay", 
+  "name": "ShellPay", 
+  "symbols": [
+   "shellpay", 
+   "SHELL"
+  ]
+ }, 
+ "SHIFT": {
+  "coinmarketcap_id": "shift", 
+  "name": "Shift", 
+  "symbols": [
+   "shift", 
+   "SHIFT"
+  ]
+ }, 
+ "SHORTY": {
+  "coinmarketcap_id": "shorty", 
+  "name": "Shorty", 
+  "symbols": [
+   "shorty", 
+   "SHORTY"
+  ]
+ }, 
+ "SIB": {
+  "coinmarketcap_id": "sibcoin", 
+  "name": "SIBCoin", 
+  "symbols": [
+   "sibcoin", 
+   "SIB"
+  ]
+ }, 
+ "SJCX": {
+  "coinmarketcap_id": "storjcoin-x", 
+  "name": "Storjcoin X", 
+  "symbols": [
+   "storjcoin-x", 
+   "SJCX"
+  ]
+ }, 
+ "SKC": {
+  "coinmarketcap_id": "skeincoin", 
+  "name": "Skeincoin", 
+  "symbols": [
+   "skeincoin", 
+   "SKC"
+  ]
+ }, 
+ "SKR": {
+  "coinmarketcap_id": "sakuracoin", 
+  "name": "Sakuracoin", 
+  "symbols": [
+   "sakuracoin", 
+   "SKR"
+  ]
+ }, 
+ "SKY": {
+  "coinmarketcap_id": "skycoin", 
+  "name": "Skycoin", 
+  "symbols": [
+   "skycoin", 
+   "SKY"
+  ]
+ }, 
+ "SLFI": {
+  "coinmarketcap_id": "selfiecoin", 
+  "name": "Selfiecoin", 
+  "symbols": [
+   "selfiecoin", 
+   "SLFI"
+  ]
+ }, 
+ "SLG": {
+  "coinmarketcap_id": "sterlingcoin", 
+  "name": "Sterlingcoin", 
+  "symbols": [
+   "sterlingcoin", 
+   "SLG"
+  ]
+ }, 
+ "SLING": {
+  "coinmarketcap_id": "sling", 
+  "name": "Sling", 
+  "symbols": [
+   "sling", 
+   "SLING"
+  ]
+ }, 
+ "SLR": {
+  "coinmarketcap_id": "solarcoin", 
+  "name": "SolarCoin", 
+  "symbols": [
+   "solarcoin", 
+   "SLR"
+  ]
+ }, 
+ "SLS": {
+  "coinmarketcap_id": "salus", 
+  "name": "SaluS", 
+  "symbols": [
+   "salus", 
+   "SLS"
+  ]
+ }, 
+ "SMC": {
+  "coinmarketcap_id": "smartcoin", 
+  "name": "SmartCoin", 
+  "symbols": [
+   "smartcoin", 
+   "SMC"
+  ]
+ }, 
+ "SMLY": {
+  "coinmarketcap_id": "smileycoin", 
+  "name": "SmileyCoin", 
+  "symbols": [
+   "smileycoin", 
+   "SMLY"
+  ]
+ }, 
+ "SNAKE": {
+  "coinmarketcap_id": "snakeeyes", 
+  "name": "SnakeEyes", 
+  "symbols": [
+   "snakeeyes", 
+   "SNAKE"
+  ]
+ }, 
+ "SNGLS": {
+  "coinmarketcap_id": "singulardtv", 
+  "name": "SingularDTV", 
+  "symbols": [
+   "singulardtv", 
+   "SNGLS"
+  ]
+ }, 
+ "SNRG": {
+  "coinmarketcap_id": "synergy", 
+  "name": "Synergy", 
+  "symbols": [
+   "synergy", 
+   "SNRG"
+  ]
+ }, 
+ "SOAR": {
+  "coinmarketcap_id": "soarcoin", 
+  "name": "Soarcoin", 
+  "symbols": [
+   "soarcoin", 
+   "SOAR"
+  ]
+ }, 
+ "SONG": {
+  "coinmarketcap_id": "songcoin", 
+  "name": "SongCoin", 
+  "symbols": [
+   "songcoin", 
+   "SONG"
+  ]
+ }, 
+ "SOON": {
+  "coinmarketcap_id": "sooncoin", 
+  "name": "SoonCoin", 
+  "symbols": [
+   "sooncoin", 
+   "SOON"
+  ]
+ }, 
+ "SOUL": {
+  "coinmarketcap_id": "soulcoin", 
+  "name": "SoulCoin", 
+  "symbols": [
+   "soulcoin", 
+   "SOUL"
+  ]
+ }, 
+ "SPACE": {
+  "coinmarketcap_id": "spacecoin", 
+  "name": "SpaceCoin", 
+  "symbols": [
+   "spacecoin", 
+   "SPACE"
+  ]
+ }, 
+ "SPEX": {
+  "coinmarketcap_id": "sproutsextreme", 
+  "name": "SproutsExtreme", 
+  "symbols": [
+   "sproutsextreme", 
+   "SPEX"
+  ]
+ }, 
+ "SPHR": {
+  "coinmarketcap_id": "sphere", 
+  "name": "Sphere", 
+  "symbols": [
+   "sphere", 
+   "SPHR"
+  ]
+ }, 
+ "SPORT": {
+  "coinmarketcap_id": "sportscoin", 
+  "name": "SportsCoin", 
+  "symbols": [
+   "sportscoin", 
+   "SPORT"
+  ]
+ }, 
+ "SPR": {
+  "coinmarketcap_id": "spreadcoin", 
+  "name": "SpreadCoin", 
+  "symbols": [
+   "spreadcoin", 
+   "SPR"
+  ]
+ }, 
+ "SPRTS": {
+  "coinmarketcap_id": "sprouts", 
+  "name": "Sprouts", 
+  "symbols": [
+   "sprouts", 
+   "SPRTS"
+  ]
+ }, 
+ "SPT": {
+  "coinmarketcap_id": "spots", 
+  "name": "Spots", 
+  "symbols": [
+   "spots", 
+   "SPT"
+  ]
+ }, 
+ "SRC": {
+  "coinmarketcap_id": "securecoin", 
+  "name": "SecureCoin", 
+  "symbols": [
+   "securecoin", 
+   "SRC"
+  ]
+ }, 
+ "START": {
+  "coinmarketcap_id": "startcoin", 
+  "name": "Startcoin", 
+  "symbols": [
+   "startcoin", 
+   "START"
+  ]
+ }, 
+ "STEEM": {
+  "coinmarketcap_id": "steem", 
+  "name": "Steem", 
+  "symbols": [
+   "steem", 
+   "STEEM"
+  ]
+ }, 
+ "STEPS": {
+  "coinmarketcap_id": "steps", 
+  "name": "Steps", 
+  "symbols": [
+   "steps", 
+   "STEPS"
+  ]
+ }, 
+ "STRAT": {
+  "coinmarketcap_id": "stratis", 
+  "name": "Stratis", 
+  "symbols": [
+   "stratis", 
+   "STRAT"
+  ]
+ }, 
+ "STRB": {
+  "coinmarketcap_id": "superturbostake", 
+  "name": "SuperTurboStake", 
+  "symbols": [
+   "superturbostake", 
+   "STRB"
+  ]
+ }, 
+ "STS": {
+  "coinmarketcap_id": "stress", 
+  "name": "Stress", 
+  "symbols": [
+   "stress", 
+   "STS"
+  ]
+ }, 
+ "STV": {
+  "coinmarketcap_id": "sativacoin", 
+  "name": "Sativacoin", 
+  "symbols": [
+   "sativacoin", 
+   "STV"
+  ]
+ }, 
+ "SWIFT": {
+  "coinmarketcap_id": "bitswift", 
+  "name": "Bitswift", 
+  "symbols": [
+   "bitswift", 
+   "SWIFT"
+  ]
+ }, 
+ "SWING": {
+  "coinmarketcap_id": "swing", 
+  "name": "Swing", 
+  "symbols": [
+   "swing", 
+   "SWING"
+  ]
+ }, 
+ "SWT": {
+  "coinmarketcap_id": "swarm-city", 
+  "name": "Swarm City", 
+  "symbols": [
+   "swarm-city", 
+   "SWT"
+  ]
+ }, 
+ "SXC": {
+  "coinmarketcap_id": "sexcoin", 
+  "name": "Sexcoin", 
+  "symbols": [
+   "sexcoin", 
+   "SXC"
+  ]
+ }, 
+ "SYNX": {
+  "coinmarketcap_id": "syndicate", 
+  "name": "Syndicate", 
+  "symbols": [
+   "syndicate", 
+   "SYNX"
+  ]
+ }, 
+ "SYS": {
+  "coinmarketcap_id": "syscoin", 
+  "name": "SysCoin", 
+  "symbols": [
+   "syscoin", 
+   "SYS"
+  ]
+ }, 
+ "TAAS": {
+  "coinmarketcap_id": "taas", 
+  "name": "TaaS", 
+  "symbols": [
+   "taas", 
+   "TAAS"
+  ]
+ }, 
+ "TAG": {
+  "coinmarketcap_id": "tagcoin", 
+  "name": "TagCoin", 
+  "symbols": [
+   "tagcoin", 
+   "TAG"
+  ]
+ }, 
+ "TAGR": {
+  "coinmarketcap_id": "tagrcoin", 
+  "name": "TAGRcoin", 
+  "symbols": [
+   "tagrcoin", 
+   "TAGR"
+  ]
+ }, 
+ "TAJ": {
+  "coinmarketcap_id": "tajcoin", 
+  "name": "TajCoin", 
+  "symbols": [
+   "tajcoin", 
+   "TAJ"
+  ]
+ }, 
+ "TALK": {
+  "coinmarketcap_id": "btctalkcoin", 
+  "name": "BTCtalkcoin", 
+  "symbols": [
+   "btctalkcoin", 
+   "TALK"
+  ]
+ }, 
+ "TCOIN": {
+  "coinmarketcap_id": "t-coin", 
+  "name": "T-coin", 
+  "symbols": [
+   "t-coin", 
+   "TCOIN"
+  ]
+ }, 
+ "TCR": {
+  "coinmarketcap_id": "thecreed", 
+  "name": "TheCreed", 
+  "symbols": [
+   "thecreed", 
+   "TCR"
+  ]
+ }, 
+ "TEAM": {
+  "coinmarketcap_id": "teamup", 
+  "name": "TeamUp", 
+  "symbols": [
+   "teamup", 
+   "TEAM"
+  ]
+ }, 
+ "TEK": {
+  "coinmarketcap_id": "tekcoin", 
+  "name": "TEKcoin", 
+  "symbols": [
+   "tekcoin", 
+   "TEK"
+  ]
+ }, 
+ "TELL": {
+  "coinmarketcap_id": "tellurion", 
+  "name": "Tellurion", 
+  "symbols": [
+   "tellurion", 
+   "TELL"
+  ]
+ }, 
+ "TERA": {
+  "coinmarketcap_id": "teracoin", 
+  "name": "TeraCoin", 
+  "symbols": [
+   "teracoin", 
+   "TERA"
+  ]
+ }, 
+ "TES": {
+  "coinmarketcap_id": "teslacoin", 
+  "name": "TeslaCoin", 
+  "symbols": [
+   "teslacoin", 
+   "TES"
+  ]
+ }, 
+ "TESLA": {
+  "coinmarketcap_id": "teslacoilcoin", 
+  "name": "TeslaCoilCoin", 
+  "symbols": [
+   "teslacoilcoin", 
+   "TESLA"
+  ]
+ }, 
+ "TGC": {
+  "coinmarketcap_id": "tigercoin", 
+  "name": "Tigercoin", 
+  "symbols": [
+   "tigercoin", 
+   "TGC"
+  ]
+ }, 
+ "THC": {
+  "coinmarketcap_id": "hempcoin", 
+  "name": "HempCoin", 
+  "symbols": [
+   "hempcoin", 
+   "THC"
+  ]
+ }, 
+ "THS": {
+  "coinmarketcap_id": "techshares", 
+  "name": "TechShares", 
+  "symbols": [
+   "techshares", 
+   "THS"
+  ]
+ }, 
+ "TIC": {
+  "coinmarketcap_id": "true-investment-coin", 
+  "name": "True Investment Coin", 
+  "symbols": [
+   "true-investment-coin", 
+   "TIC"
+  ]
+ }, 
+ "TIME": {
+  "coinmarketcap_id": "chronobank", 
+  "name": "Chronobank", 
+  "symbols": [
+   "chronobank", 
+   "TIME"
+  ]
+ }, 
+ "TIPS": {
+  "coinmarketcap_id": "fedoracoin", 
+  "name": "FedoraCoin", 
+  "symbols": [
+   "fedoracoin", 
+   "TIPS"
+  ]
+ }, 
+ "TIT": {
+  "coinmarketcap_id": "titcoin", 
+  "name": "Titcoin", 
+  "symbols": [
+   "titcoin", 
+   "TIT"
+  ]
+ }, 
+ "TIX": {
+  "coinmarketcap_id": "tickets", 
+  "name": "Tickets", 
+  "symbols": [
+   "tickets", 
+   "TIX"
+  ]
+ }, 
+ "TKN": {
+  "coinmarketcap_id": "tokencard", 
+  "name": "TokenCard", 
+  "symbols": [
+   "tokencard", 
+   "TKN"
+  ]
+ }, 
+ "TKS": {
+  "coinmarketcap_id": "tokes", 
+  "name": "Tokes", 
+  "symbols": [
+   "tokes", 
+   "TKS"
+  ]
+ }, 
+ "TLE": {
+  "coinmarketcap_id": "tattoocoin-limited", 
+  "name": "Tattoocoin (Limited Edition)", 
+  "symbols": [
+   "tattoocoin-limited", 
+   "TLE"
+  ]
+ }, 
+ "TODAY": {
+  "coinmarketcap_id": "todaycoin", 
+  "name": "TodayCoin", 
+  "symbols": [
+   "todaycoin", 
+   "TODAY"
+  ]
+ }, 
+ "TOKEN": {
+  "coinmarketcap_id": "swaptoken", 
+  "name": "SwapToken", 
+  "symbols": [
+   "swaptoken", 
+   "TOKEN"
+  ]
+ }, 
+ "TOPAZ": {
+  "coinmarketcap_id": "topaz", 
+  "name": "Topaz Coin", 
+  "symbols": [
+   "topaz", 
+   "TOPAZ"
+  ]
+ }, 
+ "TOR": {
+  "coinmarketcap_id": "torcoin-tor", 
+  "name": "Torcoin", 
+  "symbols": [
+   "torcoin-tor", 
+   "TOR"
+  ]
+ }, 
+ "TP1": {
+  "coinmarketcap_id": "kolschcoin", 
+  "name": "KolschCoin", 
+  "symbols": [
+   "kolschcoin", 
+   "TP1"
+  ]
+ }, 
+ "TRC": {
+  "coinmarketcap_id": "terracoin", 
+  "name": "Terracoin", 
+  "symbols": [
+   "terracoin", 
+   "TRC"
+  ]
+ }, 
+ "TRI": {
+  "coinmarketcap_id": "triangles", 
+  "name": "Triangles", 
+  "symbols": [
+   "triangles", 
+   "TRI"
+  ]
+ }, 
+ "TRICK": {
+  "coinmarketcap_id": "trickycoin", 
+  "name": "TrickyCoin", 
+  "symbols": [
+   "trickycoin", 
+   "TRICK"
+  ]
+ }, 
+ "TRIG": {
+  "coinmarketcap_id": "triggers", 
+  "name": "Triggers", 
+  "symbols": [
+   "triggers", 
+   "TRIG"
+  ]
+ }, 
+ "TRK": {
+  "coinmarketcap_id": "truckcoin", 
+  "name": "Truckcoin", 
+  "symbols": [
+   "truckcoin", 
+   "TRK"
+  ]
+ }, 
+ "TROLL": {
+  "coinmarketcap_id": "trollcoin", 
+  "name": "Trollcoin", 
+  "symbols": [
+   "trollcoin", 
+   "TROLL"
+  ]
+ }, 
+ "TROPTIONS": {
+  "coinmarketcap_id": "troptions", 
+  "name": "TROPTIONS", 
+  "symbols": [
+   "troptions", 
+   "TROPTIONS"
+  ]
+ }, 
+ "TRST": {
+  "coinmarketcap_id": "trust", 
+  "name": "WeTrust", 
+  "symbols": [
+   "trust", 
+   "TRST"
+  ]
+ }, 
+ "TRUMP": {
+  "coinmarketcap_id": "trumpcoin", 
+  "name": "TrumpCoin", 
+  "symbols": [
+   "trumpcoin", 
+   "TRUMP"
+  ]
+ }, 
+ "TRUST": {
+  "coinmarketcap_id": "trustplus", 
+  "name": "TrustPlus", 
+  "symbols": [
+   "trustplus", 
+   "TRUST"
+  ]
+ }, 
+ "TSE": {
+  "coinmarketcap_id": "tattoocoin", 
+  "name": "Tattoocoin (Standard Edition)", 
+  "symbols": [
+   "tattoocoin", 
+   "TSE"
+  ]
+ }, 
+ "TSTR": {
+  "coinmarketcap_id": "tristar-coin", 
+  "name": "Tristar Coin", 
+  "symbols": [
+   "tristar-coin", 
+   "TSTR"
+  ]
+ }, 
+ "TTC": {
+  "coinmarketcap_id": "tittiecoin", 
+  "name": "TittieCoin", 
+  "symbols": [
+   "tittiecoin", 
+   "TTC"
+  ]
+ }, 
+ "TX": {
+  "coinmarketcap_id": "transfercoin", 
+  "name": "TransferCoin", 
+  "symbols": [
+   "transfercoin", 
+   "TX"
+  ]
+ }, 
+ "TYC": {
+  "coinmarketcap_id": "tyrocoin", 
+  "name": "Tyrocoin", 
+  "symbols": [
+   "tyrocoin", 
+   "TYC"
+  ]
+ }, 
+ "U": {
+  "coinmarketcap_id": "ucoin", 
+  "name": "UCoin", 
+  "symbols": [
+   "ucoin", 
+   "U"
+  ]
+ }, 
+ "UBQ": {
+  "coinmarketcap_id": "ubiq", 
+  "name": "Ubiq", 
+  "symbols": [
+   "ubiq", 
+   "UBQ"
+  ]
+ }, 
+ "UFO": {
+  "coinmarketcap_id": "ufo-coin", 
+  "name": "UFO Coin", 
+  "symbols": [
+   "ufo-coin", 
+   "UFO"
+  ]
+ }, 
+ "UIS": {
+  "coinmarketcap_id": "unitus", 
+  "name": "Unitus", 
+  "symbols": [
+   "unitus", 
+   "UIS"
+  ]
+ }, 
+ "UNB": {
+  "coinmarketcap_id": "unbreakablecoin", 
+  "name": "UnbreakableCoin", 
+  "symbols": [
+   "unbreakablecoin", 
+   "UNB"
+  ]
+ }, 
+ "UNC": {
+  "coinmarketcap_id": "uncoin", 
+  "name": "UNCoin", 
+  "symbols": [
+   "uncoin", 
+   "UNC"
+  ]
+ }, 
+ "UNI": {
+  "coinmarketcap_id": "universe", 
+  "name": "Universe", 
+  "symbols": [
+   "universe", 
+   "UNI"
+  ]
+ }, 
+ "UNIBURST": {
+  "coinmarketcap_id": "uniburst", 
+  "name": "UniBURST", 
+  "symbols": [
+   "uniburst", 
+   "UNIBURST"
+  ]
+ }, 
+ "UNIC": {
+  "coinmarketcap_id": "unicoin", 
+  "name": "UniCoin", 
+  "symbols": [
+   "unicoin", 
+   "UNIC"
+  ]
+ }, 
+ "UNIT": {
+  "coinmarketcap_id": "universal-currency", 
+  "name": "Universal Currency", 
+  "symbols": [
+   "universal-currency", 
+   "UNIT"
+  ]
+ }, 
+ "UNITS": {
+  "coinmarketcap_id": "gameunits", 
+  "name": "GameUnits", 
+  "symbols": [
+   "gameunits", 
+   "UNITS"
+  ]
+ }, 
+ "UNITY": {
+  "coinmarketcap_id": "supernet-unity", 
+  "name": "SuperNET", 
+  "symbols": [
+   "supernet-unity", 
+   "UNITY"
+  ]
+ }, 
+ "UNO": {
+  "coinmarketcap_id": "unobtanium", 
+  "name": "Unobtanium", 
+  "symbols": [
+   "unobtanium", 
+   "UNO"
+  ]
+ }, 
+ "UR": {
+  "coinmarketcap_id": "ur", 
+  "name": "UR", 
+  "symbols": [
+   "ur", 
+   "UR"
+  ]
+ }, 
+ "URC": {
+  "coinmarketcap_id": "unrealcoin", 
+  "name": "Unrealcoin", 
+  "symbols": [
+   "unrealcoin", 
+   "URC"
+  ]
+ }, 
+ "URO": {
+  "coinmarketcap_id": "uro", 
+  "name": "Uro", 
+  "symbols": [
+   "uro", 
+   "URO"
+  ]
+ }, 
+ "USC": {
+  "coinmarketcap_id": "ultimate-secure-cash", 
+  "name": "Ultimate Secure Cash", 
+  "symbols": [
+   "ultimate-secure-cash", 
+   "USC"
+  ]
+ }, 
+ "USDT": {
+  "coinmarketcap_id": "tether", 
+  "name": "Tether", 
+  "symbols": [
+   "tether", 
+   "USDT"
+  ]
+ }, 
+ "USNBT": {
+  "coinmarketcap_id": "nubits", 
+  "name": "NuBits", 
+  "symbols": [
+   "nubits", 
+   "USNBT"
+  ]
+ }, 
+ "UTA": {
+  "coinmarketcap_id": "utacoin", 
+  "name": "UtaCoin", 
+  "symbols": [
+   "utacoin", 
+   "UTA"
+  ]
+ }, 
+ "UTC": {
+  "coinmarketcap_id": "ultracoin", 
+  "name": "UltraCoin", 
+  "symbols": [
+   "ultracoin", 
+   "UTC"
+  ]
+ }, 
+ "VAL": {
+  "coinmarketcap_id": "valorbit", 
+  "name": "Valorbit", 
+  "symbols": [
+   "valorbit", 
+   "VAL"
+  ]
+ }, 
+ "VASH": {
+  "coinmarketcap_id": "vpncoin", 
+  "name": "VPNCoin", 
+  "symbols": [
+   "vpncoin", 
+   "VASH"
+  ]
+ }, 
+ "VC": {
+  "coinmarketcap_id": "virtualcoin", 
+  "name": "VirtualCoin", 
+  "symbols": [
+   "virtualcoin", 
+   "VC"
+  ]
+ }, 
+ "VEC2": {
+  "coinmarketcap_id": "vector", 
+  "name": "Vector", 
+  "symbols": [
+   "vector", 
+   "VEC2"
+  ]
+ }, 
+ "VGC": {
+  "coinmarketcap_id": "vegascoin", 
+  "name": "VegasCoin", 
+  "symbols": [
+   "vegascoin", 
+   "VGC"
+  ]
+ }, 
+ "VGINA": {
+  "coinmarketcap_id": "vgina", 
+  "name": "VGINA", 
+  "symbols": [
+   "vgina", 
+   "VGINA"
+  ]
+ }, 
+ "VIA": {
+  "coinmarketcap_id": "viacoin", 
+  "name": "Viacoin", 
+  "symbols": [
+   "viacoin", 
+   "VIA"
+  ]
+ }, 
+ "VIDZ": {
+  "coinmarketcap_id": "purevidz", 
+  "name": "PureVidz", 
+  "symbols": [
+   "purevidz", 
+   "VIDZ"
+  ]
+ }, 
+ "VIP": {
+  "coinmarketcap_id": "vip-tokens", 
+  "name": "VIP Tokens", 
+  "symbols": [
+   "vip-tokens", 
+   "VIP"
+  ]
+ }, 
+ "VISIO": {
+  "coinmarketcap_id": "visio", 
+  "name": "Visio", 
+  "symbols": [
+   "visio", 
+   "VISIO"
+  ]
+ }, 
+ "VLT": {
+  "coinmarketcap_id": "veltor", 
+  "name": "Veltor", 
+  "symbols": [
+   "veltor", 
+   "VLT"
+  ]
+ }, 
+ "VLTC": {
+  "coinmarketcap_id": "vault-coin", 
+  "name": "Vault Coin", 
+  "symbols": [
+   "vault-coin", 
+   "VLTC"
+  ]
+ }, 
+ "VOLT": {
+  "coinmarketcap_id": "bitvolt", 
+  "name": "Bitvolt", 
+  "symbols": [
+   "bitvolt", 
+   "VOLT"
+  ]
+ }, 
+ "VOX": {
+  "coinmarketcap_id": "voxels", 
+  "name": "Voxels", 
+  "symbols": [
+   "voxels", 
+   "VOX"
+  ]
+ }, 
+ "VPRC": {
+  "coinmarketcap_id": "vaperscoin", 
+  "name": "VapersCoin", 
+  "symbols": [
+   "vaperscoin", 
+   "VPRC"
+  ]
+ }, 
+ "VRC": {
+  "coinmarketcap_id": "vericoin", 
+  "name": "VeriCoin", 
+  "symbols": [
+   "vericoin", 
+   "VRC"
+  ]
+ }, 
+ "VRM": {
+  "coinmarketcap_id": "veriumreserve", 
+  "name": "VeriumReserve", 
+  "symbols": [
+   "veriumreserve", 
+   "VRM"
+  ]
+ }, 
+ "VRS": {
+  "coinmarketcap_id": "veros", 
+  "name": "Veros", 
+  "symbols": [
+   "veros", 
+   "VRS"
+  ]
+ }, 
+ "VSL": {
+  "coinmarketcap_id": "vslice", 
+  "name": "vSlice", 
+  "symbols": [
+   "vslice", 
+   "VSL"
+  ]
+ }, 
+ "VTA": {
+  "coinmarketcap_id": "virtacoin", 
+  "name": "Virtacoin", 
+  "symbols": [
+   "virtacoin", 
+   "VTA"
+  ]
+ }, 
+ "VTC": {
+  "coinmarketcap_id": "vertcoin", 
+  "name": "Vertcoin", 
+  "symbols": [
+   "vertcoin", 
+   "VTC"
+  ]
+ }, 
+ "VTR": {
+  "coinmarketcap_id": "vtorrent", 
+  "name": "vTorrent", 
+  "symbols": [
+   "vtorrent", 
+   "VTR"
+  ]
+ }, 
+ "VTY": {
+  "coinmarketcap_id": "victoriouscoin", 
+  "name": "Victoriouscoin", 
+  "symbols": [
+   "victoriouscoin", 
+   "VTY"
+  ]
+ }, 
+ "WA": {
+  "coinmarketcap_id": "wa-space", 
+  "name": "WA Space", 
+  "symbols": [
+   "wa-space", 
+   "WA"
+  ]
+ }, 
+ "WARP": {
+  "coinmarketcap_id": "warp", 
+  "name": "WARP", 
+  "symbols": [
+   "warp", 
+   "WARP"
+  ]
+ }, 
+ "WAVES": {
+  "coinmarketcap_id": "waves", 
+  "name": "Waves", 
+  "symbols": [
+   "waves", 
+   "WAVES"
+  ]
+ }, 
+ "WAY": {
+  "coinmarketcap_id": "wayguide", 
+  "name": "WayGuide", 
+  "symbols": [
+   "wayguide", 
+   "WAY"
+  ]
+ }, 
+ "WBB": {
+  "coinmarketcap_id": "wild-beast-block", 
+  "name": "Wild Beast Block", 
+  "symbols": [
+   "wild-beast-block", 
+   "WBB"
+  ]
+ }, 
+ "WCT": {
+  "coinmarketcap_id": "waves-community-token", 
+  "name": "Waves Community Token", 
+  "symbols": [
+   "waves-community-token", 
+   "WCT"
+  ]
+ }, 
+ "WDC": {
+  "coinmarketcap_id": "worldcoin", 
+  "name": "WorldCoin", 
+  "symbols": [
+   "worldcoin", 
+   "WDC"
+  ]
+ }, 
+ "WEC": {
+  "coinmarketcap_id": "wowecoin", 
+  "name": "Wowecoin", 
+  "symbols": [
+   "wowecoin", 
+   "WEC"
+  ]
+ }, 
+ "WEX": {
+  "coinmarketcap_id": "wexcoin", 
+  "name": "Wexcoin", 
+  "symbols": [
+   "wexcoin", 
+   "WEX"
+  ]
+ }, 
+ "WGC": {
+  "coinmarketcap_id": "world-gold-coin", 
+  "name": "World Gold Coin", 
+  "symbols": [
+   "world-gold-coin", 
+   "WGC"
+  ]
+ }, 
+ "WGO": {
+  "coinmarketcap_id": "wavesgo", 
+  "name": "WavesGo", 
+  "symbols": [
+   "wavesgo", 
+   "WGO"
+  ]
+ }, 
+ "WINGS": {
+  "coinmarketcap_id": "wings", 
+  "name": "Wings", 
+  "symbols": [
+   "wings", 
+   "WINGS"
+  ]
+ }, 
+ "WMC": {
+  "coinmarketcap_id": "wmcoin", 
+  "name": "WMCoin", 
+  "symbols": [
+   "wmcoin", 
+   "WMC"
+  ]
+ }, 
+ "WORM": {
+  "coinmarketcap_id": "healthywormcoin", 
+  "name": "HealthyWormCoin", 
+  "symbols": [
+   "healthywormcoin", 
+   "WORM"
+  ]
+ }, 
+ "WOW": {
+  "coinmarketcap_id": "wowcoin", 
+  "name": "Wowcoin", 
+  "symbols": [
+   "wowcoin", 
+   "WOW"
+  ]
+ }, 
+ "WSX": {
+  "coinmarketcap_id": "wearesatoshi", 
+  "name": "WeAreSatoshi", 
+  "symbols": [
+   "wearesatoshi", 
+   "WSX"
+  ]
+ }, 
+ "WYV": {
+  "coinmarketcap_id": "wyvern", 
+  "name": "Wyvern", 
+  "symbols": [
+   "wyvern", 
+   "WYV"
+  ]
+ }, 
+ "X2": {
+  "coinmarketcap_id": "x2", 
+  "name": "X2", 
+  "symbols": [
+   "x2", 
+   "X2"
+  ]
+ }, 
+ "XAS": {
+  "coinmarketcap_id": "asch", 
+  "name": "Asch", 
+  "symbols": [
+   "asch", 
+   "XAS"
+  ]
+ }, 
+ "XAU": {
+  "coinmarketcap_id": "xaucoin", 
+  "name": "Xaucoin", 
+  "symbols": [
+   "xaucoin", 
+   "XAU"
+  ]
+ }, 
+ "XAUR": {
+  "coinmarketcap_id": "xaurum", 
+  "name": "Xaurum", 
+  "symbols": [
+   "xaurum", 
+   "XAUR"
+  ]
+ }, 
+ "XBB": {
+  "coinmarketcap_id": "boolberry", 
+  "name": "Boolberry", 
+  "symbols": [
+   "boolberry", 
+   "XBB"
+  ]
+ }, 
+ "XBC": {
+  "coinmarketcap_id": "bitcoin-plus", 
+  "name": "Bitcoin Plus", 
+  "symbols": [
+   "bitcoin-plus", 
+   "XBC"
+  ]
+ }, 
+ "XBG": {
+  "coinmarketcap_id": "btcgold", 
+  "name": "BTCGold", 
+  "symbols": [
+   "btcgold", 
+   "XBG"
+  ]
+ }, 
+ "XBTC21": {
+  "coinmarketcap_id": "bitcoin-21", 
+  "name": "Bitcoin 21", 
+  "symbols": [
+   "bitcoin-21", 
+   "XBTC21"
+  ]
+ }, 
+ "XBTS": {
+  "coinmarketcap_id": "beatcoin", 
+  "name": "Beatcoin", 
+  "symbols": [
+   "beatcoin", 
+   "XBTS"
+  ]
+ }, 
+ "XBY": {
+  "coinmarketcap_id": "xtrabytes", 
+  "name": "XtraBYtes", 
+  "symbols": [
+   "xtrabytes", 
+   "XBY"
+  ]
+ }, 
+ "XCI": {
+  "coinmarketcap_id": "cannabis-industry-coin", 
+  "name": "Cannabis Industry Coin", 
+  "symbols": [
+   "cannabis-industry-coin", 
+   "XCI"
+  ]
+ }, 
+ "XCN": {
+  "coinmarketcap_id": "cryptonite", 
+  "name": "Cryptonite", 
+  "symbols": [
+   "cryptonite", 
+   "XCN"
+  ]
+ }, 
+ "XCO": {
+  "coinmarketcap_id": "x-coin", 
+  "name": "X-Coin", 
+  "symbols": [
+   "x-coin", 
+   "XCO"
+  ]
+ }, 
+ "XCP": {
+  "coinmarketcap_id": "counterparty", 
+  "name": "Counterparty", 
+  "symbols": [
+   "counterparty", 
+   "XCP"
+  ]
+ }, 
+ "XCRE": {
+  "coinmarketcap_id": "creatio", 
+  "name": "Creatio", 
+  "symbols": [
+   "creatio", 
+   "XCRE"
+  ]
+ }, 
+ "XCT": {
+  "coinmarketcap_id": "c-bit", 
+  "name": "C-Bit", 
+  "symbols": [
+   "c-bit", 
+   "XCT"
+  ]
+ }, 
+ "XDE2": {
+  "coinmarketcap_id": "xde-ii", 
+  "name": "XDE II", 
+  "symbols": [
+   "xde-ii", 
+   "XDE2"
+  ]
+ }, 
+ "XDN": {
+  "coinmarketcap_id": "digitalnote", 
+  "name": "DigitalNote", 
+  "symbols": [
+   "digitalnote", 
+   "XDN"
+  ]
+ }, 
+ "XEM": {
+  "coinmarketcap_id": "nem", 
+  "name": "NEM", 
+  "symbols": [
+   "nem", 
+   "XEM"
+  ]
+ }, 
+ "XEN": {
+  "coinmarketcap_id": "xenixcoin", 
+  "name": "Xenixcoin", 
+  "symbols": [
+   "xenixcoin", 
+   "XEN"
+  ]
+ }, 
+ "XFC": {
+  "coinmarketcap_id": "forevercoin", 
+  "name": "Forevercoin", 
+  "symbols": [
+   "forevercoin", 
+   "XFC"
+  ]
+ }, 
+ "XGR": {
+  "coinmarketcap_id": "goldreserve", 
+  "name": "GoldReserve", 
+  "symbols": [
+   "goldreserve", 
+   "XGR"
+  ]
+ }, 
+ "XHI": {
+  "coinmarketcap_id": "hicoin", 
+  "name": "HiCoin", 
+  "symbols": [
+   "hicoin", 
+   "XHI"
+  ]
+ }, 
+ "XID": {
+  "coinmarketcap_id": "international-diamond", 
+  "name": "International Diamond", 
+  "symbols": [
+   "international-diamond", 
+   "XID"
+  ]
+ }, 
+ "XJO": {
+  "coinmarketcap_id": "joulecoin", 
+  "name": "Joulecoin", 
+  "symbols": [
+   "joulecoin", 
+   "XJO"
+  ]
+ }, 
+ "XLM": {
+  "coinmarketcap_id": "stellar", 
+  "name": "Stellar Lumens", 
+  "symbols": [
+   "stellar", 
+   "XLM"
+  ]
+ }, 
+ "XLR": {
+  "coinmarketcap_id": "solaris", 
+  "name": "Solaris", 
+  "symbols": [
+   "solaris", 
+   "XLR"
+  ]
+ }, 
+ "XMG": {
+  "coinmarketcap_id": "magi", 
+  "name": "Magi", 
+  "symbols": [
+   "magi", 
+   "XMG"
+  ]
+ }, 
+ "XMR": {
+  "coinmarketcap_id": "monero", 
+  "name": "Monero", 
+  "symbols": [
+   "monero", 
+   "XMR"
+  ]
+ }, 
+ "XMY": {
+  "coinmarketcap_id": "myriad", 
+  "name": "Myriad", 
+  "symbols": [
+   "myriad", 
+   "XMY"
+  ]
+ }, 
+ "XNG": {
+  "coinmarketcap_id": "enigma", 
+  "name": "Enigma", 
+  "symbols": [
+   "enigma", 
+   "XNG"
+  ]
+ }, 
+ "XOC": {
+  "coinmarketcap_id": "xonecoin", 
+  "name": "Xonecoin", 
+  "symbols": [
+   "xonecoin", 
+   "XOC"
+  ]
+ }, 
+ "XOT": {
+  "coinmarketcap_id": "internet-of-things", 
+  "name": "Internet of Things", 
+  "symbols": [
+   "internet-of-things", 
+   "XOT"
+  ]
+ }, 
+ "XP": {
+  "coinmarketcap_id": "xp", 
+  "name": "XP", 
+  "symbols": [
+   "xp", 
+   "XP"
+  ]
+ }, 
+ "XPD": {
+  "coinmarketcap_id": "petrodollar", 
+  "name": "PetroDollar", 
+  "symbols": [
+   "petrodollar", 
+   "XPD"
+  ]
+ }, 
+ "XPM": {
+  "coinmarketcap_id": "primecoin", 
+  "name": "Primecoin", 
+  "symbols": [
+   "primecoin", 
+   "XPM"
+  ]
+ }, 
+ "XPTX": {
+  "coinmarketcap_id": "platinumbar", 
+  "name": "PlatinumBAR", 
+  "symbols": [
+   "platinumbar", 
+   "XPTX"
+  ]
+ }, 
+ "XPY": {
+  "coinmarketcap_id": "paycoin2", 
+  "name": "PayCoin", 
+  "symbols": [
+   "paycoin2", 
+   "XPY"
+  ]
+ }, 
+ "XQN": {
+  "coinmarketcap_id": "quotient", 
+  "name": "Quotient", 
+  "symbols": [
+   "quotient", 
+   "XQN"
+  ]
+ }, 
+ "XRA": {
+  "coinmarketcap_id": "ratecoin", 
+  "name": "Ratecoin", 
+  "symbols": [
+   "ratecoin", 
+   "XRA"
+  ]
+ }, 
+ "XRB": {
+  "coinmarketcap_id": "raiblocks", 
+  "name": "RaiBlocks", 
+  "symbols": [
+   "raiblocks", 
+   "XRB"
+  ]
+ }, 
+ "XRC": {
+  "coinmarketcap_id": "rawcoin2", 
+  "name": "Rawcoin", 
+  "symbols": [
+   "rawcoin2", 
+   "XRC"
+  ]
+ }, 
+ "XRE": {
+  "coinmarketcap_id": "revolvercoin", 
+  "name": "RevolverCoin", 
+  "symbols": [
+   "revolvercoin", 
+   "XRE"
+  ]
+ }, 
+ "XRP": {
+  "coinmarketcap_id": "ripple", 
+  "name": "Ripple", 
+  "symbols": [
+   "ripple", 
+   "xrp"
+  ]
+ }, 
+ "XSPEC": {
+  "coinmarketcap_id": "spectrecoin", 
+  "name": "Spectrecoin", 
+  "symbols": [
+   "spectrecoin", 
+   "XSPEC"
+  ]
+ }, 
+ "XST": {
+  "coinmarketcap_id": "stealthcoin", 
+  "name": "Stealthcoin", 
+  "symbols": [
+   "stealthcoin", 
+   "XST"
+  ]
+ }, 
+ "XSTC": {
+  "coinmarketcap_id": "safe-trade-coin", 
+  "name": "Safe Trade Coin", 
+  "symbols": [
+   "safe-trade-coin", 
+   "XSTC"
+  ]
+ }, 
+ "XTC": {
+  "coinmarketcap_id": "tilecoin", 
+  "name": "TileCoin", 
+  "symbols": [
+   "tilecoin", 
+   "XTC"
+  ]
+ }, 
+ "XTO": {
+  "coinmarketcap_id": "tao", 
+  "name": "Tao", 
+  "symbols": [
+   "tao", 
+   "XTO"
+  ]
+ }, 
+ "XVC": {
+  "coinmarketcap_id": "vcash", 
+  "name": "Vcash", 
+  "symbols": [
+   "vcash", 
+   "XVC"
+  ]
+ }, 
+ "XVE": {
+  "coinmarketcap_id": "the-vegan-initiative", 
+  "name": "The Vegan Initiative", 
+  "symbols": [
+   "the-vegan-initiative", 
+   "XVE"
+  ]
+ }, 
+ "XVG": {
+  "coinmarketcap_id": "verge", 
+  "name": "Verge", 
+  "symbols": [
+   "verge", 
+   "XVG"
+  ]
+ }, 
+ "XVP": {
+  "coinmarketcap_id": "virtacoinplus", 
+  "name": "Virtacoinplus", 
+  "symbols": [
+   "virtacoinplus", 
+   "XVP"
+  ]
+ }, 
+ "XVS": {
+  "coinmarketcap_id": "vsync", 
+  "name": "Vsync", 
+  "symbols": [
+   "vsync", 
+   "XVS"
+  ]
+ }, 
+ "XWC": {
+  "coinmarketcap_id": "whitecoin", 
+  "name": "WhiteCoin", 
+  "symbols": [
+   "whitecoin", 
+   "XWC"
+  ]
+ }, 
+ "XZC": {
+  "coinmarketcap_id": "zcoin", 
+  "name": "ZCoin", 
+  "symbols": [
+   "zcoin", 
+   "XZC"
+  ]
+ }, 
+ "YAC": {
+  "coinmarketcap_id": "yacoin", 
+  "name": "Yacoin", 
+  "symbols": [
+   "yacoin", 
+   "YAC"
+  ]
+ }, 
+ "YASH": {
+  "coinmarketcap_id": "yashcoin", 
+  "name": "YashCoin", 
+  "symbols": [
+   "yashcoin", 
+   "YASH"
+  ]
+ }, 
+ "YBC": {
+  "coinmarketcap_id": "ybcoin", 
+  "name": "YbCoin", 
+  "symbols": [
+   "ybcoin", 
+   "YBC"
+  ]
+ }, 
+ "YES": {
+  "coinmarketcap_id": "yescoin", 
+  "name": "Yescoin", 
+  "symbols": [
+   "yescoin", 
+   "YES"
+  ]
+ }, 
+ "YOC": {
+  "coinmarketcap_id": "yocoin", 
+  "name": "Yocoin", 
+  "symbols": [
+   "yocoin", 
+   "YOC"
+  ]
+ }, 
+ "YOG": {
+  "coinmarketcap_id": "yogold", 
+  "name": "Yogold", 
+  "symbols": [
+   "yogold", 
+   "YOG"
+  ]
+ }, 
+ "ZBC": {
+  "coinmarketcap_id": "zilbercoin", 
+  "name": "Zilbercoin", 
+  "symbols": [
+   "zilbercoin", 
+   "ZBC"
+  ]
+ }, 
+ "ZCC": {
+  "coinmarketcap_id": "zccoin", 
+  "name": "ZcCoin", 
+  "symbols": [
+   "zccoin", 
+   "ZCC"
+  ]
+ }, 
+ "ZCL": {
+  "coinmarketcap_id": "zclassic", 
+  "name": "ZClassic", 
+  "symbols": [
+   "zclassic", 
+   "ZCL"
+  ]
+ }, 
+ "ZEC": {
+  "coinmarketcap_id": "zcash", 
+  "name": "Zcash", 
+  "symbols": [
+   "zcash", 
+   "ZEC"
+  ]
+ }, 
+ "ZEIT": {
+  "coinmarketcap_id": "zeitcoin", 
+  "name": "Zeitcoin", 
+  "symbols": [
+   "zeitcoin", 
+   "ZEIT"
+  ]
+ }, 
+ "ZENI": {
+  "coinmarketcap_id": "zennies", 
+  "name": "Zennies", 
+  "symbols": [
+   "zennies", 
+   "ZENI"
+  ]
+ }, 
+ "ZER": {
+  "coinmarketcap_id": "zero", 
+  "name": "Zero", 
+  "symbols": [
+   "zero", 
+   "ZER"
+  ]
+ }, 
+ "ZET": {
+  "coinmarketcap_id": "zetacoin", 
+  "name": "Zetacoin", 
+  "symbols": [
+   "zetacoin", 
+   "ZET"
+  ]
+ }, 
+ "ZHS": {
+  "coinmarketcap_id": "zcashshare", 
+  "name": "Zcashshare", 
+  "symbols": [
+   "zcashshare", 
+   "ZHS"
+  ]
+ }, 
+ "ZNE": {
+  "coinmarketcap_id": "zonecoin", 
+  "name": "Zonecoin", 
+  "symbols": [
+   "zonecoin", 
+   "ZNE"
+  ]
+ }, 
+ "ZNY": {
+  "coinmarketcap_id": "bitzeny", 
+  "name": "Bitzeny", 
+  "symbols": [
+   "bitzeny", 
+   "ZNY"
+  ]
+ }, 
+ "ZOI": {
+  "coinmarketcap_id": "zoin", 
+  "name": "Zoin", 
+  "symbols": [
+   "zoin", 
+   "ZOI"
+  ]
+ }, 
+ "ZSE": {
+  "coinmarketcap_id": "zsecoin", 
+  "name": "ZSEcoin", 
+  "symbols": [
+   "zsecoin", 
+   "ZSE"
+  ]
+ }, 
+ "ZUR": {
+  "coinmarketcap_id": "zurcoin", 
+  "name": "Zurcoin", 
+  "symbols": [
+   "zurcoin", 
+   "ZUR"
+  ]
+ }, 
+ "ZYD": {
+  "coinmarketcap_id": "zayedcoin", 
+  "name": "Zayedcoin", 
+  "symbols": [
+   "zayedcoin", 
+   "ZYD"
+  ]
+ }
 }
