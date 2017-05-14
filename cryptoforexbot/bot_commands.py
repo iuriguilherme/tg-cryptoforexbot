@@ -114,6 +114,7 @@ class bot_commands():
 			except Exception as e:
 				return (False, True, '%s' % (e))
 
+			reply_full = list()
 			reply = list()
 			reply.append("Aliases are case insensitive. Currently we only support currencies available at coinmarketcap.")
 			reply.append('')
@@ -136,6 +137,8 @@ class bot_commands():
 			reply.append('\n'.join(reply_to))
 			reply.append('')
 
+			reply_full.append('\n'.join(reply))
+
 			reply_from = list()
 			reply_from.append("Available cryptocurrencies:")
 			reply_from.append('')
@@ -148,12 +151,17 @@ class bot_commands():
 					reply_from_currencies_symbols.append(symbol)
 				reply_from_currencies.append(''.join(['(', ', '.join(reply_from_currencies_symbols), ')']))
 				reply_from_currencies.append('\n')
+				if len(''.join(reply_from_currencies)) > 2000:
+					reply_full.append(''.join(reply_from_currencies))
+					reply_from_currencies = list()
 			reply_from.append(''.join(reply_from_currencies))
 
 			reply.append('\n'.join(reply_from))
 
+			reply_full.append('\n'.join(reply))
+
 			try:
-				return (True, True, '\n'.join(reply))
+				return (True, True, reply_full)
 			except Exception as e:
 				return (False, True, '%s' % (e))
 		except Exception as e:
