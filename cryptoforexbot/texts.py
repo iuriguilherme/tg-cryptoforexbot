@@ -131,16 +131,9 @@ To see all available currencies, try /list%s
 """ % (metadata.handle),
 # 1
 """
-You've sent an invalid value or not a number.
+You've sent an invalid value or not a number. Use only digits and a dot.
 
-The decimal separator is a comma and it's optional.
-
-Valid examples for value:
-1
-1.00000000
-1000
-1,000.0000
-10000.0
+Valid examples for value: 1 / 1.00000000 / 1000 / 10000.0
 """
 ]
 
@@ -161,4 +154,11 @@ Thank you!
 
 ...and sorry =(
 """ % (metadata.handle, metadata.bugtracker)
+
+err_api = [
+# 0
+"coinmarketcap.com temporarily unavailable, either try again later or send /feedback",
+# 1
+"error contacting coinmarketcap.com, either try again later or send /feedback"
+]
 

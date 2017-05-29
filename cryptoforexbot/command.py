@@ -15,76 +15,61 @@ class command():
 		if response[0]:
 			if response[0] == 'feedback':
 				if response[1]:
-					return (False, chat_id, texts.feedback, '#feedback\nGroup %s sent this message as feedback:\n\n%s' % (chat_id, response[2]), ' '.join(command_list))
+					return (False, chat_id, texts.feedback, '#feedback\nUser %s sent this message as feedback:\n\n%s' % (chat_id, response[2]), ' '.join(command_list))
 				else:
-					return (True, False, chat_id, response[2], response[2])
+					return (True, False, chat_id, response[1], response[2])
 			elif response[0] == 'list':
 				if response[1]:
-					return (False, False, chat_id, response[2], ' '.join(command_list))
-				else:
 					return (False, False, chat_id, response[2], response[2])
-				return (False, False, False, False, False)
+				else:
+					return (True, False, chat_id, response[1], response[2])
 			else:
-				return (True, True, chat_id, response[2], response[2])
-			return (False, False, False, False, False)
+				return (True, True, chat_id, response[1], response[2])
 		elif response[1]:
-			return (True, False, chat_id, response[2], response[2])
+			return (True, False, chat_id, response[1], response[2])
 		elif response[2]:
 				return (True, False, chat_id, texts.err_internal, response[2])
 		else:
-			return (False, False, False, True, response[2])
-		return (False, False, False, False, False)
+			return (False, False, False, True, 'DEBUG %s%sresponse: %s' % (self, '\n', response))
 
 	def group_parse(self, chat_id, command_list):
 		response = self.group_commands.parse(chat_id, command_list)
 		if response[0]:
-			if response[0] == 'feedback':
-				if response[1]:
-					return (False, chat_id, texts.feedback, '#feedback\nGroup %s sent this message as feedback:\n\n%s' % (chat_id, response[2]), ' '.join(command_list))
-				else:
-					return (True, False, chat_id, response[2], response[2])
-			else:
-				return (True, True, chat_id, response[2], response[2])
-			return (False, False, False, False, False)
+			return (True, True, chat_id, response[1], response[2])
 		elif response[1]:
-			return (True, False, chat_id, response[2], response[2])
+			return (True, False, chat_id, response[1], response[2])
 		elif response[2]:
 			return (False, False, False, True, response[2])
 		else:
-			return (False, False, False, False, ' '.join(command_list))
-		return (False, False, False, False, False)
+			return (False, False, False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response))
 
 	def admin_user_parse(self, chat_id, command_list):
 		response = self.admin_commands.parse(chat_id, command_list)
 		if response[0]:
 			if response[0] == 'send':
-				return (True, True, response[1], response[2], ' '.join(command_list))
+				return (True, True, response[1], response[2], response[2])
 			else:
-				return (True, True, chat_id, response[2], ' '.join(command_list))
-			return (False, False, False, False, False)
+				return (True, True, chat_id, response[2], response[2])
 		elif response[1]:
 			return (True, False, chat_id, response[2], response[2])
 		elif response[2]:
 			return (False, False, False, True, response[2])
 		else:
 			return self.user_parse(chat_id, command_list)
-		return (False, False, False, False, False)
 
 	def admin_group_parse(self, chat_id, command_list):
 		response = self.admin_commands.parse(chat_id, command_list)
 		if response[0]:
 			if response[0] == 'send':
-				return (True, True, response[1], response[2], ' '.join(command_list))
+				return (True, True, response[1], response[2], response[2])
 			else:
-				return (True, True, chat_id, response[2], ' '.join(command_list))
-			return (False, False, False, False, False)
+				return (True, True, chat_id, response[2], response[2])
 		elif response[1]:
 			return (True, False, chat_id, response[2], response[2])
 		elif response[2]:
 			return (False, False, False, True, response[2])
 		else:
 			return self.group_parse(chat_id, command_list)
-		return (False, False, False, False, False)
 
 	def parse(self, chat_id, command_list):
 		## If chat_id is negative, then we're talking with a group.
@@ -95,12 +80,10 @@ class command():
 			## Regular group
 			else:
 				return self.group_parse(chat_id, command_list)
-			return (False, False, False, False, False)
 		## Admin user
 		elif chat_id == self.admin_id:
 			return self.admin_user_parse(chat_id, command_list)
 		## Regular user
 		else:
 			return self.user_parse(chat_id, command_list)
-		return (False, False, False, False, False)
 

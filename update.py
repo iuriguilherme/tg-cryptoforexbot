@@ -2,11 +2,11 @@
 ## This makes the coin information available at https://api.coinmarketcap.com/v1/ticker as a json file like https://github.com/desci/tg-cryptoforexbot/blob/master/plugins/coinmarketcap/cryptos.json
 
 import json
-from plugins.coinmarketcap.api import coinmarketcap
+from plugins.coinmarketcap.api import v1 as api
 
 class update_coinmarketcap():
 	def __init__(self):
-		self.api = coinmarketcap()
+		self.api = api()
 		self.coinmarketcap()
 	def coinmarketcap(self):
 		cryptos_file = 'plugins/coinmarketcap/cryptos.json'

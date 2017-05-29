@@ -97,23 +97,27 @@ class cryptoforex():
 		except Exception as e:
 			self.log(self.log_str.err('Telepot error: %s' % (e)))
 
-		self.log(self.log_str.rcv(str(chat_id), ' '.join(command_list)))
+		self.log(self.log_str.rcv(str(chat_id), '%s' % (msg)))
 
 		if ''.join(command_list) != '':
 			response = self.command.parse(chat_id, command_list)
+			## When response[0] is True, all must be successful
 			if response[0]:
 				if response[1]:
-					self.log(self.log_str.cmd(response[4]))
-					self.send(response[2], response[3])
+					## Tell admin group what is running
+					self.log(self.log_str.cmd(' '.join(command_list)))
+					## Send command result to command issuer
+					self.send(response[2], response[4])
 				else:
 					self.log(self.log_str.err(response[4]))
 					self.send(response[2], response[3])
 			elif response[1]:
-				self.log(self.log_str.cmd(response[4]))
+				self.log(self.log_str.cmd(' '.join(command_list)))
 				self.send(response[1], response[2])
 				## Change group_id to admin_id to send as private message
 				self.send(self.group_id, response[3])
 			elif response[2]:
+				self.log(self.log_str.cmd(' '.join(command_list)))
 				for response in response[3]:
 					self.send(chat_id, response)
 					time.sleep(1)

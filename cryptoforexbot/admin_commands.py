@@ -14,15 +14,27 @@ class admin_commands():
 			try:
 				return (True, True, texts.admin)
 			except Exception as e:
-				return(False, True, '%s' % (e))
+				return(False, True, 'DEBUG %s%sexception: %s' % (self, '\n', e))
 		elif command_list[0] == '/dbadd' or command_list[0] == ''.join(['/dbadd', metadata.handle]):
-			return (True, True, texts.err_param[4])
+			try:
+				return (True, True, texts.err_param[4])
+			except:
+				return (False, True, texts.err_internal)
 		elif command_list[0] == '/dbdel' or command_list[0] == ''.join(['/dbdel', metadata.handle]):
-			return (True, True, texts.err_param[4])
+			try:
+				return (True, True, texts.err_param[4])
+			except:
+				return (False, True, texts.err_internal)
 		elif command_list[0] == '/dblist' or command_list[0] == ''.join(['/dblist', metadata.handle]):
-			return (True, True, texts.err_param[4])
+			try:
+				return (True, True, texts.err_param[4])
+			except:
+				return (False, True, texts.err_internal)
 		elif command_list[0] == '/dbupdate' or command_list[0] == ''.join(['/dbupdate', metadata.handle]):
-			return (True, True, texts.err_param[4])
+			try:
+				return (True, True, texts.err_param[4])
+			except:
+				return (False, True, texts.err_internal)
 		elif command_list[0] == '/send' or command_list[0] == ''.join(['/info', metadata.handle]):
 			if len(command_list) > 2:
 				if self.valid.is_telegram_id(command_list[1]):
@@ -41,5 +53,8 @@ class admin_commands():
 					return (False, False, 'Nothing happened')
 				return (False, True, 'Your params are shit')
 			return (False, True, 'No param, no reply')
+		else:
+			print ('DEBUG? %s%schat_id: %s%scommand_list: %s' % (self, '\n', chat_id, '\n', command_list)) # TODO DEBUG
+			return (False, False, False)
 		return (False, False, False)
 
