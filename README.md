@@ -192,26 +192,24 @@ Roadmap
 
 ### TODO
 
-- [ ] Add as many currencies as possible;
-
+- [x] Add as many currencies as possible;
+  * All coinmarketcap currencies have been added.
 - [ ] Use as many external websites API as possible, in case some of them gets rate limit or suffer downtime;
-
+  * Currently using only coinmarketcap.com
 - [ ] Use sqlite or other database to store coin information and values;
-
 - [ ] Use inline commmands;
-
 - [ ] Translations;
 
 Disclaimer
 ---
 
-This bot relies on external services, for instance on [Coin Market Cap](https://coinmarketcap.com) and [International Monetary Fund](https://imf.org) for current values fetching. This is so as to provide a convenient way to convert to the latest prices of currencies. However, I am **not** responsible for the accuratness of the values provided by those external services. In your ideal world, we would have only descentralized currencies directly manipulated by the market. Which is not our reality as of now.  
+This bot relies on external services, for instance on [Coin Market Cap](https://coinmarketcap.com) ~~and [International Monetary Fund](https://imf.org)~~ for current values fetching. This is so as to provide a convenient way to convert to the latest prices of currencies. However, I am **not** responsible for the accuratness of the values provided by those external services. In your ideal world, we would have only descentralized currencies directly manipulated by the market. Which is not our reality as of now.  
 
 **This bot is provided in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Use at your own risk.**  
 
-If you ever complain to me that you lost money because you saw a wrong value, I will laugh at you. That said, major finance websites that charges you lots of money annualy for "secure and trusted" market data use the **very same methods** that are being used here.  
+If you ever complain to me that you lost money because you saw a wrong value, I will laugh at you. That said, major finance websites which charges you lots of money annualy for "secure and trusted" market data use the **very same methods** that are being used here.  
 So what they are charging for? They are charging you because they will be nice and won't say *"-we will laugh at you"* like I do. They would treat you as a customer, and not as an user like I do. So you're really paying to be pampered and feel special. Also they spend much money so they don't have one milisecond of downtime, and if they ever do, theorectically you may sue them.  
-If you think this is useful and should stay online and available, consider donating.  
+If you think this bot is useful and should stay online and available, consider donating. This would help me pay the internet bill and/or the hosting service, and therefore would help mantain the service available.  
 
 License
 ---
