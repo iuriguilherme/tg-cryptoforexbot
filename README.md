@@ -61,12 +61,11 @@ First get a token from [@BotFather](https://telegram.me/botfather) on Telegram. 
 
 ### Get the working code
 
-Do not just clone the main branch. I commit everything. Use the [*stable* release tag](https://github.com/desci/tg-cryptoforexbot/releases/tag/stable):  
+Do not just clone the main branch. I commit everything. Use the [*stable* branch](https://github.com/desci/tg-cryptoforexbot/tree/stable):  
 
 ```bash
-$ git clone https://github.com/desci/tg-cryptoforexbot.git
+$ git clone -b stable https://github.com/desci/tg-cryptoforexbot.git
 $ cd tg-cryptoforexbot
-$ git checkout stable
 ```
 
 ### Dependencies
