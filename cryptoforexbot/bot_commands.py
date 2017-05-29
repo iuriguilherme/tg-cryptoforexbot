@@ -160,7 +160,7 @@ class bot_commands():
     try:
       response = self.coinmarketcap.price(coin_id)
       if response[0]:
-        return (True, """
+        return (True, True, """
 Price information for %s (from coinmarketcap.com)
 
 Marketcap: U$$ %s
@@ -179,7 +179,7 @@ Last 24 hours volume: U$$ %s
 Available supply: %s %s
 Total supply: %s %s
 
-""" % (response[1][0]['name'], '{:,.2f}'.format(float(response[1][0]['market_cap_usd'])), response[1][0]['symbol'], '{:,.2f}'.format(float(response[1][0]['price_usd'])), '{:,.8f}'.format(float(response[1][0]['price_btc'])), response[1][0]['percent_change_1h'], response[1][0]['percent_change_24h'], response[1][0]['percent_change_7d'], '{:,.2f}'.format(float(response[1][0]['24h_volume_usd'])), '{:,.8f}'.format(float(response[1][0]['available_supply'])), response[1][0]['symbol'], '{:,.8f}'.format(float(response[1][0]['total_supply'])), response[1][0]['symbol']), response[2])
+""" % (response[1][0]['name'], '{:,.2f}'.format(float(response[1][0]['market_cap_usd'])), response[1][0]['symbol'], '{:,.2f}'.format(float(response[1][0]['price_usd'])), '{:,.8f}'.format(float(response[1][0]['price_btc'])), response[1][0]['percent_change_1h'], response[1][0]['percent_change_24h'], response[1][0]['percent_change_7d'], '{:,.2f}'.format(float(response[1][0]['24h_volume_usd'])), '{:,.8f}'.format(float(response[1][0]['available_supply'])), response[1][0]['symbol'], '{:,.8f}'.format(float(response[1][0]['total_supply'])), response[1][0]['symbol']))
       elif response[1]:
         return (False, response[1], response[2])
       elif response[2]:

@@ -7,7 +7,7 @@ class coinmarketcap():
   def __init__(self):
     self.api = api()
 
-  def conv(self, conv_from='BTC', conv_to='USD'):
+  def conv(self, conv_from='bitcoin', conv_to='USD'):
     try:
       response = self.api.get_ticker_id(conv_from, conv_to)
       if response[0]:
@@ -21,7 +21,7 @@ class coinmarketcap():
     except Exception as e:
       return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
 
-  def price(self, crypto='BTC'):
+  def price(self, crypto='bitcoin'):
     try:
       response = self.api.get_ticker_id(crypto, '')
       if response[0]:

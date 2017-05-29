@@ -2,7 +2,6 @@
 ## Coinmarketcap API documented at https://coinmarketcap.com/api/
 ## Requests documentation at http://docs.python-requests.org/en/latest
 
-#import json
 import requests
 from cryptoforexbot import metadata, texts
 
@@ -19,11 +18,11 @@ class v1():
     try:
       response = requests.get(request_url, headers=self.headers, params=params)
     except Exception as e:
-      return (False, texts.err_api[1], 'DEBUG %s%srequest_url: %s%sresponse.json(): %s%sexception: %s' % (self, '\n', request_url, '\n', response.json(), '\n', e))
+      return (False, texts.err_api[1], texts.err_api[1])
     if response.status_code == requests.codes.ok:
-      return (True, response.json(), 'DEBUG %s%srequest_url: %s%sresponse.json(): %s' % (self, '\n', request_url, '\n', response.json()))
+      return (True, response.json(), response.json())
     else:
-      return (False, texts.err_api[0], 'DEBUG %s%srequest_url: %s%sresponse: %s' % (self, '\n', request_url, '\n', response))
+      return (False, texts.err_api[0], texts.err_api[0])
     return (False, False, 'DEBUG %s%srequest_url: %s' % (self, '\n', request_url))
 
   def get_ticker(self, limit=0, convert=''):

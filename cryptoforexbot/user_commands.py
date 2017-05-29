@@ -51,20 +51,23 @@ class user_commands():
         try:
           if len(command_list) == 2:
             try:
-              valid_crypto = self.coinmarketcap_valid.crypto(command_list[1])
+              valid_crypto = self.coinmarketcap_valid.coin(command_list[1])
               if valid_crypto[0]:
-                try:
-                  response = self.bot_commands.price(valid_crypto[1][0])
-                  if response[0]:
-                    return (True, response[1], response[2])
-                  elif response[1]:
-                    return (False, response[1], response[2])
-                  elif response[2]:
-                    return (False, texts.err_internal, response[2])
-                  else:
-                    return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response))
-                except Exception as e:
-                  return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+                if valid_crypto[0] == 'crypto':
+                  try:
+                    response = self.bot_commands.price(valid_crypto[1][0])
+                    if response[0]:
+                      return (True, response[1], response[2])
+                    elif response[1]:
+                      return (False, response[1], response[2])
+                    elif response[2]:
+                      return (False, texts.err_internal, response[2])
+                    else:
+                      return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response))
+                  except Exception as e:
+                    return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+                else:
+                  return (False, texts.err_valid[0], valid_crypto[2])
               elif valid_crypto[1]:
                 return (False, valid_crypto[1], valid_crypto[2])
               elif valid_crypto[2]:
