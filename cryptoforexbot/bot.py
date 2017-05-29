@@ -65,7 +65,7 @@ class cryptoforex():
         self.bot.sendMessage(self.group_id, self.log_str.send(chat_id, reply))
     except Exception as e:
       self.bot.sendMessage(self.group_id, self.log_str.err('DEBUG exception: %s' % (e)))
-      print(self.log_str.err('%s' % (e)))
+      print(self.log_str.err('DEBUG exception: %s' % (e)))
       if e[1] == 429:
         time.sleep(e[2]['parameters']['retry_after']+1)
         self.bot.sendMessage(self.group_id, self.log_str.send(chat_id, reply))
@@ -89,6 +89,7 @@ class cryptoforex():
       chat_id = self.group_id
       command_list = list()
       try:
+        from_id = int(msg['from']['id'])
         chat_id = int(msg['chat']['id'])
         for subcommand in ' '.join(unicode(msg['text']).splitlines()).split(' '):
           pattern = re.compile(u'(^[/]{1}|[@]{1}|[,.]|-?\d+|\n|\w+)', re.UNICODE)
@@ -98,31 +99,38 @@ class cryptoforex():
       except Exception as e:
         self.log(self.log_str.err('DEBUG Telepot error: %s' % (e)))
       if ''.join(command_list) != '':
-        response = self.command.parse(chat_id, command_list)
+        response = self.command.parse(chat_id, from_id, command_list)
         ## When response[0] is True, all must be successful
         if response[0]:
+          ## Successful command
           if response[1]:
             ## Tell admin group what is running
             self.log(self.log_str.cmd(' '.join(command_list)))
             ## Send command result to command issuer
             self.send(response[2], response[4])
+          ## Successful error
           else:
             self.log(self.log_str.err(response[4]))
             self.send(response[2], response[3])
+        ## /feedback
         elif response[1]:
           self.log(self.log_str.cmd(' '.join(command_list)))
           self.send(response[1], response[2])
           ## Change group_id to admin_id to send as private message
           self.send(self.group_id, response[3])
+        ## /list
         elif response[2]:
           self.log(self.log_str.cmd(' '.join(command_list)))
-          for response in response[3]:
-            self.send(chat_id, response)
+          for send_response in response[3]:
+            self.send(response[2], send_response)
             time.sleep(1)
+        ## Error
         elif response[3]:
           self.log(self.log_str.err(response[4]))
+        ## Worse error
         elif response[4]:
           self.log(self.log_str.debug('%s' % (response[4])))
+        ## Never happens
         else:
           self.log(self.log_str.debug('%s to %s failed. Response: %s' % (' '.join(command_list), chat_id, response)))
 

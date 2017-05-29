@@ -17,3 +17,4 @@ v0.4.1.b, 2016-05-12 -- Updated fiat currencies information
 v0.4.2.b, 2016-05-12 -- Updated crypto currencies information
 v0.4.3.b, 2016-05-12 -- Many improves for error handling
 v0.4.4.b, 2016-05-29 -- Many fixes from previous 'improvings'
+v0.4.5.b, 2016-05-29 -- Commands on groups now sent to users
