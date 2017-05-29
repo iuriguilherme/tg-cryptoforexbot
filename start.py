@@ -5,13 +5,13 @@
 
 ## Python3
 #try:
-#	import asyncio
-#	import telepot.aio
+#  import asyncio
+#  import telepot.aio
 #except ImportError:
-#	pass
+#  pass
 
 from cryptoforexbot.bot import cryptoforex as cryptoforexbot
 
 if __name__ == "__main__":
-	cryptoforexbot()
+  cryptoforexbot()
 
