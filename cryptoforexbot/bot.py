@@ -109,11 +109,11 @@ class cryptoforex():
             ## Tell admin group what is running
             self.log(self.log_str.cmd(' '.join(command_list)))
             ## Send command result to command issuer
-            self.send((response[2], self.group_id), response[4])
+            self.send((response[2], chat_id), response[4])
           ## Successful error
           else:
             self.log(self.log_str.err(response[4]))
-            self.send((response[2], self.group_id), response[3])
+            self.send((response[2], chat_id), response[3])
         ## /feedback
         elif response[1]:
           self.log(self.log_str.cmd(' '.join(command_list)))
