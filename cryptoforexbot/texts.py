@@ -138,7 +138,8 @@ Valid examples for value: 1 / 1.00000000 / 1000 / 10000.0
 ]
 
 err_group = [
-"This command is only available as a private message. Click on %s to message me." % (metadata.handle)
+"This command is only available as a private message. Click on %s to message me." % (metadata.handle),
+"This command is only available as a private message, but I can't message you. Please click on %s to message me and use the /start command." % (metadata.handle)
 ]
 
 err_internal = """
