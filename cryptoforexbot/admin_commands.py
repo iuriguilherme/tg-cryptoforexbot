@@ -38,7 +38,7 @@ class admin_commands():
     elif command_list[0] == '/send' or command_list[0] == ''.join(['/info', metadata.handle]):
       if len(command_list) > 2:
         if self.valid.is_telegram_id(command_list[1]):
-          return ('send', command_list[1], ' '.join(command_list[2::1]), chat_id)
+          return ('send', command_list[1], ' '.join(command_list[2::1]), command_list[1])
       return (True, True, texts.err_param[3], chat_id)
     elif command_list[0] == '/debug' or command_list[0] == ''.join(['/debug', metadata.handle]):
       if len(command_list) > 1:
