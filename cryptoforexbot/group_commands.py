@@ -27,7 +27,6 @@ class group_commands():
       except Exception as e:
         return (False, text.err_internal, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
     elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
-      print('DEBUG? entrando em /list %s%scommand_list: %s%sfrom_id: %s%schat_id: %s' % (self, '\n', command_list, '\n', from_id, '\n', chat_id)) #TODO DEBUG
       try:
         response = self.bot_commands.list()
         if response[0]:
@@ -54,27 +53,27 @@ class group_commands():
               try:
                 response = self.bot_commands.price(valid_crypto[1][0])
                 if response[0]:
-                  return (True, response[1], response[2], chat_id)
+                  return (True, response[1], response[2], from_id)
                 elif response[1]:
-                  return (False, response[1], response[2], chat_id)
+                  return (False, response[1], response[2], from_id)
                 elif response[2]:
-                  return (False, texts.err_internal, response[2], chat_id)
+                  return (False, texts.err_internal, response[2], from_id)
                 else:
-                  return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response), chat_id)
+                  return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response), from_id)
               except Exception as e:
-                return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+                return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
             elif valid_crypto[1]:
-              return (False, valid_crypto[1], valid_crypto[2], chat_id)
+              return (False, valid_crypto[1], valid_crypto[2], from_id)
             elif valid_crypto[2]:
-              return (False, texts.err_internal, valid_crypto[2], chat_id)
+              return (False, texts.err_internal, valid_crypto[2], from_id)
             else:
-              return (False, False, 'DEBUG %s%svalid_crypto: %s' % (self, '\n', valid_crypto), chat_id)
+              return (False, False, 'DEBUG %s%svalid_crypto: %s' % (self, '\n', valid_crypto), from_id)
           except Exception as e:
-            return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+            return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
         else:
-          return (False, texts.err_param[2], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), chat_id)
+          return (False, texts.err_param[2], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), from_id)
       except Exception as e:
-        return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+        return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
     elif command_list[0] == '/conv' or command_list[0] == ''.join(['/conv', metadata.handle]):
       try:
         if len(command_list) == 4:
@@ -88,41 +87,41 @@ class group_commands():
                     try:
                       response = self.bot_commands.conv(command_list[1], (valid_crypto[0], valid_crypto[1]), (valid_convert[0], valid_convert[1]))
                       if response[0]:
-                        return (True, response[1], response[2], chat_id)
+                        return (True, response[1], response[2], from_id)
                       elif response[1]:
-                        return (False, response[1], response[2], chat_id)
+                        return (False, response[1], response[2], from_id)
                       elif response[2]:
-                        return (False, False, response[2], chat_id)
+                        return (False, False, response[2], from_id)
                       else:
-                        return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response), chat_id)
+                        return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response), from_id)
                         ## This identation level is also known as "python street fighter"
                         ## https://twitter.com/dr4goonis/status/476617165463105536
                     except Exception as e:
-                      return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+                      return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
                   elif valid_convert[1]:
-                    return (False, valid_convert[1], valid_convert[2], chat_id)
+                    return (False, valid_convert[1], valid_convert[2], from_id)
                   elif valid_convert[2]:
-                    return (False, False, valid_convert[2], chat_id)
+                    return (False, False, valid_convert[2], from_id)
                   else:
-                    return (False, False, 'DEBUG %s%svalid_convert: %s' % (self, '\n', valid_convert), chat_id)
+                    return (False, False, 'DEBUG %s%svalid_convert: %s' % (self, '\n', valid_convert), from_id)
                 except Exception as e:
-                  return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+                  return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
               elif valid_crypto[1]:
-                return (False, valid_crypto[1], valid_crypto[2], chat_id)
+                return (False, valid_crypto[1], valid_crypto[2], from_id)
               elif valid_crypto[2]:
-                return (False, False, valid_crypto[2], chat_id)
+                return (False, False, valid_crypto[2], from_id)
               else:
-                return (False, False, 'DEBUG %s%svalid_crypto: %s' % (self, '\n', valid_crypto), chat_id)
+                return (False, False, 'DEBUG %s%svalid_crypto: %s' % (self, '\n', valid_crypto), from_id)
             except Exception as e:
-              return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+              return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
           else:
-            return (False, texts.err_valid[1], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), chat_id)
+            return (False, texts.err_valid[1], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), from_id)
         else:
-          return (False, texts.err_param[1], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), chat_id)
+          return (False, texts.err_param[1], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list), from_id)
       except Exception as e:
-        return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), chat_id)
+        return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e), from_id)
     elif re.search(''.join([metadata.handle, '$']), command_list[0]):
-      return (True, True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command_list), metadata.handle)), chat_id)
+      return (True, True, str("I'm not sure what you mean with '%s'.\nPerhaps you should try /help%s" % (' '.join(command_list), metadata.handle)), from_id)
     else:
-      return (False, False, "Don't know what to do with '%s' from %s" % (' '.join(command_list), chat_id), chat_id)
+      return (False, False, "Don't know what to do with '%s' from %s at group %s" % (' '.join(command_list), from_id, chat_id), from_id)
 
