@@ -10,23 +10,23 @@ This bot convert values in some cryptocurrencies to fiat currencies.
 
 
 
-To see the price info for a cryptocurrency, use /price%s <coin>
-Example: /price%s ETH
+To see the price info for a cryptocurrency, use /price <coin>
+Example: /price ETH
 
-Use /price%s <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
-Exampe: /price%s BTC BRL
+Use /price <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
+Exampe: /price BTC BRL
 
 
 
-To convert values, use /conv%s <value> <from> <to>
+To convert values, use /conv <value> <from> <to>
 Where <value> must be a valid float (commas will be ignored);
 <from> may be a coinmarketcap id or a cryptocurrency symbol;
 <to> may be USD or other available fiat currency;
 
-Example: /conv%s 1,000.000 BTC USD
+Example: /conv 1000.000 BTC USD
 
-To see a list of available currencies, type /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle)
+To see a list of available currencies, type /list
+"""
 info = """
 Crypto Forex Bot information
 
@@ -98,39 +98,39 @@ The admin has been notified. I think.
 """,
 # 1
 """
-Incorrect parameters. Usage: /conv%s <value> <from> <to>
+Incorrect parameters. Usage: /conv <value> <from> <to>
 
-Example: /conv%s 1,000.000 BTC USD
+Example: /conv 1000.000 BTC USD
 
-For a list of available currencies, try /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle),
+For a list of available currencies, try /list
+""",
 # 2
 """
-Incorrect parameters. Usage: /price%s <coin>
+Incorrect parameters. Usage: /price <coin>
 
-Example: /price%s BTC
+Example: /price BTC
 
-Use /price%s <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
+Use /price <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
 
-Exampe: /price%s BTC BRL
+Exampe: /price BTC BRL
 
-For a list of available currencies, try /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle),
+For a list of available currencies, try /list
+""",
 # 3
 """
-Incorrect parameters. Usage: /send%s <to> <message>
+Incorrect parameters. Usage: /send <to> <message>
 Where <to> is a telegram id.
 
-Example: /send%s 0 This bot has been hacked
-""" % (metadata.handle, metadata.handle),
+Example: /send 0 This bot has been hacked
+""",
 # 4
 "Not implemented.",
 # 5
 """
-Incorrect parameters. Usage: /feedback%s <message>
+Incorrect parameters. Usage: /feedback <message>
 
-Example: /feedback%s This bot doesn't work!
-""" % (metadata.handle, metadata.handle),
+Example: /feedback This bot doesn't work!
+""",
 ]
 
 err_valid = [
@@ -138,8 +138,8 @@ err_valid = [
 """
 You've sent an unsupported or inexistent currency.
 
-To see all available currencies, try /list%s
-""" % (metadata.handle),
+To see all available currencies, try /list
+""",
 # 1
 """
 You've sent an invalid value or not a number. Use only digits and a dot.
@@ -158,14 +158,14 @@ Internal error.
 
 Please, if you may, notify the dev team so they can fix it.
 
-Either try to send us a message with /feedback%s
+Either try to send us a message with /feedback
 
 Or open an issue on the bug tracker: %s
 
 Thank you!
 
 ...and sorry =(
-""" % (metadata.handle, metadata.bugtracker)
+""" % (metadata.bugtracker)
 
 err_api = [
 # 0
