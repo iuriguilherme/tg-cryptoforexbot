@@ -5,12 +5,15 @@ import re
 from cryptoforexbot import bot_commands, metadata, texts
 from plugins.validation.args import valid
 from plugins.coinmarketcap import valid as coinmarketcap_valid
+from plugins.mercadobitcoin import valid as mercadobitcoin_valid
 
 class user_commands():
   def __init__(self):
     self.valid = valid()
-    self.bot_commands = bot_commands.bot_commands()
+    self.coinmarketcap_commands = bot_commands.coinmarketcap_commands()
+    self.mercadobitcoin_commands = bot_commands.mercadobitcoin_commands()
     self.coinmarketcap_valid = coinmarketcap_valid.valid()
+    self.mercadobitcoin_valid = mercadobitcoin_valid.valid()
   def parse(self, chat_id, from_id, command_list):
     try:
       ## TODO: Use a better pythonic switch/case workaround
@@ -30,7 +33,7 @@ class user_commands():
         except Exception as e:
           return (False, texts.err_internal, 'DEBUG %s%sexception: %s' % (self, '\n', e))
       elif command_list[0] == '/list' or command_list[0] == ''.join(['/list', metadata.handle]):
-        response = self.bot_commands.list()
+        response = self.coinmarketcap_commands.list()
         if response[0]:
           return ('list', True, response[2])
         elif response[1]:
@@ -55,7 +58,7 @@ class user_commands():
               if valid_crypto[0]:
                 if valid_crypto[0] == 'crypto':
                   try:
-                    response = self.bot_commands.price(valid_crypto[1][0])
+                    response = self.coinmarketcap_commands.price(valid_crypto[1][0])
                     if response[0]:
                       return (True, response[1], response[2])
                     elif response[1]:
@@ -76,6 +79,29 @@ class user_commands():
                 return (False, False, 'DEBUG %s%svalid_crypto: %s' % (self, '\n', valid_crypto))
             except Exception as e:
               return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+          elif len(command_list) == 3:
+            valid_fiat = self.mercadobitcoin_valid.fiat(command_list[2])
+            if valid_fiat[0]:
+              valid_crypto = self.mercadobitcoin_valid.coin(command_list[1])
+              if valid_crypto[0]:
+                try:
+                  response = self.mercadobitcoin_commands.price(valid_crypto[1][0], valid_crypto[1][1])
+                  if response[0]:
+                    return (True, response[1], response[2])
+                  elif response[1]:
+                    return (False, response[1], response[2])
+                  elif response[2]:
+                    return (False, texts.err_internal, response[2])
+                  else:
+                    return (False, False, 'DEBUG %s%sresponse: %s' % (self, '\n', response))
+                except Exception as e:
+                  return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+              elif valid_crypto[1]:
+                return (False, valid_crypto[1], valid_crypto[2])
+              elif valid_crypto[2]:
+                return (False, texts.err_internal, valid_crypto[2])
+            else:
+              return (False, texts.err_param[2], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list))
           else:
             return (False, texts.err_param[2], 'DEBUG %s%scommand_list: %s' % (self, '\n', command_list))
         except Exception as e:
@@ -91,7 +117,7 @@ class user_commands():
                     valid_convert = self.coinmarketcap_valid.coin(command_list[3])
                     if valid_convert[0]:
                       try:
-                        response = self.bot_commands.conv(command_list[1], (valid_crypto[0], valid_crypto[1]), (valid_convert[0], valid_convert[1]))
+                        response = self.coinmarketcap_commands.conv(command_list[1], (valid_crypto[0], valid_crypto[1]), (valid_convert[0], valid_convert[1]))
                         if response[0]:
                           return (True, response[1], response[2])
                         elif response[1]:

@@ -9,7 +9,7 @@ from plugins.coinmarketcap import valid as coinmarketcap_valid
 class group_commands():
   def __init__(self):
     self.valid = valid()
-    self.bot_commands = bot_commands.bot_commands()
+    self.bot_commands = bot_commands.coinmarketcap_commands()
     self.coinmarketcap_valid = coinmarketcap_valid.valid()
   def parse(self, chat_id, from_id, command_list):
     ## TODO: Use a better pythonic switch/case workaround

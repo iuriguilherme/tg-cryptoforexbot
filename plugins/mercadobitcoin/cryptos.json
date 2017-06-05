@@ -1,0 +1,19 @@
+{
+ "BTC": {
+  "coinmarketcap_id": "bitcoin", 
+  "name": "Bitcoin", 
+  "symbols": [
+   "bitcoin", 
+   "btc", 
+   "xbt"
+  ]
+ },
+ "LTC": {
+  "coinmarketcap_id": "litecoin", 
+  "name": "Litecoin", 
+  "symbols": [
+   "litecoin", 
+   "ltc"
+  ]
+ }
+}

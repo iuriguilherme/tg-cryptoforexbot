@@ -8,8 +8,15 @@ Crypto Forex Bot help
 
 This bot convert values in some cryptocurrencies to fiat currencies.
 
+
+
 To see the price info for a cryptocurrency, use /price%s <coin>
 Example: /price%s ETH
+
+Use /price%s <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
+Exampe: /price%s BTC BRL
+
+
 
 To convert values, use /conv%s <value> <from> <to>
 Where <value> must be a valid float (commas will be ignored);
@@ -19,7 +26,7 @@ Where <value> must be a valid float (commas will be ignored);
 Example: /conv%s 1,000.000 BTC USD
 
 To see a list of available currencies, type /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle)
+""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle)
 info = """
 Crypto Forex Bot information
 
@@ -27,7 +34,7 @@ The source code for this bot resides on github: https://github.com/desci/tg-cryp
 
 The purpose of this bot is to convert values between cryptocurrencies as well as fiat currencies.
 
-The current state of development is `alpha`.
+The current state of development is `beta`.
 
 There is a channel if you are interested in helping / following the development: https://t.me/joinchat/AAAAAA5gJhDL8TwBpxo5yw
 """
@@ -103,8 +110,12 @@ Incorrect parameters. Usage: /price%s <coin>
 
 Example: /price%s BTC
 
+Use /price%s <coin> BRL to use mercadobitcoin.com.br instead of coinmarketcap.com - supported cryptocurrencies are Bitcoin and Litecoin
+
+Exampe: /price%s BTC BRL
+
 For a list of available currencies, try /list%s
-""" % (metadata.handle, metadata.handle, metadata.handle),
+""" % (metadata.handle, metadata.handle, metadata.handle, metadata.handle, metadata.handle),
 # 3
 """
 Incorrect parameters. Usage: /send%s <to> <message>
@@ -160,6 +171,10 @@ err_api = [
 # 0
 "coinmarketcap.com temporarily unavailable, either try again later or send /feedback",
 # 1
-"error contacting coinmarketcap.com, either try again later or send /feedback"
+"error contacting coinmarketcap.com, either try again later or send /feedback",
+# 2
+"mercadobitcoin.com.br temporariamente indisponível, tente novamente ou envie /feedback",
+# 3
+"erro acessando mercadobitcoin.com.br, tente novamente ou envie /feedback"
 ]
 

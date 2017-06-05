@@ -7,8 +7,9 @@ import operator
 
 from cryptoforexbot import texts, metadata
 from plugins.coinmarketcap.wrapper import coinmarketcap
+from plugins.mercadobitcoin.wrapper import mercadobitcoin
 
-class bot_commands():
+class coinmarketcap_commands():
 
   def __init__(self):
     self.coinmarketcap = coinmarketcap()
@@ -180,6 +181,39 @@ Available supply: %s %s
 Total supply: %s %s
 
 """ % (response[1][0]['name'], '{:,.2f}'.format(float(response[1][0]['market_cap_usd'])), response[1][0]['symbol'], '{:,.2f}'.format(float(response[1][0]['price_usd'])), '{:,.8f}'.format(float(response[1][0]['price_btc'])), response[1][0]['percent_change_1h'], response[1][0]['percent_change_24h'], response[1][0]['percent_change_7d'], '{:,.2f}'.format(float(response[1][0]['24h_volume_usd'])), '{:,.8f}'.format(float(response[1][0]['available_supply'])), response[1][0]['symbol'], '{:,.8f}'.format(float(response[1][0]['total_supply'])), response[1][0]['symbol']))
+      elif response[1]:
+        return (False, response[1], response[2])
+      elif response[2]:
+        return (False, texts.err_internal, response[2])
+      else:
+        return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+      return (False, False, False)
+    except Exception as e:
+      return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+
+  def debug(self, param):
+    return (True, True, ' '.join(param))
+
+class mercadobitcoin_commands():
+
+  def __init__(self):
+    self.mercadobitcoin = mercadobitcoin()
+
+  def price(self, coin_id, coin_name):
+    try:
+      response = self.mercadobitcoin.price(coin_id)
+      if response[0]:
+        response_string = list()
+        response_string.append('Informação das ultimas 24 horas para %s (de mercadobitcoin.com.br)' % (str(coin_name)))
+        response_string.append('\nValor')
+        response_string.append('atual: R$ %s' % ('{:,.2f}'.format(float(response[1]['ticker']['last']))))
+        response_string.append('maior: R$ %s' % ('{:,.2f}'.format(float(response[1]['ticker']['high']))))
+        response_string.append('menor: R$ %s' % ('{:,.2f}'.format(float(response[1]['ticker']['low']))))
+        response_string.append('\nVolume: %s BTC' % ('{:,.8f}'.format(float(response[1]['ticker']['vol']))))
+        response_string.append('\nMaior oferta de')
+        response_string.append('compra: R$ %s' % ('{:,.2f}'.format(float(response[1]['ticker']['buy']))))
+        response_string.append('venda: R$ %s' % ('{:,.2f}'.format(float(response[1]['ticker']['sell']))))
+        return (True, True, '\n'.join(response_string))
       elif response[1]:
         return (False, response[1], response[2])
       elif response[2]:

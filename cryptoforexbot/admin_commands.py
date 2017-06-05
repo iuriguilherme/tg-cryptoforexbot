@@ -7,7 +7,7 @@ from plugins.validation.args import valid
 class admin_commands():
   def __init__(self):
     self.valid = valid()
-    self.bot_commands = bot_commands.bot_commands()
+    self.bot_commands = bot_commands.coinmarketcap_commands()
   def parse(self, chat_id, from_id, command_list):
     ## TODO: Use a better pythonic switch/case workaround
     if command_list[0] == '/admin' or command_list[0] == ''.join(['/admin', metadata.handle]):

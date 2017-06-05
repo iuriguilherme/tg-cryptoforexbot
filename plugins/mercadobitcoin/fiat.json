@@ -1,0 +1,15 @@
+{
+  "BRL": {
+    "name": "Brazilian real",
+    "symbols" : [
+      "BRL",
+      "real",
+      "reais",
+      "hue",
+      "huebr"
+    ],
+    "coinmarketcap_id": "BRL",
+    "decoration": "R$ %s",
+    "plural": "Brazilian reais"
+  }
+}
