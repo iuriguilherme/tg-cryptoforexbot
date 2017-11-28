@@ -48,3 +48,31 @@ class valid():
     except Exception as e:
       return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
 
+class fake_valid():
+  def __init__(self):
+    pass
+
+  def crypto(self, string):
+    return (True, (string, string), 'Did not validate, sent True value')
+
+  def convert(self, string):
+    return (True, (string, string), 'Did not validate, sent True value')
+
+  def coin(self, string):
+    try:
+      valid_convert = self.convert(string)
+      if valid_convert[0]:
+        return ('fiat', valid_convert[1], valid_convert[2])
+      else:
+        valid_crypto = self.crypto(string)
+        if valid_crypto[0]:
+          return ('crypto', valid_crypto[1], '\n'.join([valid_convert[2], valid_crypto[2]]))
+        elif valid_crypto[1]:
+          return (False, valid_crypto[1], valid_crypto[2])
+        elif valid_crypto[2]:
+          return (False, False, '\n'.join([valid_convert[2], valid_crypto[2]]))
+        else:
+          return (False, False, False)
+    except Exception as e:
+      return (False, False, 'DEBUG %s%sexception: %s' % (self, '\n', e))
+

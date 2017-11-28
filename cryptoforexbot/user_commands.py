@@ -4,7 +4,8 @@
 import re
 from cryptoforexbot import bot_commands, metadata, texts
 from plugins.validation.args import valid
-from plugins.coinmarketcap import valid as coinmarketcap_valid
+#from plugins.coinmarketcap import valid as coinmarketcap_valid
+from plugins.coinmarketcap import fake_valid as coinmarketcap_valid
 from plugins.mercadobitcoin import valid as mercadobitcoin_valid
 
 class user_commands():
