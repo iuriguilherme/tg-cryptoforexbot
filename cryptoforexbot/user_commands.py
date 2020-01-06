@@ -4,8 +4,8 @@
 import re
 from cryptoforexbot import bot_commands, metadata, texts
 from plugins.validation.args import valid
-#from plugins.coinmarketcap import valid as coinmarketcap_valid
-from plugins.coinmarketcap import fake_valid as coinmarketcap_valid
+from plugins.coinmarketcap import valid as coinmarketcap_valid
+#~ from plugins.coinmarketcap.valid import fake_valid as coinmarketcap_valid
 from plugins.mercadobitcoin import valid as mercadobitcoin_valid
 
 class user_commands():
@@ -13,7 +13,7 @@ class user_commands():
     self.valid = valid()
     self.coinmarketcap_commands = bot_commands.coinmarketcap_commands()
     self.mercadobitcoin_commands = bot_commands.mercadobitcoin_commands()
-    self.coinmarketcap_valid = coinmarketcap_valid.valid()
+    self.coinmarketcap_valid = coinmarketcap_valid.fake_valid()
     self.mercadobitcoin_valid = mercadobitcoin_valid.valid()
   def parse(self, chat_id, from_id, command_list):
     try:
