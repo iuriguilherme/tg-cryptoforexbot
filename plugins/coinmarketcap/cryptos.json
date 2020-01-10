@@ -87,12 +87,28 @@
    "8BIT"
   ]
  }, 
+ "999": {
+  "coinmarketcap_id": "999-coin", 
+  "name": "999", 
+  "symbols": [
+   "999-coin", 
+   "999"
+  ]
+ }, 
  "9COIN": {
   "coinmarketcap_id": "9coin", 
   "name": "9COIN", 
   "symbols": [
    "9coin", 
    "9COIN"
+  ]
+ }, 
+ "ABBC": {
+  "coinmarketcap_id": "abbc-coin", 
+  "name": "ABBC Coin", 
+  "symbols": [
+   "abbc-coin", 
+   "ABBC"
   ]
  }, 
  "ABN": {
@@ -159,6 +175,14 @@
    "ACP"
   ]
  }, 
+ "ADA": {
+  "coinmarketcap_id": "cardano", 
+  "name": "Cardano", 
+  "symbols": [
+   "cardano", 
+   "ADA"
+  ]
+ }, 
  "ADC": {
   "coinmarketcap_id": "audiocoin", 
   "name": "AudioCoin", 
@@ -221,6 +245,14 @@
   "symbols": [
    "advanced-internet-blocks", 
    "AIB"
+  ]
+ }, 
+ "ALGO": {
+  "coinmarketcap_id": "algorand", 
+  "name": "Algorand", 
+  "symbols": [
+   "algorand", 
+   "ALGO"
   ]
  }, 
  "ALL": {
@@ -487,6 +519,14 @@
    "BASH"
   ]
  }, 
+ "BAT": {
+  "coinmarketcap_id": "basic-attention-token", 
+  "name": "Basic Attention Token", 
+  "symbols": [
+   "basic-attention-token", 
+   "BAT"
+  ]
+ }, 
  "BAY": {
   "coinmarketcap_id": "bitbay", 
   "name": "BitBay", 
@@ -511,12 +551,28 @@
    "BCC"
   ]
  }, 
+ "BCD": {
+  "coinmarketcap_id": "bitcoin-diamond", 
+  "name": "Bitcoin Diamond", 
+  "symbols": [
+   "bitcoin-diamond", 
+   "BCD"
+  ]
+ }, 
  "BCF": {
   "coinmarketcap_id": "bitcoinfast", 
   "name": "BitcoinFast", 
   "symbols": [
    "bitcoinfast", 
    "BCF"
+  ]
+ }, 
+ "BCH": {
+  "coinmarketcap_id": "bitcoin-cash", 
+  "name": "Bitcoin Cash", 
+  "symbols": [
+   "bitcoin-cash", 
+   "BCH"
   ]
  }, 
  "BCN": {
@@ -533,6 +589,14 @@
   "symbols": [
    "bitcrystals", 
    "BCY"
+  ]
+ }, 
+ "BDX": {
+  "coinmarketcap_id": "beldex", 
+  "name": "Beldex", 
+  "symbols": [
+   "beldex", 
+   "BDX"
   ]
  }, 
  "BELA": {
@@ -767,6 +831,14 @@
    "BLZ"
   ]
  }, 
+ "BNB": {
+  "coinmarketcap_id": "binance-coin", 
+  "name": "Binance Coin", 
+  "symbols": [
+   "binance-coin", 
+   "BNB"
+  ]
+ }, 
  "BOAT": {
   "coinmarketcap_id": "doubloon", 
   "name": "Doubloon", 
@@ -847,6 +919,14 @@
    "BRX"
   ]
  }, 
+ "BRZE": {
+  "coinmarketcap_id": "breezecoin", 
+  "name": "Breezecoin", 
+  "symbols": [
+   "breezecoin", 
+   "BRZE"
+  ]
+ }, 
  "BSC": {
   "coinmarketcap_id": "bowscoin", 
   "name": "BowsCoin", 
@@ -877,6 +957,14 @@
   "symbols": [
    "globalboost-y", 
    "BSTY"
+  ]
+ }, 
+ "BSV": {
+  "coinmarketcap_id": "bitcoin-sv", 
+  "name": "Bitcoin SV", 
+  "symbols": [
+   "bitcoin-sv", 
+   "BSV"
   ]
  }, 
  "BTA": {
@@ -976,6 +1064,14 @@
    "BTSR"
   ]
  }, 
+ "BTT": {
+  "coinmarketcap_id": "bittorrent", 
+  "name": "BitTorrent", 
+  "symbols": [
+   "bittorrent", 
+   "BTT"
+  ]
+ }, 
  "BTU": {
   "coinmarketcap_id": "bitcoin-unlimited", 
   "name": "Bitcoin Unlimited (Futures)", 
@@ -1054,6 +1150,14 @@
   "symbols": [
    "bitcedi", 
    "BXC"
+  ]
+ }, 
+ "BXK": {
+  "coinmarketcap_id": "bitbook-gambling", 
+  "name": "Bitbook Gambling", 
+  "symbols": [
+   "bitbook-gambling", 
+   "BXK"
   ]
  }, 
  "BXT": {
@@ -1176,6 +1280,14 @@
    "CC"
   ]
  }, 
+ "CCA": {
+  "coinmarketcap_id": "counos-coin", 
+  "name": "Counos Coin", 
+  "symbols": [
+   "counos-coin", 
+   "CCA"
+  ]
+ }, 
  "CCM100": {
   "coinmarketcap_id": "ccminer", 
   "name": "CCMiner", 
@@ -1206,6 +1318,14 @@
   "symbols": [
    "canada-ecoin", 
    "CDN"
+  ]
+ }, 
+ "CENNZ": {
+  "coinmarketcap_id": "centrality", 
+  "name": "Centrality", 
+  "symbols": [
+   "centrality", 
+   "CENNZ"
   ]
  }, 
  "CESC": {
@@ -1262,6 +1382,14 @@
   "symbols": [
    "cryptojacks", 
    "CJ"
+  ]
+ }, 
+ "CKB": {
+  "coinmarketcap_id": "nervos-network", 
+  "name": "Nervos Network", 
+  "symbols": [
+   "nervos-network", 
+   "CKB"
   ]
  }, 
  "CLAM": {
@@ -1344,6 +1472,14 @@
    "CNT"
   ]
  }, 
+ "CNX": {
+  "coinmarketcap_id": "cryptonex", 
+  "name": "Cryptonex", 
+  "symbols": [
+   "cryptonex", 
+   "CNX"
+  ]
+ }, 
  "CON": {
   "coinmarketcap_id": "paycon", 
   "name": "PayCon", 
@@ -1414,6 +1550,14 @@
   "symbols": [
    "crevacoin", 
    "CREVA"
+  ]
+ }, 
+ "CRO": {
+  "coinmarketcap_id": "crypto-com-coin", 
+  "name": "Crypto.com Coin", 
+  "symbols": [
+   "crypto-com-coin", 
+   "CRO"
   ]
  }, 
  "CRT": {
@@ -2032,6 +2176,14 @@
    "EMV"
   ]
  }, 
+ "ENJ": {
+  "coinmarketcap_id": "enjin-coin", 
+  "name": "Enjin Coin", 
+  "symbols": [
+   "enjin-coin", 
+   "ENJ"
+  ]
+ }, 
  "ENRG": {
   "coinmarketcap_id": "energycoin", 
   "name": "Energycoin", 
@@ -2054,6 +2206,22 @@
   "symbols": [
    "environ", 
    "ENV"
+  ]
+ }, 
+ "EON": {
+  "coinmarketcap_id": "dimension-chain", 
+  "name": "Dimension Chain", 
+  "symbols": [
+   "dimension-chain", 
+   "EON"
+  ]
+ }, 
+ "EOS": {
+  "coinmarketcap_id": "eos", 
+  "name": "EOS", 
+  "symbols": [
+   "eos", 
+   "EOS"
   ]
  }, 
  "ERC": {
@@ -2135,6 +2303,14 @@
   "symbols": [
    "expanse", 
    "EXP"
+  ]
+ }, 
+ "FAB": {
+  "coinmarketcap_id": "fabrk", 
+  "name": "FABRK", 
+  "symbols": [
+   "fabrk", 
+   "FAB"
   ]
  }, 
  "FAIR": {
@@ -2329,6 +2505,14 @@
    "FTC"
   ]
  }, 
+ "FTT": {
+  "coinmarketcap_id": "ftx-token", 
+  "name": "FTX Token", 
+  "symbols": [
+   "ftx-token", 
+   "FTT"
+  ]
+ }, 
  "FUN": {
   "coinmarketcap_id": "alphabet-coin-fund", 
   "name": "Alphabet Coin Fund", 
@@ -2367,6 +2551,14 @@
   "symbols": [
    "fuzzballs", 
    "FUZZ"
+  ]
+ }, 
+ "FXC": {
+  "coinmarketcap_id": "flexacoin", 
+  "name": "Flexacoin", 
+  "symbols": [
+   "flexacoin", 
+   "FXC"
   ]
  }, 
  "G3N": {
@@ -2665,6 +2857,14 @@
    "GRT"
   ]
  }, 
+ "GTN": {
+  "coinmarketcap_id": "glitzkoin", 
+  "name": "GlitzKoin", 
+  "symbols": [
+   "glitzkoin", 
+   "GTN"
+  ]
+ }, 
  "GUA": {
   "coinmarketcap_id": "guarany", 
   "name": "Guarany", 
@@ -2721,6 +2921,14 @@
    "HBN"
   ]
  }, 
+ "HC": {
+  "coinmarketcap_id": "hypercash", 
+  "name": "HyperCash", 
+  "symbols": [
+   "hypercash", 
+   "HC"
+  ]
+ }, 
  "HCC": {
   "coinmarketcap_id": "happy-creator-coin", 
   "name": "Happy Creator Coin", 
@@ -2735,6 +2943,14 @@
   "symbols": [
    "heat-ledger", 
    "HEAT"
+  ]
+ }, 
+ "HEDG": {
+  "coinmarketcap_id": "hedgetrade", 
+  "name": "HedgeTrade", 
+  "symbols": [
+   "hedgetrade", 
+   "HEDG"
   ]
  }, 
  "HILL": {
@@ -2817,12 +3033,28 @@
    "HONEY"
   ]
  }, 
+ "HOT": {
+  "coinmarketcap_id": "holo", 
+  "name": "Holo", 
+  "symbols": [
+   "holo", 
+   "HOT"
+  ]
+ }, 
  "HPC": {
   "coinmarketcap_id": "happycoin", 
   "name": "Happycoin", 
   "symbols": [
    "happycoin", 
    "HPC"
+  ]
+ }, 
+ "HT": {
+  "coinmarketcap_id": "huobi-token", 
+  "name": "Huobi Token", 
+  "symbols": [
+   "huobi-token", 
+   "HT"
   ]
  }, 
  "HTC": {
@@ -2945,6 +3177,14 @@
    "ICOO"
   ]
  }, 
+ "ICX": {
+  "coinmarketcap_id": "icon", 
+  "name": "ICON", 
+  "symbols": [
+   "icon", 
+   "ICX"
+  ]
+ }, 
  "IEC": {
   "coinmarketcap_id": "ivugeocoin", 
   "name": "IvugeoCoin", 
@@ -3001,6 +3241,14 @@
    "IMX"
   ]
  }, 
+ "INB": {
+  "coinmarketcap_id": "insight-chain", 
+  "name": "Insight Chain", 
+  "symbols": [
+   "insight-chain", 
+   "INB"
+  ]
+ }, 
  "INCNT": {
   "coinmarketcap_id": "incent", 
   "name": "Incent", 
@@ -3015,6 +3263,14 @@
   "symbols": [
    "influxcoin", 
    "INFX"
+  ]
+ }, 
+ "INO": {
+  "coinmarketcap_id": "ino-coin", 
+  "name": "INO COIN", 
+  "symbols": [
+   "ino-coin", 
+   "INO"
   ]
  }, 
  "INPAY": {
@@ -3055,6 +3311,14 @@
   "symbols": [
    "internet-of-people", 
    "IOP"
+  ]
+ }, 
+ "IOST": {
+  "coinmarketcap_id": "iostoken", 
+  "name": "IOST", 
+  "symbols": [
+   "iostoken", 
+   "IOST"
   ]
  }, 
  "ISL": {
@@ -3151,6 +3415,22 @@
   "symbols": [
    "kashhcoin", 
    "KASHH"
+  ]
+ }, 
+ "KBC": {
+  "coinmarketcap_id": "karatgold-coin", 
+  "name": "Karatgold Coin", 
+  "symbols": [
+   "karatgold-coin", 
+   "KBC"
+  ]
+ }, 
+ "KCS": {
+  "coinmarketcap_id": "kucoin-shares", 
+  "name": "KuCoin Shares", 
+  "symbols": [
+   "kucoin-shares", 
+   "KCS"
   ]
  }, 
  "KED": {
@@ -3311,6 +3591,14 @@
   "symbols": [
    "biglifecoin", 
    "LFC"
+  ]
+ }, 
+ "LINK": {
+  "coinmarketcap_id": "chainlink", 
+  "name": "Chainlink", 
+  "symbols": [
+   "chainlink", 
+   "LINK"
   ]
  }, 
  "LIR": {
@@ -3513,6 +3801,14 @@
    "MBL"
   ]
  }, 
+ "MCO": {
+  "coinmarketcap_id": "crypto-com", 
+  "name": "MCO", 
+  "symbols": [
+   "crypto-com", 
+   "MCO"
+  ]
+ }, 
  "MCRN": {
   "coinmarketcap_id": "macron", 
   "name": "MACRON", 
@@ -3601,12 +3897,36 @@
    "MILO"
   ]
  }, 
+ "MIN": {
+  "coinmarketcap_id": "mindol", 
+  "name": "MINDOL", 
+  "symbols": [
+   "mindol", 
+   "MIN"
+  ]
+ }, 
  "MINT": {
   "coinmarketcap_id": "mintcoin", 
   "name": "Mintcoin", 
   "symbols": [
    "mintcoin", 
    "MINT"
+  ]
+ }, 
+ "MIOTA": {
+  "coinmarketcap_id": "iota", 
+  "name": "IOTA", 
+  "symbols": [
+   "iota", 
+   "MIOTA"
+  ]
+ }, 
+ "MKR": {
+  "coinmarketcap_id": "maker", 
+  "name": "Maker", 
+  "symbols": [
+   "maker", 
+   "MKR"
   ]
  }, 
  "MLN": {
@@ -3647,6 +3967,14 @@
   "symbols": [
    "mineum", 
    "MNM"
+  ]
+ }, 
+ "MOF": {
+  "coinmarketcap_id": "molecular-future", 
+  "name": "Molecular Future", 
+  "symbols": [
+   "molecular-future", 
+   "MOF"
   ]
  }, 
  "MOIN": {
@@ -3785,6 +4113,14 @@
    "MZC"
   ]
  }, 
+ "NANO": {
+  "coinmarketcap_id": "nano", 
+  "name": "Nano", 
+  "symbols": [
+   "nano", 
+   "NANO"
+  ]
+ }, 
  "NAUT": {
   "coinmarketcap_id": "nautiluscoin", 
   "name": "NautilusCoin", 
@@ -3815,6 +4151,14 @@
   "symbols": [
    "netbit", 
    "NBIT"
+  ]
+ }, 
+ "NEO": {
+  "coinmarketcap_id": "neo", 
+  "name": "Neo", 
+  "symbols": [
+   "neo", 
+   "NEO"
   ]
  }, 
  "NEOS": {
@@ -3865,6 +4209,14 @@
    "NEWB"
   ]
  }, 
+ "NEXO": {
+  "coinmarketcap_id": "nexo", 
+  "name": "Nexo", 
+  "symbols": [
+   "nexo", 
+   "NEXO"
+  ]
+ }, 
  "NKA": {
   "coinmarketcap_id": "incakoin", 
   "name": "IncaKoin", 
@@ -3895,6 +4247,14 @@
   "symbols": [
    "namecoin", 
    "NMC"
+  ]
+ }, 
+ "NOAH": {
+  "coinmarketcap_id": "noah-coin", 
+  "name": "Noah Coin", 
+  "symbols": [
+   "noah-coin", 
+   "NOAH"
   ]
  }, 
  "NOBL": {
@@ -4025,6 +4385,14 @@
    "OK"
   ]
  }, 
+ "OKB": {
+  "coinmarketcap_id": "okb", 
+  "name": "OKB", 
+  "symbols": [
+   "okb", 
+   "OKB"
+  ]
+ }, 
  "OMC": {
   "coinmarketcap_id": "omicron", 
   "name": "Omicron", 
@@ -4033,12 +4401,28 @@
    "OMC"
   ]
  }, 
+ "OMG": {
+  "coinmarketcap_id": "omisego", 
+  "name": "OmiseGO", 
+  "symbols": [
+   "omisego", 
+   "OMG"
+  ]
+ }, 
  "OMNI": {
   "coinmarketcap_id": "omni", 
   "name": "Omni", 
   "symbols": [
    "omni", 
    "OMNI"
+  ]
+ }, 
+ "ONT": {
+  "coinmarketcap_id": "ontology", 
+  "name": "Ontology", 
+  "symbols": [
+   "ontology", 
+   "ONT"
   ]
  }, 
  "OP": {
@@ -4135,6 +4519,14 @@
   "symbols": [
    "pascal-lite", 
    "PASL"
+  ]
+ }, 
+ "PAX": {
+  "coinmarketcap_id": "paxos-standard", 
+  "name": "Paxos Standard", 
+  "symbols": [
+   "paxos-standard", 
+   "PAX"
   ]
  }, 
  "PAYP": {
@@ -4491,6 +4883,14 @@
    "PXI"
   ]
  }, 
+ "PZM": {
+  "coinmarketcap_id": "prizm", 
+  "name": "PRIZM", 
+  "symbols": [
+   "prizm", 
+   "PZM"
+  ]
+ }, 
  "QBC": {
   "coinmarketcap_id": "quebecoin", 
   "name": "Quebecoin", 
@@ -4545,6 +4945,14 @@
   "symbols": [
    "quatloo", 
    "QTL"
+  ]
+ }, 
+ "QTUM": {
+  "coinmarketcap_id": "qtum", 
+  "name": "Qtum", 
+  "symbols": [
+   "qtum", 
+   "QTUM"
   ]
  }, 
  "QWARK": {
@@ -4755,6 +5163,14 @@
    "RUBIT"
   ]
  }, 
+ "RVN": {
+  "coinmarketcap_id": "ravencoin", 
+  "name": "Ravencoin", 
+  "symbols": [
+   "ravencoin", 
+   "RVN"
+  ]
+ }, 
  "RYCN": {
   "coinmarketcap_id": "royalcoin-2", 
   "name": "RoyalCoin 2", 
@@ -4859,6 +5275,14 @@
    "SDP"
   ]
  }, 
+ "SEELE": {
+  "coinmarketcap_id": "seele", 
+  "name": "Seele", 
+  "symbols": [
+   "seele", 
+   "SEELE"
+  ]
+ }, 
  "SEQ": {
   "coinmarketcap_id": "sequence", 
   "name": "Sequence", 
@@ -4920,7 +5344,7 @@
   "name": "Storjcoin X", 
   "symbols": [
    "storjcoin-x", 
-   "SJCX",
+   "SJCX", 
    "storj"
   ]
  }, 
@@ -5026,6 +5450,14 @@
   "symbols": [
    "synergy", 
    "SNRG"
+  ]
+ }, 
+ "SNX": {
+  "coinmarketcap_id": "synthetix-network-token", 
+  "name": "Synthetix Network Token", 
+  "symbols": [
+   "synthetix-network-token", 
+   "SNX"
   ]
  }, 
  "SOAR": {
@@ -5212,6 +5644,14 @@
    "SXC"
   ]
  }, 
+ "SXP": {
+  "coinmarketcap_id": "swipe", 
+  "name": "Swipe", 
+  "symbols": [
+   "swipe", 
+   "SXP"
+  ]
+ }, 
  "SYNX": {
   "coinmarketcap_id": "syndicate", 
   "name": "Syndicate", 
@@ -5250,6 +5690,14 @@
   "symbols": [
    "tagrcoin", 
    "TAGR"
+  ]
+ }, 
+ "TAGZ5": {
+  "coinmarketcap_id": "tagz5", 
+  "name": "TAGZ5", 
+  "symbols": [
+   "tagz5", 
+   "TAGZ5"
   ]
  }, 
  "TAJ": {
@@ -5348,12 +5796,36 @@
    "THC"
   ]
  }, 
+ "THETA": {
+  "coinmarketcap_id": "theta", 
+  "name": "THETA", 
+  "symbols": [
+   "theta", 
+   "THETA"
+  ]
+ }, 
+ "THR": {
+  "coinmarketcap_id": "thorecoin", 
+  "name": "ThoreCoin", 
+  "symbols": [
+   "thorecoin", 
+   "THR"
+  ]
+ }, 
  "THS": {
   "coinmarketcap_id": "techshares", 
   "name": "TechShares", 
   "symbols": [
    "techshares", 
    "THS"
+  ]
+ }, 
+ "THX": {
+  "coinmarketcap_id": "thorenext", 
+  "name": "ThoreNext", 
+  "symbols": [
+   "thorenext", 
+   "THX"
   ]
  }, 
  "TIC": {
@@ -5540,6 +6012,14 @@
    "TRUST"
   ]
  }, 
+ "TRX": {
+  "coinmarketcap_id": "tron", 
+  "name": "TRON", 
+  "symbols": [
+   "tron", 
+   "TRX"
+  ]
+ }, 
  "TSE": {
   "coinmarketcap_id": "tattoocoin", 
   "name": "Tattoocoin (Standard Edition)", 
@@ -5562,6 +6042,14 @@
   "symbols": [
    "tittiecoin", 
    "TTC"
+  ]
+ }, 
+ "TUSD": {
+  "coinmarketcap_id": "trueusd", 
+  "name": "TrueUSD", 
+  "symbols": [
+   "trueusd", 
+   "TUSD"
   ]
  }, 
  "TX": {
@@ -5724,6 +6212,14 @@
    "USC"
   ]
  }, 
+ "USDC": {
+  "coinmarketcap_id": "usd-coin", 
+  "name": "USD Coin", 
+  "symbols": [
+   "usd-coin", 
+   "USDC"
+  ]
+ }, 
  "USDT": {
   "coinmarketcap_id": "tether", 
   "name": "Tether", 
@@ -5786,6 +6282,14 @@
   "symbols": [
    "vector", 
    "VEC2"
+  ]
+ }, 
+ "VET": {
+  "coinmarketcap_id": "vechain", 
+  "name": "VeChain", 
+  "symbols": [
+   "vechain", 
+   "VET"
   ]
  }, 
  "VGC": {
@@ -5906,6 +6410,14 @@
   "symbols": [
    "vslice", 
    "VSL"
+  ]
+ }, 
+ "VSYS": {
+  "coinmarketcap_id": "v-systems", 
+  "name": "V Systems", 
+  "symbols": [
+   "v-systems", 
+   "VSYS"
   ]
  }, 
  "VTA": {
@@ -6236,6 +6748,14 @@
    "XEN"
   ]
  }, 
+ "XET": {
+  "coinmarketcap_id": "eternal-token", 
+  "name": "ETERNAL TOKEN", 
+  "symbols": [
+   "eternal-token", 
+   "XET"
+  ]
+ }, 
  "XFC": {
   "coinmarketcap_id": "forevercoin", 
   "name": "Forevercoin", 
@@ -6266,6 +6786,14 @@
   "symbols": [
    "international-diamond", 
    "XID"
+  ]
+ }, 
+ "XIN": {
+  "coinmarketcap_id": "mixin", 
+  "name": "Mixin", 
+  "symbols": [
+   "mixin", 
+   "XIN"
   ]
  }, 
  "XJO": {
@@ -6468,6 +6996,14 @@
    "XTO"
   ]
  }, 
+ "XTZ": {
+  "coinmarketcap_id": "tezos", 
+  "name": "Tezos", 
+  "symbols": [
+   "tezos", 
+   "XTZ"
+  ]
+ }, 
  "XVC": {
   "coinmarketcap_id": "vcash", 
   "name": "Vcash", 
@@ -6572,6 +7108,14 @@
    "YOG"
   ]
  }, 
+ "ZB": {
+  "coinmarketcap_id": "zb-token", 
+  "name": "ZB Token", 
+  "symbols": [
+   "zb-token", 
+   "ZB"
+  ]
+ }, 
  "ZBC": {
   "coinmarketcap_id": "zilbercoin", 
   "name": "Zilbercoin", 
@@ -6610,6 +7154,14 @@
   "symbols": [
    "zeitcoin", 
    "ZEIT"
+  ]
+ }, 
+ "ZEN": {
+  "coinmarketcap_id": "horizen", 
+  "name": "Horizen", 
+  "symbols": [
+   "horizen", 
+   "ZEN"
   ]
  }, 
  "ZENI": {
@@ -6666,6 +7218,14 @@
   "symbols": [
    "zoin", 
    "ZOI"
+  ]
+ }, 
+ "ZRX": {
+  "coinmarketcap_id": "0x", 
+  "name": "0x", 
+  "symbols": [
+   "0x", 
+   "ZRX"
   ]
  }, 
  "ZSE": {
