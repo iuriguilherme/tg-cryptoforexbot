@@ -5,6 +5,7 @@
 import re
 import time
 import ConfigParser
+import json
 
 try:
   import telepot
@@ -85,7 +86,7 @@ class cryptoforex():
     self.send((self.group_id, self.admin_id), reply)
 
   def rcv(self, msg):
-    self.log(self.log_str.rcv(str(msg['chat']['id']), '%s' % (msg)))
+    self.log(self.log_str.rcv(str(msg['chat']['id']), json.dumps(msg, sort_keys=True, indent=2)))
     glance = telepot.glance(msg)
     if glance[0] == 'text':
       chat_id = self.group_id
