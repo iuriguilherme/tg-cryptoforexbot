@@ -879,6 +879,14 @@
    "BOST"
   ]
  }, 
+ "BOTX": {
+  "coinmarketcap_id": "botxcoin", 
+  "name": "botXcoin", 
+  "symbols": [
+   "botxcoin", 
+   "BOTX"
+  ]
+ }, 
  "BPC": {
   "coinmarketcap_id": "bitpark-coin", 
   "name": "Bitpark Coin", 
@@ -2008,6 +2016,14 @@
    "DWC"
   ]
  }, 
+ "DX": {
+  "coinmarketcap_id": "dxchain-token", 
+  "name": "DxChain Token", 
+  "symbols": [
+   "dxchain-token", 
+   "DX"
+  ]
+ }, 
  "DYN": {
   "coinmarketcap_id": "dynamic", 
   "name": "Dynamic", 
@@ -2407,6 +2423,14 @@
   "symbols": [
    "foldingcoin", 
    "FLDC"
+  ]
+ }, 
+ "FLG": {
+  "coinmarketcap_id": "folgory-coin", 
+  "name": "Folgory Coin", 
+  "symbols": [
+   "folgory-coin", 
+   "FLG"
   ]
  }, 
  "FLO": {
@@ -3783,6 +3807,14 @@
   "symbols": [
    "maxcoin", 
    "MAX"
+  ]
+ }, 
+ "MB": {
+  "coinmarketcap_id": "minebee", 
+  "name": "MineBee", 
+  "symbols": [
+   "minebee", 
+   "MB"
   ]
  }, 
  "MBIT": {
