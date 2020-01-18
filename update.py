@@ -18,7 +18,7 @@ class update_coinmarketcap():
             cryptos.update({coin["symbol"]:{"name":coin["name"],"coinmarketcap_id":coin["id"],"symbols":[coin["id"],coin["symbol"]]}})
         json.dump(cryptos, open(cryptos_file, 'w'), indent=True, sort_keys=True, ensure_ascii=False)
     else:
-        print(u"Didn't worked.")
+        print(u"Didn't work.")
 
 if __name__ == "__main__":
   update_coinmarketcap = update_coinmarketcap()
