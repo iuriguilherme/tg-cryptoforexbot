@@ -1,6 +1,11 @@
 Crypto Forex Bot for Telegram
 ===
 
+Archiving notice
+---
+
+This is no longer mantained. Please see https://github.com/iuriguilherme/cryptoforexbot for the same project updated. The bot address is the same: https://t.me/cryptoforexbot
+
 What
 ---
 
